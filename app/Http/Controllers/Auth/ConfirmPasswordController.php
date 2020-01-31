@@ -37,4 +37,9 @@ class ConfirmPasswordController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function redirectTo()
+    {
+        return app()->getLocale() .$this->redirectTo;
+    }
 }
