@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>El-TK</b> admin',
+    'logo' => '<b>Laravel</b> admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>ElectroInstalacie</b>',
+    'logo-mini' => '<b>La</b>',
 
     /*
     |--------------------------------------------------------------------------
