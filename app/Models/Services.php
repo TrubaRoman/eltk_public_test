@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use App\Models\LocalizedModel;
 use Illuminate\Database\Eloquent\Model;
 
 class Services extends LocalizedModel

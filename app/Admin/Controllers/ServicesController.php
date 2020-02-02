@@ -2,7 +2,8 @@
 
 namespace App\Admin\Controllers;
 
-use App\Services;
+use App\Models\LocalizedModel;
+use App\Models\Services;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
