@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
 
 class ServicesController extends AdminController
 {
@@ -67,10 +68,15 @@ class ServicesController extends AdminController
             $localizations->id()->sortable();
             $localizations->services_id()->sortable();
             $localizations->menu();
-            $localizations->lang()->sortable();
-            $localizations->title();
+            $localizations->column('lang')->display(function ($title) {
+
+                return "<img src='/build/img/flags/24/{$title}.png'> &nbsp;$title</img>";
+
+            });
+//            $localizations->lang()->image('public/build/img/flag/24/uk.png');
             $localizations->short_content()->limit(10);
             $localizations->content()->limit(40);
+
 
 
             $localizations->filter(function ($filter) {

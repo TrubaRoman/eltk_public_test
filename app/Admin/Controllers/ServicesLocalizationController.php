@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Models\Services;
 use App\Models\ServicesLocalization;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
@@ -28,10 +29,14 @@ class ServicesLocalizationController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('menu', __('Menu'));
-        $grid->column('services_id', __('Services id'));
-        $grid->column('lang', __('Lang'));
-        $grid->column('title', __('Title'));
-        $grid->column('short_content', __('Short content'));
+        $grid->column('services_id', __('Services id'))->sortable();
+        $grid->column('lang')->display(function ($lang) {
+
+            return "<img src='/build/img/flags/24/{$lang}.png'> &nbsp;$lang</img>";
+
+        })->sortable();
+        $grid->column('title', __('Title'))->sortable();
+        $grid->column('short_content', __('Short content'))->sortable();
         $grid->column('content', __('Content'));
 
         return $grid;
@@ -68,8 +73,8 @@ class ServicesLocalizationController extends AdminController
         $form = new Form(new ServicesLocalization());
 
         $form->text('menu', __('Menu'));
-        $form->number('services_id', __('Services id'));
-        $form->text('lang', __('Lang'));
+        $form->text('services_id', __('Services id'));
+        $form->select('lang', __('Lang'))->options(config('app.locales'));
         $form->text('title', __('Title'));
         $form->text('short_content', __('Short content'));
         $form->textarea('content', __('Content'));
