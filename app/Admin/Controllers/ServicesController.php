@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ServicesController extends AdminController
@@ -30,7 +31,7 @@ class ServicesController extends AdminController
 
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
-        $grid->column('image', __('Image'));
+        $grid->column('image')->image();
         $grid->column('status', __('Status'));
         $grid->column('sort', __('Sort'));
         $grid->column('created_at', __('Created at'));
@@ -56,7 +57,7 @@ class ServicesController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('slug', __('Slug'));
-        $show->field('image', __('Image'));
+        $show->image('image');
         $show->field('status', __('Status'));
         $show->field('sort', __('Sort'));
         $show->field('created_at', __('Created at'));
