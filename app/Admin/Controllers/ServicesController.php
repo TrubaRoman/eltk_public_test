@@ -10,6 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Intervention\Image\Facades\Image;
 
 class ServicesController extends AdminController
 {
@@ -98,10 +99,11 @@ class ServicesController extends AdminController
         $form = new Form(new Services());
 
         $form->text('slug', __('Slug'));
-        $form->image('image', __('Image'));
+        $form->image('image', __('Image'))->crop(100, 100, 25, 25);
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 
         return $form;
     }
+
 }
