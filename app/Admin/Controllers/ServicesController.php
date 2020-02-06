@@ -10,7 +10,7 @@ use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Intervention\Image\Facades\Image;
+
 
 class ServicesController extends AdminController
 {
@@ -33,10 +33,10 @@ class ServicesController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
-        $grid->column('status', __('Status'));
+        $grid->column('status', __('Status'))->bool();
         $grid->column('sort', __('Sort'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created at'))->date('Y-m-d');
+        $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
         $grid->localizations('Language Variants')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
@@ -58,7 +58,7 @@ class ServicesController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('slug', __('Slug'));
-        $show->image('image');
+        $show->image();
         $show->field('status', __('Status'));
         $show->field('sort', __('Sort'));
         $show->field('created_at', __('Created at'));
@@ -99,7 +99,7 @@ class ServicesController extends AdminController
         $form = new Form(new Services());
 
         $form->text('slug', __('Slug'));
-        $form->image('image', __('Image'))->crop(100, 100, 25, 25);
+        $form->image('image', __('Image'));
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 
