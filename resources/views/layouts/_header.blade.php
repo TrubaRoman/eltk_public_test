@@ -131,15 +131,8 @@
                                                 <li><a href="element.html">Elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Services</a>
-                                            <ul>
-                                                <li><a href="renovation-and-painting.html">Renovation And Painting</a></li>
-                                                <li><a href="air-conditioner.html">Air Conditioner</a></li>
-                                                <li><a href="home-maintainance.html">Home Maintainance</a></li>
-                                                <li><a href="wiring-and-installation.html">Wiring And Installation</a></li>
-                                                <li><a href="plumber-services.html">Plumber Services</a></li>
-                                                <li><a href="painting-services.html">Painting Services</a></li>
-                                            </ul>
+                                        <li><a href="{{route('services')}}">Services</a>
+
                                         </li>
                                         <li><a href="#">Projects</a>
                                             <ul>
@@ -170,11 +163,14 @@
                                         </li>
 
 
-                                                                                        <li><a href="#" ><i class="flag-icon flag-icon-pl"></i>	&#8195;Polski</a><ul>
-                                                                                               <li><a  href="contact-us-1.html"> <i class="flag-icon flag-icon-gb"></i> 	&#8195;English </a></li>
-                                                                                               <li><a  href="contact-us-1.html"> <i class="flag-icon flag-icon-ua"></i>	&#8195;Українська </a></li>
-                                                                                           </ul>
-                                                                                        </li>
+                                        <li><a href="#" ><img src="/build/img/flags/24/{{app()->getLocale()}}.png">	&#8195;{{strtoupper(app()->getLocale())}}</a>
+                                            <ul>
+                                                @foreach(config('app.locales') as $locale)
+                                                <li><a  href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale)}}">
+                                                        <img src="/build/img/flags/24/{{$locale}}.png" alt=""> 	&#8195;&#8195;{{strtoupper($locale)}} </a></li>
+                                              @endforeach
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
