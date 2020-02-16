@@ -118,10 +118,10 @@ website:   	http://www.themepunch.com
 .tp-simpleresponsive img,
 .rev_slider img{
 	max-width:none !important;
-	-moz-transition: none 0;
-	-webkit-transition: none 0;
-	-o-transition: none 0;
-	transition: none 0;
+	-moz-transition: none ;
+	-webkit-transition: none ;
+	-o-transition: none ;
+	transition: none ;
 	margin:0px;
 	padding:0px;
 	border-width:0px;
@@ -835,7 +835,7 @@ img.tp-slider-alternative-image	{
 
 .rev-cbutton-light-sr	{		
 	color: #333;  	
-	border-radius: 3;		
+	border-radius: 3px;
 	background-color: rgba(255,255,255, 0.75);
 }
 

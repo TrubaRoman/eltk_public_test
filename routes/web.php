@@ -28,5 +28,6 @@
 
             Route::get('/', 'HomeController@index')->name('home');
             Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
+            Route::get('/services','ServicesController@index')->name('services');
 
     });

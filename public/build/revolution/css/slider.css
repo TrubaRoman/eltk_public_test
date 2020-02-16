@@ -5793,7 +5793,7 @@ tp-caption.Team-Thumb,
 
 
 /* slider-css */
-.simple-text-box{ background-color: rgb(253, 161, 43) }
+.simple-text-box{ background-color: rgb(238, 86, 81); }
 .slide-main-text{ font-family: Poppins; }
 .slide-dsec-text { font-family: Poppins; }
 
@@ -5803,8 +5803,8 @@ tp-caption.Team-Thumb,
 
 /* button */
 .tp-caption.skin-flat-button, .skin-flat-button {
-	background-color: rgb(253, 161, 43);
-    border-color: rgb(253, 161, 43);
+	background-color: rgb(238, 86, 81);;
+    border-color: rgb(238, 86, 81);;
     color: rgb(255, 255, 255);
     font-style: normal;
     font-family: Poppins;
@@ -5812,9 +5812,9 @@ tp-caption.Team-Thumb,
 .tp-caption.skin-flatborder-button{
 	border-style: solid;
     border-width: 2px;
-    background-color: rgb(253, 161, 43);
-    border-color: rgb(253, 161, 43);
-    color: rgb(253, 161, 43);
+    background-color: rgb(238, 86, 81);;
+    border-color: rgb(238, 86, 81);;
+    color: rgb(238, 86, 81);;
     font-style: normal;
     font-family: Poppins;
 }
@@ -5838,7 +5838,7 @@ tp-caption.Team-Thumb,
 }
 .tp-caption.white-flatborder-button:hover{ border-color: #fff; }
 .tp-caption.white-flatborder-button:hover{ background-color: #fff; color: #182333; }
-.ttm-video-play-btn{ background-color: rgb(253, 161, 43); color: rgb(255, 255, 255); border-radius: 100px;}
+.ttm-video-play-btn{ background-color: rgb(238, 86, 81);; color: rgb(255, 255, 255); border-radius: 100px;}
 .ttm-popup-video{ 
 	font-family: "Open Sans";
 }
@@ -5966,10 +5966,10 @@ website:   	http://www.themepunch.com
 .tp-simpleresponsive img,
 .rev_slider img{
 	max-width:none !important;
-	-moz-transition: none 0;
-	-webkit-transition: none 0;
-	-o-transition: none 0;
-	transition: none 0;
+	-moz-transition: none ;
+	-webkit-transition: none ;
+	-o-transition: none ;
+	transition: none ;
 	margin:0px;
 	padding:0px;
 	border-width:0px;
@@ -6683,7 +6683,7 @@ img.tp-slider-alternative-image	{
 
 .rev-cbutton-light-sr	{		
 	color: #333;  	
-	border-radius: 3;		
+	border-radius: 3px;
 	background-color: rgba(255,255,255, 0.75);
 }
 

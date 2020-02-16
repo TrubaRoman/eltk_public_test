@@ -58,7 +58,7 @@ class ServicesController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('slug', __('Slug'));
-        $show->image();
+        $show->image('image',('Image'));
         $show->field('status', __('Status'));
         $show->field('sort', __('Sort'));
         $show->field('created_at', __('Created at'));

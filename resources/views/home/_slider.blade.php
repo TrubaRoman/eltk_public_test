@@ -306,24 +306,24 @@
                      data-paddingleft="[0,0,0,0]">24x7<br>Services
                 </div>
 
-                <a class="tp-caption dark-flatborder-button tp-resizeme" href="#" target="_self" id="slide-4-layer-9" data-x="['center','center','center','center']" data-hoffset="['207','111','0','0']" data-y="['top','top','middle','middle']" data-voffset="['432','426','71','37']"
-                   data-fontsize="['13','13','12','11']"
-                   data-lineheight="['13','13','12','11']"
-                   data-fontweight="['600','600','600','600']"
-                   data-width="none"
-                   data-height="none"
-                   data-whitespace="nowrap"
-                   data-type="text"
-                   data-actions=''
-                   data-responsive_offset="on"
-                   data-frames='[{"delay":1150,"speed":500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                   data-textAlign="['inherit','inherit','inherit','inherit']"
-                   data-paddingtop="[20,20,15,12]"
-                   data-paddingright="[30,30,25,20]"
-                   data-paddingbottom="[20,20,15,12]"
-                   data-paddingleft="[30,30,25,20]">VIEW MORE DETAILS
+{{--                <a class="tp-caption dark-flatborder-button tp-resizeme" href="#" target="_self" id="slide-4-layer-9" data-x="['center','center','center','center']" data-hoffset="['207','111','0','0']" data-y="['top','top','middle','middle']" data-voffset="['432','426','71','37']"--}}
+{{--                   data-fontsize="['13','13','12','11']"--}}
+{{--                   data-lineheight="['13','13','12','11']"--}}
+{{--                   data-fontweight="['600','600','600','600']"--}}
+{{--                   data-width="none"--}}
+{{--                   data-height="none"--}}
+{{--                   data-whitespace="nowrap"--}}
+{{--                   data-type="text"--}}
+{{--                   data-actions=''--}}
+{{--                   data-responsive_offset="on"--}}
+{{--                   data-frames='[{"delay":1150,"speed":500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power0.easeIn"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'--}}
+{{--                   data-textAlign="['inherit','inherit','inherit','inherit']"--}}
+{{--                   data-paddingtop="[20,20,15,12]"--}}
+{{--                   data-paddingright="[30,30,25,20]"--}}
+{{--                   data-paddingbottom="[20,20,15,12]"--}}
+{{--                   data-paddingleft="[30,30,25,20]">VIEW MORE DETAILS--}}
 
-                </a>
+{{--                </a>--}}
 
                 <a class="tp-caption skin-flat-button tp-resizeme" href="#" target="_self" id="slide-4-layer-19" data-x="['center','center','center','center']" data-hoffset="['407','311','0','0']" data-y="['top','top','middle','middle']" data-voffset="['432','425','130','93']"
                    data-fontsize="['13','13','12','11']"

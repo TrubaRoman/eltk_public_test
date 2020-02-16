@@ -3321,21 +3321,23 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 /*------------------------------------------------------------------------------*/
 
     
-    jQuery( ".ttm-header-search-link a" ).addClass('sclose');   
+    jQuery( ".ttm-header-search-link #alt-menu" ).addClass('sclose');   
     
-    jQuery( ".ttm-header-search-link a" ).click(function(event ) {  
-  
+    jQuery( ".ttm-header-search-link #alt-menu" ).click(function(event ) {  
+
         jQuery(".field.searchform-s").focus();  
-        
-        if (jQuery('.ttm-header-search-link a').hasClass('sclose')) {   
-            jQuery( ".ttm-header-search-link a i" ).removeClass('ti-search').addClass('ti-close');
+
+                
+        if (jQuery('.ttm-header-search-link #alt-menu').hasClass('sclose')) {   
+            jQuery( ".ttm-header-search-link #alt-menu i" ).removeClass('ti-more-alt').addClass('ti-close');
             jQuery(this).removeClass('sclose').addClass('open');    
             jQuery(".ttm-search-overlay").addClass('st-show');                  
         } else {
             jQuery(this).removeClass('open').addClass('sclose');
-            jQuery( ".ttm-header-search-link a i" ).removeClass('ti-close').addClass('ti-search');  
+            jQuery( ".ttm-header-search-link #alt-menu i" ).removeClass('ti-close').addClass('ti-more-alt');  
             jQuery(".ttm-search-overlay").removeClass('st-show');   
-        }   
+        } 
+  
         event.preventDefault(); 
     });
 

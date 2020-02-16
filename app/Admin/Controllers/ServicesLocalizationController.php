@@ -74,7 +74,15 @@ class ServicesLocalizationController extends AdminController
 
         $form->text('menu', __('Menu'));
         $form->text('services_id', __('Services id'));
-        $form->select('lang', __('Lang'))->options(config('app.locales'));
+        $form->select('lang', __('Lang'))->options(function ()
+        {
+            $arr = [];
+            foreach(config('app.locales')  as  $value){
+                $arr[$value] = $value;
+            }
+            return $arr;
+
+        });
         $form->text('title', __('Title'));
         $form->text('short_content', __('Short content'));
         $form->textarea('content', __('Content'));

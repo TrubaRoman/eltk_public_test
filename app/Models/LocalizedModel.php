@@ -23,8 +23,7 @@ class LocalizedModel extends Model
     public function localizations()
     {
         return $this->hasMany(
-//            $this->getLocalizationModelName()
-            ServicesLocalization::class
+           $this->getLocalizationModelName()
         );
     }
 

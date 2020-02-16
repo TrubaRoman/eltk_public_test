@@ -5,7 +5,7 @@
         <div class="container">
             <div class="ttm-topbar-content">
                 <ul class="top-contact text-left">
-                    <li class="list-inline-item">Your Trusted 24 Hours Service Provider!</li>
+                    <li class="list-inline-item">{{__('/layouts/header.top-header.left-slogan')}}</li>
                 </ul>
                 <div class="topbar-right text-right">
                     <div class="ttm-social-links-wrapper list-inline">
@@ -23,7 +23,7 @@
                     </div>
                     <ul class="top-contact ttm-highlight-right">
 
-                        <li><strong><i class="fa fa-phone"></i>Talk To Expert :</strong> <span class="tel-no">0 (143) 456 7897</span></li>
+                        <li><strong><i class="fa fa-phone"></i>{{__('/layouts/header.top-header.right-slogan')}} :</strong> <span class="tel-no">0 (143) 456 7897</span></li>
                     </ul>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                                 <i class="ti ti-mobile"></i>
                             </div>
                             <div class="title-box">
-                                <h5>Call</h5>
+                                <h5>{{__('/layouts/header.top-header.call')}}</h5>
                                 <p>+123 456 7890</p>
                             </div>
                         </li>
@@ -57,7 +57,7 @@
                                 <i class="ti ti-comment-alt"></i>
                             </div>
                             <div class="title-box">
-                                <h5>Email</h5>
+                                <h5>{{__('/layouts/header.top-header.email')}}</h5>
                                 <p>info@example.com</p>
                             </div>
                         </li>
@@ -66,7 +66,7 @@
                                 <i class="ti ti-location-pin"></i>
                             </div>
                             <div class="title-box">
-                                <h5>Address</h5>
+                                <h5>{{__('/layouts/header.top-header.address')}}</h5>
                                 <p>24 Fifth st, Los Angeles, USA</p>
                             </div>
                         </li>
@@ -91,24 +91,8 @@
                                 </div>
                                 <nav id="menu" class="menu">
                                     <ul class="dropdown">
-                                        <li class="active"><a href="index.html">Home</a>
-                                            <ul>
-                                                <li><a href="index.html">Sample Homepage 1</a></li>
-                                                <li><a href="home-2.html">Sample Homepage 2</a></li>
-                                                <li><a href="home-3.html">Sample Homepage 3</a></li>
-                                                <li><a href="home-4.html">Sample Homepage 4<span class="label-new">New</span></a></li>
-                                                <li><a href="home-5.html">Sample Homepage 5<span class="label-new">New</span></a></li>
-                                                <li><a href="home-onepage.html">Sample Homepage One<span class="label-new">New</span></a></li>
-                                                <li class="active"><a href="#">Header Styles</a>
-                                                    <ul>
-                                                        <li><a href="index.html">Header Classic</a></li>
-                                                        <li><a target="_blank" href="header-overlay.html">Header Overlay</a></li>
-                                                        <li class="active"><a target="_blank" href="header-infostack.html">Header Infostack</a></li>
-                                                        <li><a target="_blank" href="header-stackcenter.html">Header Stack Center</a></li>
-                                                        <li><a target="_blank" href="header-classic-info.html">Header Classic Info</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <li class="active"><a href="{{route('home',app()->getLocale())}}">Home</a>
+
                                         </li>
                                         <li><a href="#">Pages</a>
                                             <ul>
@@ -131,8 +115,8 @@
                                                 <li><a href="element.html">Elements</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="{{route('services')}}">Services</a>
-
+                                        <li>
+                                            <a href="{{route('services',app()->getLocale())}}">Services</a>
                                         </li>
                                         <li><a href="#">Projects</a>
                                             <ul>
@@ -175,9 +159,48 @@
                                 </nav>
                             </div>
                             <div class="ttm-rt-contact">
+                  <!-- header-icins -->
+                                        <div class="ttm-header-icons ">
+                                     
+
+
+                                            <div class="ttm-header-icon ttm-header-search-link">
+                                                <a  href="#" id="alt-menu" ><i class="ti ti-more-alt"></i></a>
+                                                <div class="ttm-search-overlay">
+                                                    <div class="ttm-site-searchform">
+                                                        <div class="w-search-form-h">
+                                                            <div class="w-search-form-row">
+
+
+                                                            	        <!-- ????                -->
+										                            <ul>
+										                                <li>                         
+										                                       <a href="tel:+48609862467"  class= "link-defoult" >
+										                                       		<p ><i class="fa fa-phone"></i> +48 609 862 467</p> 
+										                                       </a>                                     
+										                                </li>
+										                              
+										                                <li>                         
+										                                       <a href="mailto:eltk.koczurek@op.pl"  class= "link-defoult" >
+										                                       		<p ><i class="fa fa-at"></i> eltk.koczurek@op.pl</p> 
+										                                       </a>                                     
+										                                </li> 
+
+
+										                            </ul>
+                        
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div><!-- header-icons end -->
+
 
                                 <div class="ttm-custombutton">
-                                    <a href="contact-us.html">strefa pracownika<i class="fa fa-caret-right"></i></a>
+                                    <a href="contact-us.html">{{__('/layouts/header.nav.employee-cabinet')}}<i class="fa fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>

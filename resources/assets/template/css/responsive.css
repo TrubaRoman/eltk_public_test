@@ -318,7 +318,7 @@
     .ttm-header-style-infostack .ttm-rt-contact .ttm-custombutton ,
     .ttm-header-style-classic .ttm-rt-contact .ttm-custombutton{
         display: inline-block;
-        padding: 0 28px;
+        padding: 4px 28px;
         position: relative;
         margin-left: 2px;
         -webkit-transition: all 0.3s ease-in-out 0s;
@@ -444,6 +444,9 @@
 	/* featured-icon-box*/
 	.featured-icon-box.style6{ padding-left: 0px; padding-right: 0px; }
 
+}
+@media all and (min-width: 1199px){
+	.ttm-header-search-link{display: none;}
 }
 
 

@@ -128,9 +128,7 @@
 }
 .owl-carousel .owl-grab {
   cursor: move;
-  cursor: -webkit-grab;
-  cursor: -o-grab;
-  cursor: -ms-grab;
+
   cursor: grab;
 }
 .owl-carousel.owl-rtl {
@@ -186,7 +184,7 @@
 
 /* owl Next and Prev buttons */
 .owl-theme .owl-controls .owl-nav div {
-    background: #ff5e14;
+    background: #EE5651;
     text-align: center;
     display: block;
     outline: 0;
