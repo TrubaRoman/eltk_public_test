@@ -85,7 +85,7 @@ class ServicesLocalizationController extends AdminController
         });
         $form->text('title', __('Title'));
         $form->text('short_content', __('Short content'));
-        $form->textarea('content', __('Content'));
+        $form->ckeditor('content', __('Content'));
 
         return $form;
     }
