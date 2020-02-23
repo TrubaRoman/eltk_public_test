@@ -30,16 +30,19 @@
                     <div class="col-md-4 d-flex align-items-streach">
                         <!-- featured-imagebox -->
                         <div class="featured-imagebox box-shadow2 mb-30">
-                            <div class="featured-thumbnail">
+                            <div class="featured-thumbnail" style="min-height: 270px">
                                 <img class="img-fluid" src="{{$item->getLastImage()}}" alt="">
                             </div>
                             <div class="ttm-box-bottom-content">
                                 <div class="featured-title featured-title">
                                     <h5><a href="{{route('services.show',[app()->getLocale(),$item->slug])}}">{{$item->localization->title}}</a></h5>
                                 </div>
-                                <div class="featured-desc">
+                                <div class="featured-desc pb-20" >
                                     <p>{{$item->localization->short_content}}</p>
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10" href=" {{route('services.show',[app()->getLocale(),$item->slug])}}">MORE DETAILS<i class="ti ti-angle-double-right"></i></a>
+
+                                    <div class="self-item " style="position: absolute; bottom: 38px;left: 15px;right: 15px;top:auto">
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mb-10" href=" {{route('services.show',[app()->getLocale(),$item->slug])}}">MORE DETAILS<i class="ti ti-angle-double-right"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div><!-- featured-imagebox end-->
