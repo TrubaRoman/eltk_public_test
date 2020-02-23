@@ -11,7 +11,7 @@
                     </div><!-- /.page-title-captions -->
                     <div class="breadcrumb-wrapper">
                                 <span>
-                                    <a title="Homepage" href="index.html"><i class="ti ti-home"></i></a>
+                                    <a title="Homepage" href="{{route('home',app()->getLocale())}}"><i class="ti ti-home"></i></a>
                                 </span>
                         <span class="ttm-bread-sep">&nbsp; / &nbsp;</span>
                         <span><span>Services 2</span></span>

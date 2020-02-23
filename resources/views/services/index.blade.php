@@ -27,19 +27,19 @@
 {{--                    {{dd($services)}}--}}
                     @foreach($services as $item)
 
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-flex align-items-streach">
                         <!-- featured-imagebox -->
                         <div class="featured-imagebox box-shadow2 mb-30">
                             <div class="featured-thumbnail">
-                                <img class="img-fluid" src="{{$item->getImage()}}" alt="">
+                                <img class="img-fluid" src="{{$item->getLastImage()}}" alt="">
                             </div>
                             <div class="ttm-box-bottom-content">
                                 <div class="featured-title featured-title">
-                                    <h5><a href="home-maintainance.html">{{$item->localization->title}}</a></h5>
+                                    <h5><a href="{{route('services.show',[app()->getLocale(),$item->slug])}}">{{$item->localization->title}}</a></h5>
                                 </div>
                                 <div class="featured-desc">
                                     <p>{{$item->localization->short_content}}</p>
-                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10" href="home-maintainance.html">MORE DETAILS<i class="ti ti-angle-double-right"></i></a>
+                                    <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-icon-btn-right ttm-btn-style-border ttm-btn-color-black mt-10" href=" {{route('services.show',[app()->getLocale(),$item->slug])}}">MORE DETAILS<i class="ti ti-angle-double-right"></i></a>
                                 </div>
                             </div>
                         </div><!-- featured-imagebox end-->

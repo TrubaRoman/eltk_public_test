@@ -71,7 +71,6 @@ class ServicesLocalizationController extends AdminController
     protected function form()
     {
         $form = new Form(new ServicesLocalization());
-
         $form->text('menu', __('Menu'));
         $form->text('services_id', __('Services id'));
         $form->select('lang', __('Lang'))->options(function ()
@@ -82,7 +81,7 @@ class ServicesLocalizationController extends AdminController
             }
             return $arr;
 
-        });
+        })->default(app()->getLocale());
         $form->text('title', __('Title'));
         $form->text('short_content', __('Short content'));
         $form->ckeditor('content', __('Content'));

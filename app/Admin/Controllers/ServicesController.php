@@ -58,7 +58,13 @@ class ServicesController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('slug', __('Slug'));
-        $show->image('image',('Image'));
+        $show->image('image')->as(function ($image){
+            $html = '';
+            foreach($image as $item){
+                $html .= "<img src='{$item}' style='max-height: 150px;margin-right: 10px'>";
+            }
+            return $html;
+        })->unescape();
         $show->field('status', __('Status'));
         $show->field('sort', __('Sort'));
         $show->field('created_at', __('Created at'));
@@ -99,7 +105,8 @@ class ServicesController extends AdminController
         $form = new Form(new Services());
 
         $form->text('slug', __('Slug'));
-        $form->image('image', __('Image'));
+        // multiple image
+        $form->multipleImage('image','images');
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 
