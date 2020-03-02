@@ -14,5 +14,7 @@ Route::group([
     $router->resource('users', UserController::class);
     $router->resource('services', ServicesController::class);
     $router->resource('services-localizations', ServicesLocalizationController::class);
+    $router->resource('prices', PriceController::class);
+
 
 });

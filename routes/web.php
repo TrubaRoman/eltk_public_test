@@ -30,5 +30,6 @@
             Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
             Route::get('/services','ServicesController@index')->name('services');
             Route::get('/services/{slug?}','ServicesController@show')->name('services.show');
+            Route::get('/price','PriceController@index')->name('price');
 
     });
