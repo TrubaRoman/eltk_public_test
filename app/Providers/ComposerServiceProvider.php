@@ -25,6 +25,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('price.index', NavigationComposer::class);
+        view()->composer('layouts._script_nav', NavigationComposer::class);
     }
 }

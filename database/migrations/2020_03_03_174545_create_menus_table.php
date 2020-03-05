@@ -19,7 +19,7 @@ class CreateMenusTable extends Migration
             $table->string('name_pl');
             $table->string('name_en');
             $table->string('name_uk');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->tinyInteger('sort_order')->default(0);
             $table->boolean('status')->default(true);
 

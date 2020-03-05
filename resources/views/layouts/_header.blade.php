@@ -91,60 +91,7 @@
                                 </div>
                                 <nav id="menu" class="menu">
                                     <ul class="dropdown">
-                                        <li class="active"><a href="{{route('home',app()->getLocale())}}">Home</a>
-
-                                        </li>
-                                        <li><a href="#">Pages</a>
-                                            <ul>
-                                                <li><a href="aboutus-1.html">About Us 1</a></li>
-                                                <li><a href="aboutus-2.html">About Us 2</a></li>
-                                                <li><a href="services-1.html">Service 1</a></li>
-                                                <li><a href="services-2.html">Service 2</a></li>
-                                                <li><a href="our-team.html">Our Team</a></li>
-                                                <li><a href="#">Shop</a>
-                                                    <ul>
-                                                        <li><a href="home-shop.html">Home Shop</a></li>
-                                                        <li><a href="product-details.html">Single Product Details</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="career.html">Carrer</a></li>
-                                                <li><a href="error.html">Error Page</a></li>
-                                                <li><a href="element.html">Elements</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="{{route('services',app()->getLocale())}}">Services</a>
-                                        </li>
-                                        <li><a href="#">Projects</a>
-                                            <ul>
-                                                <li><a href="portfolio-style-1.html">Project Style 1</a></li>
-                                                <li><a href="portfolio-style-2.html">Project Style 2</a></li>
-                                                <li><a href="#">Project Single</a>
-                                                    <ul>
-                                                        <li><a href="single-style-1.html">Style One</a></li>
-                                                        <li><a href="single-style-2.html">Style Two</a></li>
-                                                        <li><a href="single-style-3.html">Style Three</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Blog Classic</a></li>
-                                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                <li><a href="blog-left-image.html">Blog Left Image</a></li>
-                                                <li><a href="single-blog.html">Single Blog View</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Contact Us</a>
-                                            <ul>
-                                                <li><a href="contact-us-1.html">Contact Us 1</a></li>
-                                                <li><a href="contact-us-2.html">Contact Us 2</a></li>
-                                            </ul>
-                                        </li>
+                                    @include('layouts._script_nav')
 
 
                                         <li><a href="#" ><img src="/build/img/flags/24/{{app()->getLocale()}}.png">	&#8195;{{strtoupper(app()->getLocale())}}</a>

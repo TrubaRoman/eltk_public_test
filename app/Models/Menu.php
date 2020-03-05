@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Menu extends Model
 {
+
     protected $fillable = [
         'parent_id',
         'name_pl',
@@ -18,12 +19,19 @@ class Menu extends Model
 
     public $timestamps = false;
 
-    protected function getMenuAttribute()
+    public function getNameAttribute()
     {
         $locale = app()->getLocale();
         $column = "name_{$locale}";
         return $this->{$column};
     }
+
+//    public function getUrlAttribute()
+//    {
+//        $locale = app()->getLocale();
+//        $column = $locale."url";
+//        return $this->{$column};
+//    }
 
     public function scopeIsStatus($query)
     {
