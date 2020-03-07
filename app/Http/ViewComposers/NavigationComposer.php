@@ -9,13 +9,13 @@
     {
         public function compose(View $view)
         {
-            $menuitems = Menu::isStatus()
+            $menufooter = Menu::isStatus()
                 ->ofSort(['parent_id' => 'asc', 'sort_order' => 'asc'])
                 ->get();
 
-            $menuitems = $this->buildTree($menuitems);
+            $menuitems = $this->buildTree($menufooter);
 
-            return $view->with('menuitems', $menuitems);
+            return $view->with(['menuitems'=> $menuitems,'menufooter'=>$menufooter]);
         }
 
         public function buildTree($items)

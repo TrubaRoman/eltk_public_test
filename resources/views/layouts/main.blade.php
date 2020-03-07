@@ -100,23 +100,7 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                        <div class="widget widget_nav_menu clearfix">
-                            <h3 class="widget-title">Our Services</h3>
-                            <ul id="menu-footer-services">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="services-1.html">Services</a></li>
-                                <li><a href="about-1.html">About</a></li>
-                                <li><a href="portfolio-style-1.html">Gallery</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="our-team.html">Team</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="career.html">Carrer</a></li>
-                                <li><a href="contact-us-1.html">Contact Us</a></li>
-                                <li><a href="single-style-3.html">Projects</a></li>
-                                <li><a href="contact-us-2.html">Locations</a></li>
-                                <li><a href="home-shop.html">Shop</a></li>
-                            </ul>
-                        </div>
+@include('layouts._footer_nav')
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_text clearfix">

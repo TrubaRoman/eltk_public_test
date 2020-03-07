@@ -13,7 +13,6 @@ class Menu extends Model
         'name_en',
         'name_uk',
         'url',
-        'sort_order',
         'status'
     ];
 
@@ -26,12 +25,7 @@ class Menu extends Model
         return $this->{$column};
     }
 
-//    public function getUrlAttribute()
-//    {
-//        $locale = app()->getLocale();
-//        $column = $locale."url";
-//        return $this->{$column};
-//    }
+
 
     public function scopeIsStatus($query)
     {
