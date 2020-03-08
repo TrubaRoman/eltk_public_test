@@ -13,7 +13,8 @@ class Menu extends Model
         'name_en',
         'name_uk',
         'url',
-        'status'
+        'status',
+        'sort_order'
     ];
 
     public $timestamps = false;
@@ -34,7 +35,9 @@ class Menu extends Model
 
     public function scopeOfSort($query, $sort)
     {
+
         foreach ($sort as $column => $direction) {
+
             $query->orderBy($column, $direction);
         }
 
