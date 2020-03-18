@@ -146,5 +146,10 @@ return [
     */
 
     'attributes' => [
+        'name'                  => 'Imię',
+        'email'                 => 'Adres e-mail',
+        'address'               => 'Adres',
+        'phone'                 => 'Telefon',
+        'message'               => 'Wiadomość',
     ],
 ];

@@ -13,6 +13,7 @@ class CreateContactsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('contacts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->nullable();
@@ -22,8 +23,8 @@ class CreateContactsTable extends Migration
             $table->string('lang',2);
             $table->string('body');
             $table->ipAddress('ip');
-            $table->tinyInteger('is_read');
-            $table->tinyInteger('is_answer');
+            $table->tinyInteger('is_read')->nullable();
+            $table->tinyInteger('is_answer')->nullable();
             $table->timestamps();
         });
     }

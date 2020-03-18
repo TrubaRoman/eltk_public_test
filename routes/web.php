@@ -33,6 +33,6 @@
             Route::get('/price','PriceController@index')->name('price');
             Route::get('/about','AboutController@index')->name('about-us');
             Route::get('/contacts','ContactsController@index')->name('contacts');
-            Route::post('/send','ContactsController@send')->name('send');
+            Route::post('/sendmail','ContactsController@sendmail')->name('sendmail');
 
     });

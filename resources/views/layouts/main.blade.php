@@ -165,15 +165,101 @@
 
 <!-- Javascript -->
 
-<script src="{{mix('js/layout.js','build')}}"></script>;
+<script src="{{mix('js/layout.js','build')}}"></script>
 
 <!-- Revolution Slider -->
-<script src="{{mix('revolution/js/slider.js','build')}}"></script>;
+<script src="{{mix('revolution/js/slider.js','build')}}"></script>
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="{{mix('revolution/js/extensions/extensions-slider.js','build')}}"></script>;
+<script src="{{mix('revolution/js/extensions/extensions-slider.js','build')}}"></script>
 
 <!-- Javascript end-->
 
+{{--<script>--}}
+{{--    (function () {--}}
+{{--        document.querySelector('#contact-form').addEventListener('submit',function (e) {--}}
+{{--            e.preventDefault()--}}
+{{--            axios.post(this.action,--}}
+{{--                {--}}
+{{--                    'name': document.querySelector('#name').value,--}}
+{{--                    'email': document.querySelector('#email').value,--}}
+{{--                    'phone': document.querySelector('#phone').value,--}}
+{{--                   'body': document.querySelector('#body').value,--}}
+{{--                })--}}
+{{--            .then((response)=>{--}}
+{{--                   console.log('success');--}}
+{{--            })--}}
+{{--            .catch((error)=> {--}}
+{{--                console.log(error.response)--}}
+{{--            });--}}
+{{--        });--}}
+{{--    })();--}}
+{{--</script>--}}
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $('#ttm-contactform').on('submit', function (e) {
+            e.preventDefault();
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            // var name = $("input[name=name]").val();
+            // var phone = $("input[name=phone]").val();
+            // var email = $("input[name=email]").val();
+            // var body = $("input[name=body]").val();
+
+            $.ajax({
+                type: 'POST',
+                url: '{{route('sendmail',app()->getLocale())}}',
+                data: $('#ttm-contactform').serialize(),
+                // success: function (response) {
+                //
+                //
+                //       document.getElementById('flash-messages').scrollIntoView({behavior:'smooth',block: 'center'});
+                //      $('div.text-success').html(response);
+                //
+                // },
+                success: function(data){
+
+                 const successItem = Object.keys(data)[0];
+                 const successMessage = data[successItem];
+
+                    const elementDOM = document.getElementById('flash-messages')
+                    const successMessages = document.querySelectorAll('.text-success')
+
+                    successMessages.forEach((element) => element.textContent)
+                    console.log(successMessages);
+                    elementDOM.insertAdjacentHTML('afterend',`<div class = "text-success"><b>${successMessage}</b></div>`)
+
+                },
+
+                error: function (error) {
+
+                    const errors = error.responseJSON.errors;
+                    const firstItem = Object.keys(errors)[0]
+                    const firstItemDOM = document.getElementById(firstItem)
+                    const firstErrorMessage = errors[firstItem][0]
+
+                    //scroll to the error message
+                    firstItemDOM.scrollIntoView({behavior:'smooth',block: 'center'})
+
+                    //remove all errors messages
+                    const errorMessages = document.querySelectorAll('.text-danger')
+                    errorMessages.forEach((element) => element.textContent = '')
+
+                    //show is the error message
+                    firstItemDOM.insertAdjacentHTML('afterend',`<div class = "text-danger">${firstErrorMessage}</div>`)
+
+
+                }
+
+            })
+        })
+    })
+</script>
 </body>
 
 <!-- Mirrored from themetechmount.com/html/boldman/header-infostack.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Dec 2019 12:54:26 GMT -->

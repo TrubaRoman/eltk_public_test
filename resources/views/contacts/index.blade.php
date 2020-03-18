@@ -17,41 +17,41 @@
                             </div>
                             <div class="title-desc">We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of seryou with any unconventional.</div>
                         </div><!-- section title end -->
-                        <form id="ttm-contactform" class="ttm-contactform wrap-form clearfix" method="post" action="send">
+                        <div class="text-success" id = "flash-messages"></div>
+                        <form id="ttm-contactform" id="contact-form" class="ttm-contactform wrap-form clearfix" method="POST"   >
                             {{csrf_field()}}
-
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="your-name" type="text" value="" placeholder="Your Name" ></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="name" type="text" value="" placeholder="{{__('validation.attributes.name')}}" id="name"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="your-phone" type="text" value="" placeholder="Cell Phone" ></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="" placeholder="{{__('validation.attributes.phone')}}" id="phone" ></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="" placeholder="Email" ></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="" placeholder="{{__('validation.attributes.email')}}" id="email"  ></span>
                                     </label>
                                 </div>
-                                <div class="col-lg-6">
-                                    <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i><input name="venue" type="text" value="" placeholder="Venue" ></span>
-                                    </label>
-                                </div>
+{{--                                <div class="col-lg-6">--}}
+{{--                                    <label>--}}
+{{--                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i><input name="venue" type="text" value="" placeholder="Venue" ></span>--}}
+{{--                                    </label>--}}
+{{--                                </div>--}}
+
                             </div>
                             <label>
-                                <span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i><textarea name="message" rows="3" cols="40" placeholder="Message" ></textarea></span>
+                                <span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i><textarea name="message" rows="3" cols="40" placeholder="{{__('validation.attributes.message')}}" id="message"></textarea></span>
                             </label>
-                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="SEND">
+                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="MAKE A RESERVATION">
                         </form>
-
-
                     </div>
+
                     <div class="col-md-5">
                         <!-- single-img -->
                         <div class="single-img">
@@ -62,14 +62,15 @@
             </div>
         </section>
         <!-- contact-form-section end -->
-
+        <hr>
         <!-- map-section -->
         <div class="ttm-row map-section bg-layer clearfix">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-8 ">
-                        <div class="map-wrapper" style="padding-left: 30px">
+                    <div class="col-lg-8">
+
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.7371101624863!2d19.984145315113846!3d50.01628242643495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164367f3dc2173%3A0x4ee479f6f6467e!2zT2vDs2xuYSAyOCwgS3Jha8Ozdw!5e0!3m2!1suk!2spl!4v1583614458825!5m2!1suk!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
 
                     </div>
                     <div class="col-lg-4">
@@ -102,5 +103,5 @@
         <!-- map-section -->
 
     </div>
-
     @endsection
+{{--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.7371101624863!2d19.984145315113846!3d50.01628242643495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164367f3dc2173%3A0x4ee479f6f6467e!2zT2vDs2xuYSAyOCwgS3Jha8Ozdw!5e0!3m2!1suk!2spl!4v1583614458825!5m2!1suk!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>--}}

@@ -154,7 +154,7 @@ return [
     'attributes' => [
         'name'                  => 'Ім\'я',
         'username'              => 'Нікнейм',
-        'email'                 => 'E-mail адреса',
+        'email'                 => 'Електронна адреса',
         'first_name'            => 'Ім\'я',
         'last_name'             => 'Прізвище',
         'password'              => 'Пароль',
@@ -181,5 +181,6 @@ return [
         'time'                  => 'Час',
         'available'             => 'Доступно',
         'size'                  => 'Розмір',
+        'message'               => 'Повідомлення',
     ],
 ];
