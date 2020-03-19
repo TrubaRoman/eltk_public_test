@@ -41,7 +41,7 @@ class ContactsController extends Controller
         $contact->ip = $request->ip();
         $contact->save();
 
-        return response()->json(['success'=>'BLA BLA BLA SUCESS !!!! ']);
+        return response()->json(['success'=>'BLA BLA BLA SUCESS !!!! '],200);
     }
 
 }

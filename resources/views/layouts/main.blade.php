@@ -215,29 +215,32 @@
                 type: 'POST',
                 url: '{{route('sendmail',app()->getLocale())}}',
                 data: $('#ttm-contactform').serialize(),
-                // success: function (response) {
-                //
-                //
-                //       document.getElementById('flash-messages').scrollIntoView({behavior:'smooth',block: 'center'});
-                //      $('div.text-success').html(response);
-                //
-                // },
-                success: function(data){
+                success: function (response) {
+                    console.log(response)
+                    $('#flash-messages').show('slow');
+                        document.getElementById('flash-messages').scrollIntoView({behavior:'smooth',block: 'center'});
+                        $('div.text-success').html(response.success);
 
-                 const successItem = Object.keys(data)[0];
-                 const successMessage = data[successItem];
-
-                    const elementDOM = document.getElementById('flash-messages')
-                    const successMessages = document.querySelectorAll('.text-success')
-
-                    successMessages.forEach((element) => element.textContent)
-                    console.log(successMessages);
-                    elementDOM.insertAdjacentHTML('afterend',`<div class = "text-success"><b>${successMessage}</b></div>`)
+                    $('.text-danger').hide('slow');
 
                 },
+                // success: function(data){
+                //
+                //  const successItem = Object.keys(data)[0];
+                //  const successMessage = data[successItem];
+                //
+                //     const elementDOM = document.getElementById('flash-messages')
+                //     const successMessages = document.querySelectorAll('.text-success')
+                //
+                //     successMessages.forEach((element) => element.textContent)
+                //     console.log(successMessages);
+                //     elementDOM.insertAdjacentHTML('afterend',`<div class = "text-success"><b>${successMessage}</b></div>`)
+                //
+                // },
 
                 error: function (error) {
-
+                    console.log(error)
+                     $('#flash-messages').hide('slow');
                     const errors = error.responseJSON.errors;
                     const firstItem = Object.keys(errors)[0]
                     const firstItemDOM = document.getElementById(firstItem)
@@ -253,10 +256,15 @@
                     //show is the error message
                     firstItemDOM.insertAdjacentHTML('afterend',`<div class = "text-danger">${firstErrorMessage}</div>`)
 
-
                 }
 
+
             })
+            document.getElementById('ttm-contactform').reset();
+            setTimeout(function () {
+                $('#flash-messages').hide('slow');
+                $('.text-danger').hide('slow');
+            },5000);
         })
     })
 </script>

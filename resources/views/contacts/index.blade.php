@@ -17,8 +17,8 @@
                             </div>
                             <div class="title-desc">We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of seryou with any unconventional.</div>
                         </div><!-- section title end -->
-                        <div class="text-success" id = "flash-messages"></div>
-                        <form id="ttm-contactform" id="contact-form" class="ttm-contactform wrap-form clearfix" method="POST"   >
+                        <div class="text-success " id = "flash-messages"></div>
+                        <form id="ttm-contactform"  class="ttm-contactform wrap-form clearfix"   >
                             {{csrf_field()}}
                             <div class="row">
                                 <div class="col-lg-6">
