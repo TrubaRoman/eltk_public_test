@@ -216,7 +216,7 @@
                 url: '{{route('sendmail',app()->getLocale())}}',
                 data: $('#ttm-contactform').serialize(),
                 success: function (response) {
-                    console.log(response)
+
                     $('#flash-messages').show('slow');
                         document.getElementById('flash-messages').scrollIntoView({behavior:'smooth',block: 'center'});
                         $('div.text-success').html(response.success);
@@ -239,22 +239,34 @@
                 // },
 
                 error: function (error) {
-                    console.log(error)
-                     $('#flash-messages').hide('slow');
-                    const errors = error.responseJSON.errors;
-                    const firstItem = Object.keys(errors)[0]
-                    const firstItemDOM = document.getElementById(firstItem)
-                    const firstErrorMessage = errors[firstItem][0]
 
-                    //scroll to the error message
-                    firstItemDOM.scrollIntoView({behavior:'smooth',block: 'center'})
+                    if(error.status === 429){
 
-                    //remove all errors messages
-                    const errorMessages = document.querySelectorAll('.text-danger')
-                    errorMessages.forEach((element) => element.textContent = '')
+                        $('#throttle').show('slow');
+                        document.getElementById('throttle').scrollIntoView({behavior:'smooth',block: 'center'});
+                        $('div.text-warning').html(error.responseJSON.message);
 
-                    //show is the error message
-                    firstItemDOM.insertAdjacentHTML('afterend',`<div class = "text-danger">${firstErrorMessage}</div>`)
+                    }
+                    else{
+                        $('#flash-messages').hide('slow');
+                        const errors = error.responseJSON.errors;
+                        const firstItem = Object.keys(errors)[0]
+                        const firstItemDOM = document.getElementById(firstItem)
+                        const firstErrorMessage = errors[firstItem][0]
+
+                        //scroll to the error message
+                        firstItemDOM.scrollIntoView({behavior:'smooth',block: 'center'})
+
+                        //remove all errors messages
+                        const errorMessages = document.querySelectorAll('.text-danger')
+                        errorMessages.forEach((element) => element.textContent = '')
+
+                        //show is the error message
+                        firstItemDOM.insertAdjacentHTML('afterend',`<div class = "text-danger">${firstErrorMessage}</div>`)
+                    }
+                    
+                    $('.text-success').hide('slow');
+
 
                 }
 
@@ -264,6 +276,7 @@
             setTimeout(function () {
                 $('#flash-messages').hide('slow');
                 $('.text-danger').hide('slow');
+                $('#throttle').hide('slow');
             },5000);
         })
     })
