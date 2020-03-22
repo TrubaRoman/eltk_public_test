@@ -13936,7 +13936,7 @@ namespace Illuminate\Support\Facades {
          * @param string $path
          * @param \Illuminate\Contracts\Support\Arrayable|array $data
          * @param array $mergeData
-         * @return \Illuminate\Contracts\View\View 
+         * @return \Illuminate\Contracts\View\Vilocaew
          * @static 
          */ 
         public static function file($path, $data = [], $mergeData = [])

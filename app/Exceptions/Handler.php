@@ -51,12 +51,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
         {
-            if($exception instanceof ThrottleRequestsException) {
-                $time = Carbon::now()->addDay();
-            return response()->json([
-                'message' => 'Too many requests. Slowf your roll! go go go'.$time,
-                'code' => 429
-            ], 429);}
+//            if($exception instanceof ThrottleRequestsException) {
+////                $time = Carbon::now()->addDay();
+//            return response()->json([
+//                'message' =>  __('throttle.limitrequests'),
+//                'code' => 429
+//            ], 429);}
         return parent::render($request, $exception);
     }
 }

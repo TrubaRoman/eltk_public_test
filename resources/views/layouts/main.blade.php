@@ -206,46 +206,30 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            // var name = $("input[name=name]").val();
-            // var phone = $("input[name=phone]").val();
-            // var email = $("input[name=email]").val();
-            // var body = $("input[name=body]").val();
 
             $.ajax({
                 type: 'POST',
                 url: '{{route('sendmail',app()->getLocale())}}',
                 data: $('#ttm-contactform').serialize(),
-                success: function (response) {
 
+                success: function (response) {
+                    $('#throttle').hide('slow');
                     $('#flash-messages').show('slow');
                         document.getElementById('flash-messages').scrollIntoView({behavior:'smooth',block: 'center'});
                         $('div.text-success').html(response.success);
 
                     $('.text-danger').hide('slow');
-
+                    document.getElementById('ttm-contactform').reset();
                 },
-                // success: function(data){
-                //
-                //  const successItem = Object.keys(data)[0];
-                //  const successMessage = data[successItem];
-                //
-                //     const elementDOM = document.getElementById('flash-messages')
-                //     const successMessages = document.querySelectorAll('.text-success')
-                //
-                //     successMessages.forEach((element) => element.textContent)
-                //     console.log(successMessages);
-                //     elementDOM.insertAdjacentHTML('afterend',`<div class = "text-success"><b>${successMessage}</b></div>`)
-                //
-                // },
 
                 error: function (error) {
 
-                    if(error.status === 429){
+                    $('#throttle').hide('slow');
 
+                    if(error.status === 429){
                         $('#throttle').show('slow');
                         document.getElementById('throttle').scrollIntoView({behavior:'smooth',block: 'center'});
                         $('div.text-warning').html(error.responseJSON.message);
-
                     }
                     else{
                         $('#flash-messages').hide('slow');
@@ -272,11 +256,11 @@
 
 
             })
-            document.getElementById('ttm-contactform').reset();
+
             setTimeout(function () {
                 $('#flash-messages').hide('slow');
                 $('.text-danger').hide('slow');
-                $('#throttle').hide('slow');
+                //
             },5000);
         })
     })

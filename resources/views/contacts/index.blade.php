@@ -17,26 +17,26 @@
                             </div>
                             <div class="title-desc">We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of seryou with any unconventional.</div>
                         </div><!-- section title end -->
-                        <div class="text-success "  id="flash-messages"></div>
+                        <div class="text-success h6"  id="flash-messages"></div>
                         <div class="text-warning "  id="throttle"></div>
                         <form id="ttm-contactform"  class="ttm-contactform wrap-form clearfix"   >
                             {{csrf_field()}}
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="name" type="text" value="" placeholder="{{__('validation.attributes.name')}}" id="name"></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="name" type="text" value="{{old('name')}}" placeholder="{{__('validation.attributes.name')}}" id="name"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="" placeholder="{{__('validation.attributes.phone')}}" id="phone" ></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="{{old('phone')}}" placeholder="{{__('validation.attributes.phone')}}" id="phone" ></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="" placeholder="{{__('validation.attributes.email')}}" id="email"  ></span>
+                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="{{old('email')}}" placeholder="{{__('validation.attributes.email')}}" id="email"  ></span>
                                     </label>
                                 </div>
 {{--                                <div class="col-lg-6">--}}

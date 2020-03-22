@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Session;
 use View;
 use App\Models\Contacts;
@@ -10,14 +12,20 @@ use Validator;
 
 class ContactsController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('throttle:30')->only('sendmail');
+    }
+
     public function index()
     {
-//        dd(request()->ip());
         return view('contacts.index');
     }
 
     public function sendmail(Request $request)
     {
+
         $validator = Validator::make($request->all(),[
             'name' => 'required|string|max:100',
             'email' => 'required|email',
@@ -41,7 +49,7 @@ class ContactsController extends Controller
         $contact->ip = $request->ip();
         $contact->save();
 
-        return response()->json(['success'=>'BLA BLA BLA SUCESS !!!! '],200);
+        return response()->json(['success'=>__('messages.email-send-success')],200);
     }
 
 }
