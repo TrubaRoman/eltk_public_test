@@ -16,6 +16,8 @@ Route::group([
     $router->resource('services-localizations', ServicesLocalizationController::class);
     $router->resource('prices', PriceController::class);
     $router->resource('menus', MenuController::class);
+    $router->resource('contacts', ContactsController::class);
+
 
 
 });
