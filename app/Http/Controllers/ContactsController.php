@@ -8,7 +8,8 @@ use View;
 use App\Models\Contacts;
 use Illuminate\Http\Request;
 use Validator;
-
+use App\Mail\ContactForm;
+use Mail;
 
 class ContactsController extends Controller
 {
@@ -23,33 +24,37 @@ class ContactsController extends Controller
         return view('contacts.index');
     }
 
-    public function sendmail(Request $request)
+    public function sendmail(Request $request, Contacts $contact)
     {
 
         $validator = Validator::make($request->all(),[
             'name' => 'required|string|max:100',
             'email' => 'required|email',
             'phone' => 'numeric',
-            'message' => 'required|string|max:1500'
+            'message' => 'required|string|max:3500'
         ]);
         if ($validator->fails()){
             return response()
                 ->json(['errors' => $validator->errors()],422);
         }
 
-
-        $contact = new Contacts();
+//
+//        $contact = new Contacts();
 
         $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->subject = 'subject';
+        $contact->subject = 'Wiadomość z witryny';
         $contact->phone = $request->phone;
         $contact->body = $request->message;
         $contact->lang = app()->getLocale();
         $contact->ip = $request->ip();
         $contact->save();
 
-        return response()->json(['success'=>__('messages.email-send-success')],200);
+
+           Mail::to($contact->admin_email)->send(new ContactForm($contact));
+           return response()->json(['success'=>__('messages.email-send-success')],200);
+
+
     }
 
 }

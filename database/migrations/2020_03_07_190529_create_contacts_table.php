@@ -18,10 +18,10 @@ class CreateContactsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('email');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('subject');
             $table->string('lang',2);
-            $table->string('body');
+            $table->text('body');
             $table->ipAddress('ip');
             $table->tinyInteger('is_read')->nullable();
             $table->tinyInteger('is_answer')->nullable();
