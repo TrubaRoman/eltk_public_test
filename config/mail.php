@@ -2,6 +2,9 @@
 
 return [
 
+    'admin-email' => 'test-admin-email@excemple.com',
+
+    'admin-name' => env('APP_NAME','EL-T.K'),
     /*
     |--------------------------------------------------------------------------
     | Mail Driver

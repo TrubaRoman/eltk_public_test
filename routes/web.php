@@ -11,10 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    Route::get('/', function () {
+        return redirect(app()->getLocale());
+    });
 
-Auth::routes();
+    Route::group([
+        'prefix' => '{locale}',
+        'where' => ['locale' => '[a-zA-Z]{2}'],
+        'middleware' => 'setlocale'], function(){
 
-Route::get('/home', 'HomeController@index')->name('home');
+            Route::get('/', function () {
+                return view('welcome');
+            });
+
+            Auth::routes();
+
+            Route::get('/', 'HomeController@index')->name('home');
+            Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
+            Route::get('/services','ServicesController@index')->name('services');
+            Route::get('/services/{slug?}','ServicesController@show')->name('services.show');
+            Route::get('/price','PriceController@index')->name('price');
+            Route::get('/about','AboutController@index')->name('about-us');
+            Route::get('/contacts','ContactsController@index')->name('contacts');
+            Route::post('/sendmail','ContactsController@sendmail')->name('sendmail');
+
+    });

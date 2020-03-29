@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Exceptions;
-
+use Carbon\Carbon;
+use Illuminate\Http\Exceptions\ThrottleRequestsException;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
@@ -49,7 +50,13 @@ class Handler extends ExceptionHandler
      * @throws \Exception
      */
     public function render($request, Exception $exception)
-    {
+        {
+//            if($exception instanceof ThrottleRequestsException) {
+////                $time = Carbon::now()->addDay();
+//            return response()->json([
+//                'message' =>  __('throttle.limitrequests'),
+//                'code' => 429
+//            ], 429);}
         return parent::render($request, $exception);
     }
 }
