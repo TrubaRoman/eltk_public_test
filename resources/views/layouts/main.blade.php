@@ -172,31 +172,12 @@
 <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
 <script src="{{mix('revolution/js/extensions/extensions-slider.js','build')}}"></script>
 
-<!-- Javascript end-->
 
-{{--<script>--}}
-{{--    (function () {--}}
-{{--        document.querySelector('#contact-form').addEventListener('submit',function (e) {--}}
-{{--            e.preventDefault()--}}
-{{--            axios.post(this.action,--}}
-{{--                {--}}
-{{--                    'name': document.querySelector('#name').value,--}}
-{{--                    'email': document.querySelector('#email').value,--}}
-{{--                    'phone': document.querySelector('#phone').value,--}}
-{{--                   'body': document.querySelector('#body').value,--}}
-{{--                })--}}
-{{--            .then((response)=>{--}}
-{{--                   console.log('success');--}}
-{{--            })--}}
-{{--            .catch((error)=> {--}}
-{{--                console.log(error.response)--}}
-{{--            });--}}
-{{--        });--}}
-{{--    })();--}}
-{{--</script>--}}
 
 <script type="text/javascript">
-
+    $(function(){
+        $("#phone").mask("+(99) 999-999-999");
+    });
 
     $(document).ready(function () {
         $('#ttm-contactform').on('submit', function (e) {
@@ -248,12 +229,9 @@
                         //show is the error message
                         firstItemDOM.insertAdjacentHTML('afterend',`<div class = "text-danger">${firstErrorMessage}</div>`)
                     }
-                    
+
                     $('.text-success').hide('slow');
-
-
                 }
-
 
             })
 

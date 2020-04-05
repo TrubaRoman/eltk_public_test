@@ -2,7 +2,7 @@
 
 return [
 
-    'admin-email' => 'test-admin-email@excemple.com',
+    'admin-email' => env('ADMIN_EMAIL'),
 
     'admin-name' => env('APP_NAME','EL-T.K'),
     /*

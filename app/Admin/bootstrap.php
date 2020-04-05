@@ -18,4 +18,14 @@
  *
  */
 
+use Encore\Admin\Facades\Admin;
+
 Encore\Admin\Form::forget(['map', 'editor']);
+
+
+    Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+
+        $count = \App\Models\Contacts::getCountNewMessages();
+        $navbar->right(view('admin.header._nav',['count' => $count]));
+
+    });
