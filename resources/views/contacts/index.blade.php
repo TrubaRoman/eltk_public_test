@@ -29,7 +29,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <label>
-                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="{{old('phone')}}" placeholder="{{__('validation.attributes.phone')}}" id="phone" ></span>
+                                        <span class="text-input "><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="{{old('phone')}}" placeholder="{{__('validation.attributes.phone')}}" id="phone"  ></span>
                                     </label>
                                 </div>
                             </div>
@@ -39,6 +39,7 @@
                                         <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="{{old('email')}}" placeholder="{{__('validation.attributes.email')}}" id="email"  ></span>
                                     </label>
                                 </div>
+
 {{--                                <div class="col-lg-6">--}}
 {{--                                    <label>--}}
 {{--                                        <span class="text-input"><i class="ttm-textcolor-skincolor ti-location-pin"></i><input name="venue" type="text" value="" placeholder="Venue" ></span>--}}

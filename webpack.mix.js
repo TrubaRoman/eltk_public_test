@@ -43,6 +43,7 @@ mix.setPublicPath('public/build')
         "resources/assets/template/js/jquery.easing.js",
         "resources/assets/template/js/jquery-waypoints.js",
         "resources/assets/template/js/jquery-validate.js",
+        "resources/assets/template/js/jquery.maskedinput.js",
         "resources/assets/template/js/owl.carousel.js",
         "resources/assets/template/js/jquery.prettyPhoto.js",
         "resources/assets/template/js/numinate.min6959.js?ver=4.9.3",

@@ -19,10 +19,12 @@ class ContactsController extends Controller
         $this->middleware('throttle:30')->only('sendmail');
     }
 
+
     public function index()
     {
         return view('contacts.index');
     }
+
 
     public function sendmail(Request $request, Contacts $contact)
     {
@@ -30,7 +32,7 @@ class ContactsController extends Controller
         $validator = Validator::make($request->all(),[
             'name' => 'required|string|max:100',
             'email' => 'required|email',
-            'phone' => 'numeric',
+            'phone' => 'required|min:11',
             'message' => 'required|string|max:3500'
         ]);
         if ($validator->fails()){
@@ -38,8 +40,6 @@ class ContactsController extends Controller
                 ->json(['errors' => $validator->errors()],422);
         }
 
-//
-//        $contact = new Contacts();
 
         $contact->name = $request->name;
         $contact->email = $request->email;

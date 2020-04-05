@@ -23,8 +23,8 @@ class CreateContactsTable extends Migration
             $table->string('lang',2);
             $table->text('body');
             $table->ipAddress('ip');
-            $table->tinyInteger('is_read')->nullable();
-            $table->tinyInteger('is_answer')->nullable();
+            $table->tinyInteger('is_read')->default(0);
+            $table->tinyInteger('is_answer')->default(0);
             $table->timestamps();
         });
     }
