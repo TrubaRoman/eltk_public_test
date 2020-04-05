@@ -6,7 +6,9 @@ use App\Models\Contacts;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Grid\Displayers\Actions;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
 
 class ContactsController extends AdminController
 {
@@ -25,19 +27,31 @@ class ContactsController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Contacts());
- ;
+        $grid->disableCreateButton();
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'));
         $grid->column('phone', __('Phone'));
-        $grid->column('subject', __('Subject'));
-        $grid->column('lang', __('Lang'));
-        $grid->column('body', __('Body'));
+        $grid->column('subject', __('Subject'))->hide();
+        $grid->column('lang','')->display(function ($lang) {
+
+            return "<img src='/build/img/flags/24/{$lang}.png'> &nbsp;$lang</img>";
+
+        })->sortable()->help('Język zainstalowany na stronie nadawcy')->width(80);
+        $grid->column('body', __('Treść wiadomości'))->limit(300)->help('Treść wiadomości od nadawcy');
         $grid->column('ip', __('Ip'));
-        $grid->column('is_read', __('Is read'))->switch();
-        $grid->column('is_answer', __('Is answer'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $states = [
+            'on'  => ['value' => 1, 'text' => 'tak', 'color' => 'primary'],
+            'off' => ['value' => 0, 'text' => 'nie', 'color' => 'default'],
+        ];
+        $grid->column('is_read', __('Przeczytana'))->switch($states );
+        $grid->column('is_answer', __('Odpowiedź'))->display(function ($bool){
+            return ($bool == 0)?"<span class='label label-danger'>nie</span>":"<span class='label label-default'>tak</span>";
+        });
+        $grid->column('created_at', __('Czas'))->sortable()->width(100);
+        $grid->setActionClass(Actions::class);
+
+//        $grid->column('updated_at', __('Updated at'));
 
 
         return $grid;

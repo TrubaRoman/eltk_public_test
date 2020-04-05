@@ -34,7 +34,7 @@ class ServicesController extends AdminController
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
         $grid->column('status', __('Status'))->bool();
-        $grid->column('sort', __('Sort'));
+        $grid->column('sort', __('Sort'))->editable();
         $grid->column('created_at', __('Created at'))->date('Y-m-d');
         $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
         $grid->localizations('Language Variants')->display(function ($localize) {
