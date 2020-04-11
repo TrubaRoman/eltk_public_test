@@ -15,7 +15,7 @@ class CreateContactsTable extends Migration
     {
 
         Schema::create('contacts', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('name')->nullable();
             $table->string('email');
             $table->string('phone')->nullable();
@@ -27,6 +27,17 @@ class CreateContactsTable extends Migration
             $table->tinyInteger('is_answer')->default(0);
             $table->timestamps();
         });
+
+        Schema::create('answers', function(Blueprint $table) {
+            $table->increments('id');
+            $table->integer('contacts_id')->unsigned()->index()->nullable();
+            $table->string('email');
+            $table->string('name');
+            $table->string('subject');
+            $table->text('body');
+            $table->timestamps();
+            $table->foreign('contacts_id')->references('id')->on('contacts')->onDelete('cascade');
+        });
     }
 
     /**
@@ -37,5 +48,6 @@ class CreateContactsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('contacts');
+        Schema::dropIfExists('answers');
     }
 }

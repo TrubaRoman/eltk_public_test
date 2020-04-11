@@ -37,5 +37,16 @@ class Contacts extends Model
         return $contacts->update();
     }
 
+    public static function setAnswerMessage($id)
+    {
+        $contacts = self::find($id);
+        $contacts->is_answer = self::IS_ANSWER_MESSAGE;
+        return $contacts->update();
+    }
+    public function answers()
+    {
+        return $this->hasMany(Answers::class,'contacts_id');
+    }
+
 }
 

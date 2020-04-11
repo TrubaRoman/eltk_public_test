@@ -17,6 +17,7 @@ Route::group([
     $router->resource('prices', PriceController::class);
     $router->resource('menus', MenuController::class);
     $router->resource('contacts', ContactsController::class);
+    $router->resource('answers', AnswersController::class);
 
 
 
