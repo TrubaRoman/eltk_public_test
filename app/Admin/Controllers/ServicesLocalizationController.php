@@ -26,7 +26,7 @@ class ServicesLocalizationController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new ServicesLocalization());
-
+        $grid->enableHotKeys();
         $grid->column('id', __('Id'));
         $grid->column('menu', __('Menu'));
         $grid->column('services_id', __('Services id'))->sortable();

@@ -19,6 +19,8 @@ class ContactsController extends AdminController
      */
     protected $title = 'App\Models\Contacts';
 
+
+
     /**
      * Make a grid builder.
      *
@@ -28,6 +30,7 @@ class ContactsController extends AdminController
     {
         $grid = new Grid(new Contacts());
         $grid->disableCreateButton();
+        $grid->enableHotKeys();
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'))->sortable();
@@ -40,19 +43,24 @@ class ContactsController extends AdminController
         })->sortable()->help('Język zainstalowany na stronie nadawcy')->width(80);
         $grid->column('body', __('Treść wiadomości'))->limit(300)->help('Treść wiadomości od nadawcy');
         $grid->column('ip', __('Ip'));
+
         $states = [
             'on'  => ['value' => 1, 'text' => 'tak', 'color' => 'primary'],
             'off' => ['value' => 0, 'text' => 'nie', 'color' => 'default'],
         ];
-        $grid->column('is_read', __('Przeczytana'))->switch($states );
+
+        $grid->column('is_read', __('Przeczytana'))->switch($states )->width(80);
         $grid->column('is_answer', __('Odpowiedź'))->display(function ($bool){
             return ($bool == 0)?"<span class='label label-danger'>nie</span>":"<span class='label label-default'>tak</span>";
         });
         $grid->column('created_at', __('Czas'))->sortable()->width(100);
         $grid->setActionClass(Actions::class);
 
-//        $grid->column('updated_at', __('Updated at'));
+        $grid->actions(function ($actions) {
+            $actions->prepend('<a href="/admin/answers"><i class="fa fa-at"></i></a>');
+            $actions->disableEdit();
 
+        });
 
         return $grid;
     }

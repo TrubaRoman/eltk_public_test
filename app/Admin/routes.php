@@ -20,5 +20,8 @@ Route::group([
     $router->resource('answers', AnswersController::class);
 
 
+    $router->get('forms/settings', 'FormController@settings');
+
+
 
 });

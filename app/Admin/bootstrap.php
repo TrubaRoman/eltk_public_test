@@ -19,12 +19,14 @@
  */
 
 use Encore\Admin\Facades\Admin;
+use App\Admin\Extensions\Nav;
 
 Encore\Admin\Form::forget(['map', 'editor']);
 
 
     Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
-
+        $navbar->right(Nav\Link::make('Settings', 'forms/settings'));
+        $navbar->left(new Nav\Dropdown());
         $count = \App\Models\Contacts::getCountNewMessages();
         $navbar->right(view('admin.header._nav',['count' => $count]));
 

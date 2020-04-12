@@ -37,40 +37,4 @@ class HomeController extends Controller
             });
     }
 }
-//return Admin::content(function (Content $content) use ($id) {
-//
-//    $content->header('Services');
-//    $content->description('Detail');
-//
-//    $content->body(Admin::show(Services::findOrFail($id), function (Show $show) {
-//
-//        $show->id('ID');
-//        $show->slug('Slug');
-//        $show->image('Image');
-//        $show->sort('sort');
-//        $show->status('status');
-//        $show->created_at();
-//        $show->updated_at();
-//
-//        $show->localizations('Comments', function ($localization) {
-//
-//            $localization->resource('/admin/services-localizations');
-//
-//            $localization->id();
-//            $localization->services_id()->sortable();
-//
-//            $localization->title()->limit(20);
-//            $localization->lang('Language')->sortable();
-//            $localization->content()->limit(20);
-//
-//
-//            $localization->filter(function ($filter) {
-//                $filter->like('content');
-//            });
-//        });
-//
-//
-//    }));
-//
-//
-//});
+

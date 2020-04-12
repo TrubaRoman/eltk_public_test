@@ -29,7 +29,7 @@ class ServicesController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Services());
-
+        $grid->enableHotKeys();
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
