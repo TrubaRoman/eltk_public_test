@@ -18,6 +18,8 @@ Route::group([
     $router->resource('menus', MenuController::class);
     $router->resource('contacts', ContactsController::class);
     $router->resource('answers', AnswersController::class);
+    $router->resource('abouts-localizations', AboutLocalizationController::class);
+    $router->resource('abouts', AboutController::class);
 
 
     $router->get('forms/settings', 'FormController@settings');
