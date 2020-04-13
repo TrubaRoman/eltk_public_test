@@ -33,9 +33,8 @@ class CounterController extends AdminController
         $grid->column('icon', __('Icon'));
         $grid->column('int_count', __('Int count'));
         $grid->column('sort', __('Sort'));
-        $grid->column('status', __('Status'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('status', __('Status'))->bool();
+
 
         return $grid;
     }

@@ -11,7 +11,7 @@
                                                 <span   data-appear-animation = "animateDigits"
                                                         data-from             = "0"
                                                         data-to               = "{{$item->int_count}}"
-                                                        data-interval         = "{{$item->int_count / 3}}"
+                                                        data-interval         = "{{$item->int_count / mt_rand(2,10)}}"
                                                         data-before           = ""
                                                         data-before-style     = "sup"
                                                         data-after            = ""

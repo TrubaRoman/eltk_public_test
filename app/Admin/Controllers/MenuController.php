@@ -33,7 +33,7 @@ class MenuController extends AdminController
         $grid->column('name_uk', __('Name uk'));
         $grid->column('url', __('Url'));
         $grid->column('sort_order', __('Sort order'));
-        $grid->column('status', __('Status'));
+        $grid->column('status', __('Status'))->bool();
 
 
         return $grid;

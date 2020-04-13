@@ -30,7 +30,7 @@ class AboutController extends AdminController
         $grid->column('image', __('Image'))->image();
         $grid->column('alt_image', __('Alt image'));
         $grid->column('sort', __('Sort'));
-        $grid->column('status', __('Status'));
+        $grid->column('status', __('Status'))->bool();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 

@@ -25,13 +25,13 @@
                         <!-- acadion -->
                         <div class="accordion mt-40">
                           {!! $abouts->localization->content !!}
-
+                            @include('layouts._counters')
                         </div><!-- acadion end-->
 
                     </div>
 
                 </div><!-- row end-->
-                @include('layouts._counters')
+
             </div>
         </section>
         <!-- about-section end -->

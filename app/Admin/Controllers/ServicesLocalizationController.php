@@ -37,7 +37,7 @@ class ServicesLocalizationController extends AdminController
         })->sortable();
         $grid->column('title', __('Title'))->sortable();
         $grid->column('short_content', __('Short content'))->sortable();
-        $grid->column('content', __('Content'));
+        $grid->column('content', __('Content'))->limit(200);
 
         return $grid;
     }
