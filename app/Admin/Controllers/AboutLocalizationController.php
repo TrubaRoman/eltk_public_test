@@ -83,7 +83,7 @@ class AboutLocalizationController extends AdminController
         $form->text('title', __('Title'));
         $form->text('title_two', __('Title two'));
         $form->ckeditor('content', __('Content'));
-        $form->textarea('content_two', __('Content two'));
+        $form->ckeditor('content_two', __('Content two'));
 
         return $form;
     }

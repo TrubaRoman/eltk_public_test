@@ -97,7 +97,7 @@ class AboutController extends AdminController
     {
         $form = new Form(new Abouts());
 
-        $form->image('image', __('Image'))->resize(320, 240);
+        $form->image('image', __('Image'))->resize(509, 598);
         $form->text('alt_image', __('Alt image'));
         $form->number('sort', __('Sort'));
         $form->switch('status', __('Status'))->default(1);

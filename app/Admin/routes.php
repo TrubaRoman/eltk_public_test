@@ -20,6 +20,8 @@ Route::group([
     $router->resource('answers', AnswersController::class);
     $router->resource('abouts-localizations', AboutLocalizationController::class);
     $router->resource('abouts', AboutController::class);
+    $router->resource('counters', CounterController::class);
+
 
 
     $router->get('forms/settings', 'FormController@settings');
