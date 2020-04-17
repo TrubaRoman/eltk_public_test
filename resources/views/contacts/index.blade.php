@@ -57,7 +57,7 @@
                     <div class="col-md-5">
                         <!-- single-img -->
                         <div class="single-img">
-                            <img class="img-fluid" src="images/single-img-four.png" alt="">
+                            <img class="img-fluid" src="/build/images/test.jpg" alt="">
                         </div><!-- single-img end -->
                     </div>
                 </div><!-- row end -->
