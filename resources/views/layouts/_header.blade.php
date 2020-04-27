@@ -98,7 +98,7 @@
                                             <ul>
                                                 @foreach(config('app.locales') as $locale)
                                                     @if(\Illuminate\Support\Facades\Route::currentRouteName())
-                                                <li><a  href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale)}}">
+                                                <li><a  href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), [$locale,(request()->route()->parameter('slug'))??''])}}">
                                                         <img src="/build/img/flags/24/{{$locale}}.png" alt=""> 	&#8195;&#8195;{{strtoupper($locale)}} </a></li>
                                                     @endif
                                               @endforeach

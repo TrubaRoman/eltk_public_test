@@ -21,6 +21,8 @@ Route::group([
     $router->resource('abouts-localizations', AboutLocalizationController::class);
     $router->resource('abouts', AboutController::class);
     $router->resource('counters', CounterController::class);
+    $router->resource('portfolios', PortfolioController::class);
+    $router->resource('portfolio-localizations', PortfolioLocalizationController::class);
 
 
 

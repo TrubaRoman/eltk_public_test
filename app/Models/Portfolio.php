@@ -3,12 +3,10 @@
 namespace App\Models;
 
 use App\Components\Traits\Images;
-use App\Models\LocalizedModel;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
-
-class Services extends LocalizedModel
+class Portfolio extends LocalizedModel
 {
 
 //    protected $casts = ['image' => 'json' ];
@@ -20,11 +18,11 @@ class Services extends LocalizedModel
 
 
     protected $fillable = [
-        'slug', 'image', 'sort','status'
+       'id', 'slug', 'image','category_id', 'alt_image','project_name','client','duration','address','sort','status'
     ];
     use Sluggable;
-
     use Images;
+
     /**
      * Return the sluggable configuration array for this model.
      *
@@ -38,6 +36,7 @@ class Services extends LocalizedModel
             ]
         ];
     }
+
 
     public function setImageAttribute($image)
     {
@@ -61,12 +60,21 @@ class Services extends LocalizedModel
     {
         return $this->status === self::IS_ACTIVE;
     }
-    /**
-     *
-     * @return string( path image in db| path defoult image)
-     */
 
+    public function portfolioList(){
+        return self::withLocalization(app()->getLocale())->where('status',Portfolio::IS_ACTIVE)->orderBy('sort')->get();
+    }
 
+    public function portfolioNoCurrent($slug)
+    {
+        $list = $this->portfolioList();
+        return $list->where('slug','!=',$slug);
+    }
+
+    public function portfolioItem($slug)
+    {
+        return self::withLocalization(app()->getLocale())->where(['status'=>Portfolio::IS_ACTIVE,'slug'=>$slug])->firstOrFail();
+    }
 
 
 }
