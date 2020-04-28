@@ -26,7 +26,7 @@ class ContactsController extends Controller
     }
 
 
-    public function sendmail(Request $request, Contacts $contact)
+    public function sendmail(Request $request)
     {
 
         $validator = Validator::make($request->all(),[
@@ -40,7 +40,7 @@ class ContactsController extends Controller
                 ->json(['errors' => $validator->errors()],422);
         }
 
-
+        $contact = new Contacts();
         $contact->name = $request->name;
         $contact->email = $request->email;
         $contact->subject = 'Wiadomość z witryny';

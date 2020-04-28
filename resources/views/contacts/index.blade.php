@@ -16,6 +16,7 @@
                                 <h2 class="title">Contact Form</h2>
                             </div>
                             <div class="title-desc">We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of seryou with any unconventional.</div>
+                            <div class="title-desc"><small>Pole <i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>  jest wymagane </small></div>
                         </div><!-- section title end -->
                         <div class="text-success h6"  id="flash-messages"></div>
                         <div class="text-warning "  id="throttle"></div>
@@ -23,19 +24,19 @@
                             {{csrf_field()}}
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label>
+                                    <label for="name"> <i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><i class="ttm-textcolor-skincolor ti-user"></i><input name="name" type="text" value="{{old('name')}}" placeholder="{{__('validation.attributes.name')}}" id="name"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label>
+                                    <label for="phone"><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input "><i class="ttm-textcolor-skincolor ti-mobile"></i><input name="phone" type="text" value="{{old('phone')}}" placeholder="{{__('validation.attributes.phone')}}" id="phone"  ></span>
                                     </label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <label>
+                                    <label for="email"> <i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><i class="ttm-textcolor-skincolor ti-email"></i><input name="email" type="text" value="{{old('email')}}" placeholder="{{__('validation.attributes.email')}}" id="email"  ></span>
                                     </label>
                                 </div>
@@ -47,7 +48,7 @@
 {{--                                </div>--}}
 
                             </div>
-                            <label>
+                            <label for="message"><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                 <span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i><textarea name="message" rows="3" cols="40" placeholder="{{__('validation.attributes.message')}}" id="message"></textarea></span>
                             </label>
                             <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="MAKE A RESERVATION">
@@ -63,6 +64,7 @@
                 </div><!-- row end -->
             </div>
         </section>
+
         <!-- contact-form-section end -->
         <hr>
         <!-- map-section -->

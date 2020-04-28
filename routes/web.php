@@ -36,5 +36,6 @@
             Route::get('/portfolio/{slug?}','PortfolioController@show')->name('portfolio.show');
             Route::get('/contacts','ContactsController@index')->name('contacts');
             Route::post('/sendmail','ContactsController@sendmail')->name('sendmail');
-
+            Route::get('/offers','JobofferController@index')->name('offers');
+            Route::post('/send-offers','JobofferController@send')->name('send-offers');
     });

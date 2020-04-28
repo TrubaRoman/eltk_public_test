@@ -23,6 +23,7 @@ Route::group([
     $router->resource('counters', CounterController::class);
     $router->resource('portfolios', PortfolioController::class);
     $router->resource('portfolio-localizations', PortfolioLocalizationController::class);
+    $router->resource('joboffers', JobofferController::class);
 
 
 
