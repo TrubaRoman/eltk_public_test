@@ -40,9 +40,9 @@ class Cvcontroller extends AdminController
         $grid->column('experience', __('Experience'))->sortable();
         $grid->column('message', __('Message'))->limit(300);
         $grid->column('cv', __('Cv'))->downloadable()
-//            ->qrcode(function ($path) {
-//            return Storage::disk('admin')->url($path);
-//        })
+            ->qrcode(function ($path) {
+            return Storage::disk('admin')->url($path);
+        })
         ;
         $grid->column('is_read', __('Is read'))->switch();
         $grid->column('ip', __('Ip'));
@@ -53,7 +53,9 @@ class Cvcontroller extends AdminController
         })->sortable()->help('Język zainstalowany na stronie nadawcy')->width(80);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
-
+        $grid->actions(function ($actions){
+            $actions->disableDelete();
+        });
 
         return $grid;
     }
@@ -108,7 +110,7 @@ class Cvcontroller extends AdminController
         $form->switch('udt', __('Udt'));
         $form->number('experience', __('Experience'));
         $form->textarea('message', __('Message'));
-        $form->file('cv', __('Cv'));
+        $form->file('cv', __('Cv'))->removable();
         $form->switch('is_read', __('Is read'));
         $form->ip('ip', __('Ip'));
         $form->text('lang', __('Lang'));

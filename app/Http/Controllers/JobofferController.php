@@ -18,7 +18,6 @@ class JobofferController extends Controller
     public function index()
     {
         $offers = Joboffer::where('status',1)->orderBy('sort')->get();
-
         return view('joboffer.index',['offers' => $offers]);
     }
 
@@ -26,16 +25,16 @@ class JobofferController extends Controller
     {
 
         $validator = Validator::make($request->all(),[
-//            'name'=> 'required|string',
-//            'surname'=> 'required|string',
-//            'phone' => 'required|string',
-//            'email' => 'nullable|email',
-//            'offer' => 'required|string',
-//            'driving_license' => 'required|bool',
-//            'sep' => 'required|bool',
-//            'udt' => 'required|bool',
-//            'experience' => 'integer|required',
-//            'description'=> 'nullable|string|max:1000',
+            'name'=> 'required|string',
+            'surname'=> 'required|string',
+            'phone' => 'required|string',
+            'email' => 'nullable|email',
+            'offer' => 'required|string',
+            'driving_license' => 'required|bool',
+            'sep' => 'required|bool',
+            'udt' => 'required|bool',
+            'experience' => 'integer|required',
+            'description'=> 'nullable|string|max:1000',
             'cv'=> 'nullable|file|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx|max:500'
         ]);
         if ($validator->fails()){
