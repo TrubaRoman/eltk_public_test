@@ -7,6 +7,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Grid\Displayers\Actions;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
 
 class AboutController extends AdminController
 {
@@ -15,7 +16,7 @@ class AboutController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Models\Abouts';
+    protected $title = 'O firmie';
 
     /**
      * Make a grid builder.
@@ -31,8 +32,8 @@ class AboutController extends AdminController
         $grid->column('alt_image', __('Alt image'));
         $grid->column('sort', __('Sort'));
         $grid->column('status', __('Status'))->bool();
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created at'))->date('Y-m-d');
+        $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
 
         $grid->localizations('Language Variants')->display(function ($localize) {
             $count = count($localize);
@@ -58,8 +59,8 @@ class AboutController extends AdminController
         $show->field('alt_image', __('Alt image'));
         $show->field('sort', __('Sort'));
         $show->field('status', __('Status'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->column('created_at', __('Created at'))->date('Y-m-d');
+        $show->column('updated_at', __('Updated at'))->date('Y-m-d');
         $show->localizations('Language Variants', function ($localizations) {
 
             $localizations->resource('/admin/abouts-localizations');
@@ -97,7 +98,11 @@ class AboutController extends AdminController
     {
         $form = new Form(new Abouts());
 
-        $form->image('image', __('Image'))->resize(509, 598);
+        $form->image('image','images')->resize(509, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->crop(509, 598)->removable()->name(function ( $file ){
+            return 'about_'.Str::random(2).'.'.$file->guessExtension();
+        });
         $form->text('alt_image', __('Alt image'));
         $form->number('sort', __('Sort'));
         $form->switch('status', __('Status'))->default(1);

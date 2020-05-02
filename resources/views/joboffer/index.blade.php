@@ -12,32 +12,32 @@
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
 
-                                <h3 class="title">Podaj CV</h3>
+                                <h3 class="title">{{__('content/pages.offers.cv-title')}}</h3>
                             </div>
-                            <div class="title-desc"><h6>Zatrudnimy doświadczonych elektromonterów z uprawnieniami. Zainteresowanych prosimy o przesyłanie CV.</h6></div>
-                            <div class="title-desc"><small>Pole <i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>  jest wymagane </small></div>
+                            <div class="title-desc"><h6>{{__('content/pages.offers.cv-desc')}}</h6></div>
+                            <div class="title-desc"><small>{{__('content/pages.offers.required-desc')}} <i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i> </small></div>
                         </div><!-- section title end -->
                         <div class="text-success h6"  id="flash-messages"></div>
                         <div class="text-warning "  id="throttle"></div>
                         <form  id="ttm-job-offers" method = "POST" class="ttm-contactform wrap-form clearfix" >
-                            @method('post');
+                            @method('POST')
                             @csrf
                             <div class="row">
                                 <div class="col-lg-12">
                                     <label for="name">
-                                        <i class="ttm-textcolor-skincolor ti-user"></i> <b>	&nbsp;Imie</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                        <i class="ttm-textcolor-skincolor ti-user"></i> <b>	&nbsp;{{__('validation.attributes.name')}} </b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><input name="name" type="text" value="{{old('name')}}"id="name"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="surname">
-                                        <i class="ttm-textcolor-skincolor ti-user"></i> <b>	&nbsp;Nazwisko</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                        <i class="ttm-textcolor-skincolor ti-user"></i> <b>	{{__('validation.attributes.surname')}}</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><input name="surname" type="text" value="{{old('surname')}}" id="surname"></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="phone">
-                                        <i class="ttm-textcolor-skincolor ti-mobile"></i><b>	&nbsp;Kontakt telefoniczny </b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                        <i class="ttm-textcolor-skincolor ti-mobile"></i><b>	{{__('validation.attributes.phone')}} </b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input "><input name="phone" type="text" value="{{old('phone')}}"  id="phone"  ></span>
                                     </label>
                                 </div>
@@ -45,72 +45,74 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <label for = "email">
-                                        <i class="ttm-textcolor-skincolor ti-email"></i><b>	&nbsp;Email</b>
+                                        <i class="ttm-textcolor-skincolor ti-email"></i><b>	&nbsp;{{__('validation.attributes.email')}}</b>
                                         <span class="text-input"><input name="email" type="text" value="{{old('email')}}"  id="email"  ></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="offer"><i class="ttm-textcolor-skincolor ti-hummer"></i>  <b>&nbsp;Aplikacja na stanowisko</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                    <label for="offer"><i class="ttm-textcolor-skincolor ti-hummer"></i>  <b>&nbsp;{{__('validation.attributes.offer')}}</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><select
                                                     name="offer" id="offer" >
-                                                <option value="">wybierz</option>
+                                                <option value="">{{__('content/pages.form.select')}}</option>
                                                 @foreach($offers as $offer)
                                                 <option >{{$offer->title}}</option>
                                                 @endforeach
+                                                <option>{{__('content/pages.form.other')}}</option>
+
                                             </select></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="driving_license"><i class="ttm-textcolor-skincolor ti-car"></i>  <b>&nbsp;Prawo jazdy</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                    <label for="driving_license"><i class="ttm-textcolor-skincolor ti-car"></i>  <b>&nbsp;{{__('validation.attributes.driving_license')}}</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input">
                                             <select
                                                     name="driving_license" id="driving_license" >
-                                                <option selected value="">wybierz</option>
-                                                <option value="1">tak</option>
-                                                <option value="0">nie</option>
+                                                <option selected value="">{{__('content/pages.form.select')}}</option>
+                                                <option value="1">{{__('content/pages.form.bool.true')}}</option>
+                                                <option value="0">{{__('content/pages.form.bool.false')}}</option>
 
                                             </select>
                                         </span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="sep"><i class="ttm-textcolor-skincolor ti-bolt-alt"></i> <b> &nbsp;Uprawnienia SEP lub równoważne</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                    <label for="sep"><i class="ttm-textcolor-skincolor ti-bolt-alt"></i> <b> &nbsp;{{__('validation.attributes.sep')}}</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input">
                                             <select name="sep" id="sep" >
-                                                <option selected value="">wybierz</option>
-                                                <option value="1">tak</option>
-                                                <option value="0">nie</option>
+                                                <option selected value="">{{__('content/pages.form.select')}}</option>
+                                                <option value="1">{{__('content/pages.form.bool.true')}}</option>
+                                                <option value="0">{{__('content/pages.form.bool.false')}}</option>
 
                                             </select>
                                         </span>
                                     </label>
                                 </div>
                                 <div class="col-lg-6">
-                                    <label for="udt"><i class="ttm-textcolor-skincolor ti-settings"></i> <b> &nbsp;Uprawnienia UDT</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                    <label for="udt"><i class="ttm-textcolor-skincolor ti-settings"></i> <b> &nbsp;{{__('validation.attributes.udt')}}</b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input">
                                             <select name="udt" id="udt" >
-                                                <option selected value="">wybierz</option>
-                                                <option value="1" >tak</option>
-                                                <option value="0">nie</option>
+                                                <option selected value="">{{__('content/pages.form.select')}}</option>
+                                                <option value="1" >{{__('content/pages.form.bool.true')}}</option>
+                                                <option value="0">{{__('content/pages.form.bool.false')}}</option>
                                             </select>
                                         </span>
                                     </label>
                                 </div>
                                 <div class="col-lg-12">
-                                    <label for="experience"><i class="ttm-textcolor-skincolor ti-medall-alt"></i><b>&nbsp; Doświadczenie w zawodzie (lata) </b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
+                                    <label for="experience"><i class="ttm-textcolor-skincolor ti-medall-alt"></i><b>	&#8194;{{__('validation.attributes.experience')}} </b><i class="fa fa-asterisk" style="color:#EE5651; font-size:8px; vertical-align:top;"></i>
                                         <span class="text-input"><input name="experience" type="text" value=""  id="experience"  ></span>
                                     </label>
                                 </div>
                                 <div class="col-lg-12">
                                     <label for="cv">
-                                        <i class="ttm-textcolor-skincolor ti-upload"></i> <b>&nbsp; Załącz CV (rozmiar pliku maks. 500kB)</b>
+                                        <i class="ttm-textcolor-skincolor ti-upload"></i> <b>&nbsp; {{__('validation.attributes.cv')}} ({{__('content/pages.form.file-max-size-desc',['value' => '500'])}})</b>
                                         <span class="text-input"><input name="cv" type="file" value=""  id="cv"  ></span>
                                     </label>
                                 </div>
 
                             </div>
-                            <label for="message"><i class="ttm-textcolor-skincolor ti-comment"></i><b>&nbsp; Dodatkowy opis</b>
-                                <span class="text-input"><textarea name="message" rows="3" cols="40" placeholder="" id="message"></textarea></span>
+                            <label for="description"><i class="ttm-textcolor-skincolor ti-comment"></i><b>	&#8194;{{__('validation.attributes.description')}}</b>
+                                <span class="text-input"><textarea name="description" rows="3" cols="40" placeholder="" id="description"></textarea></span>
                             </label>
                             <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="send" >
                         </form>
@@ -121,7 +123,7 @@
                         <div class="section-title clearfix">
                             <div class="title-header">
 
-                                <h3 >Jobs offers</h3>
+                                <h3 >{{__('content/pages.offers.offers-title')}}</h3>
                             </div>
                         </div><!-- section title end -->
                         <!-- acadion -->

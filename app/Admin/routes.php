@@ -24,6 +24,8 @@ Route::group([
     $router->resource('portfolios', PortfolioController::class);
     $router->resource('portfolio-localizations', PortfolioLocalizationController::class);
     $router->resource('joboffers', JobofferController::class);
+    $router->resource('cvs', Cvcontroller::class);
+
 
 
 

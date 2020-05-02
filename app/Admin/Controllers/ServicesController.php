@@ -19,7 +19,7 @@ class ServicesController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Services';
+    protected $title = 'Usługi';
 
     /**
      * Make a grid builder.
@@ -108,7 +108,9 @@ class ServicesController extends AdminController
         // multiple image
         $form->multipleImage('image','images')->resize(1600, null, function ($constraint) {
             $constraint->aspectRatio();
-        })->crop(1600,1200)->removable();
+        })->crop(1600,1200)->removable()->name(function ( $file ){
+        return 'services_'.Str::random(2).'.'.$file->guessExtension();
+    });
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 

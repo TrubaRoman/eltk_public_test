@@ -152,6 +152,15 @@ return [
         'address'               => 'Address',
         'phone'                 => 'Phone',
         'message'               => 'Message',
+        //  ----------------      jobofferts form -----------------
+        'surname'               =>'Last name',
+        'offer'                 =>'Select a working position',
+        'driving_license'       =>'Driving license',
+        'sep'                   =>'Certificate "SEP" or equivalent',
+        'udt'                   =>'Certificate "UDT"',
+        'experience'            =>'Work experience (years)',
+        'cv'                    =>'Attach your CV',
+        'description'            =>'Additional Description'
     ],
 
 ];

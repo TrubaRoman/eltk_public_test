@@ -3,10 +3,13 @@
 namespace App\Admin\Controllers;
 
 use App\Models\Portfolio;
+use Cviebrock\EloquentSluggable\Sluggable;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Illuminate\Support\Str;
+use Route;
 
 class PortfolioController extends AdminController
 {
@@ -15,7 +18,7 @@ class PortfolioController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Models\Portfolio';
+    protected $title = 'Portfolio';
 
     /**
      * Make a grid builder.
@@ -107,12 +110,14 @@ class PortfolioController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new Portfolio());
-
-        $form->text('slug', __('Slug'));
+        $portfolio  = new Portfolio();
+        $form = new Form( $portfolio );
+       $form->text('slug', __('Slug'));
         $form->multipleImage('image','images')->resize(1200, null, function ($constraint) {
         $constraint->aspectRatio();
-    })->crop(1200,800)->removable();
+    })->crop(1200,800)->removable()->name(function ( $file ){
+            return 'portfolios_'.Str::random(2).'.'.$file->guessExtension();
+        });
         $form->text('alt_image', __('Alt image'));
         $form->text('project_name', __('Project name'));
         $form->text('client', __('Client'));

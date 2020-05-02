@@ -24,7 +24,7 @@ return [
     'before_or_equal' => ':attribute musi być datą nie późniejszą niż :date.',
     'between'         => [
         'numeric' => ':attribute musi zawierać się w granicach :min - :max.',
-        'file'    => ':attribute musi zawierać się w granicach :min - :max kilobajtów.',
+        'file'    => '":attribute" musi zawierać się w granicach :min - :max kilobajtów.',
         'string'  => ':attribute musi zawierać się w granicach :min - :max znaków.',
         'array'   => ':attribute musi składać się z :min - :max elementów.',
     ],
@@ -38,7 +38,7 @@ return [
     'digits_between' => ':attribute musi mieć od :min do :max cyfr.',
     'dimensions'     => ':attribute ma niepoprawne wymiary.',
     'distinct'       => ':attribute ma zduplikowane wartości.',
-    'email'          => 'Format :attribute jest nieprawidłowy.',
+    'email'          => 'Format ":attribute" jest nieprawidłowy.',
     'ends_with'      => ':attribute musi kończyć się jedną z następujących wartości: :values',
     'exists'         => 'Zaznaczony :attribute jest nieprawidłowy.',
     'file'           => ':attribute musi być plikiem.',
@@ -95,7 +95,7 @@ return [
     'password'             => 'Hasło jest nieprawidłowe.',
     'present'              => 'Pole :attribute musi być obecne.',
     'regex'                => 'Format :attribute jest nieprawidłowy.',
-    'required'             => 'Pole :attribute jest wymagane.',
+    'required'             => 'Pole ":attribute" jest wymagane.',
     'required_if'          => 'Pole :attribute jest wymagane gdy :other jest :value.',
     'required_unless'      => ':attribute jest wymagany jeżeli :other nie znajduje się w :values.',
     'required_with'        => 'Pole :attribute jest wymagane gdy :values jest obecny.',
@@ -151,5 +151,15 @@ return [
         'address'               => 'Adres',
         'phone'                 => 'Telefon',
         'message'               => 'Wiadomość',
+
+        //  ----------------      jobofferts form -----------------
+        'surname'               =>'Nazwisko',
+        'offer'                 =>'Wybierz stanowisko',
+        'driving_license'       =>'Prawo jazdy',
+        'sep'                   =>'Uprawnienia "SEP" lub równoważne',
+        'udt'                   =>'Uprawnienia "UDT"',
+        'experience'            =>'Doświadczenie w zawodzie (lata)',
+        'cv'                    =>'Załącz CV',
+        'description'            =>'Dodatkowy opis'
     ],
 ];

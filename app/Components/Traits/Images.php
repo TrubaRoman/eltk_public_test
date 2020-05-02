@@ -13,7 +13,9 @@
                 return self::getImage($this->image[count($this->image) > 0?count($this->image)-1:count($this->image)]);
             }
 
-            else return self::getImage($this->image);
+            else {
+                return self::getImage($this->image);
+            }
         }
 
         /**

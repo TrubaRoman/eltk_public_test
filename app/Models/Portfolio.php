@@ -32,8 +32,8 @@ class Portfolio extends LocalizedModel
     {
         return [
             'slug' => [
-                'source' => 'slug'
-            ]
+                'source' => 'project_name'
+            ],
         ];
     }
 
