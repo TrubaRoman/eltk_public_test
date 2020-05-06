@@ -22,6 +22,7 @@
             $file->storeAs($this->upload_dir,$filename);//зберігаємо файл в папку
             $this->cv = $this->upload_dir.$filename;// завантажуємо імя нового файла в поле image
             $this->save();// зберігаємо імя картинки в базу
+//            return $filename;
         }
 
         public function removeCV()

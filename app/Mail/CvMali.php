@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
 
 class CvMali extends Mailable
 {
@@ -29,8 +30,14 @@ class CvMali extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.contactform.cvmail')->with(
-            'data',$this->data
-        )->subject('CV z witryny')->from($this->data->email,$this->data->surname)->attach('.',['as' => $this->data->cv]);
+        return $this->view('emails.cv-mail')
+            ->text('emails.cv-mail-plain')
+            ->with(
+            [
+                'data'=>$this->data,
+                'imagePath' => public_path().'/build/images/'
+            ]
+        )->subject('CV z witryny')->from($this->data->email,$this->data->surname)
+            ->attachFromStorage($this->data->cv);
     }
 }

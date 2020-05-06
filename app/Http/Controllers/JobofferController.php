@@ -6,6 +6,7 @@ use App\Mail\CvMali;
 use App\Models\Cv;
 use App\Models\Joboffer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Mail;
 use Validator;
 class JobofferController extends Controller
@@ -17,13 +18,13 @@ class JobofferController extends Controller
 
     public function index()
     {
+
         $offers = Joboffer::where('status',1)->orderBy('sort')->get();
         return view('joboffer.index',['offers' => $offers]);
     }
 
     public function send(Request $request)
     {
-
         $validator = Validator::make($request->all(),[
             'name'=> 'required|string',
             'surname'=> 'required|string',
@@ -56,9 +57,10 @@ class JobofferController extends Controller
         $cv->lang = app()->getLocale();
         $cv->ip = $request->ip();
         $cv->uploadCV($request->file('cv'));
-        $cv->save();
 
-//        Mail::to(config('mail.admin-email'))->send(new CvMali($cv));
+
+      if (Mail::to(config('mail.admin-email'))->send(new CvMali($cv)) )$cv->save();
+
         return response()->json(['success'=>__('messages.email-send-success')],200);
     }
 
