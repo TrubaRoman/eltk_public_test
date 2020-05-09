@@ -31,11 +31,16 @@ class JobofferController extends AdminController
         $grid->column('title_en', __('Title en'));
         $grid->column('title_uk', __('Title uk'));
 
-        $grid->column('description_pl', __('Description pl'));
-        $grid->column('description_en', __('Description en'));
-        $grid->column('description_uk', __('Description uk'));
+        $grid->column('description_pl', __('Opis pracy pl'))->limit(200);
+        $grid->column('description_en', __('Opis pracy en'))->limit(200);
+        $grid->column('description_uk', __('Opis pracy uk'))->limit(200);
         $grid->column('sort', __('Sort'));
-        $grid->column('status', __('Status'));
+        $states = [
+            'on' => ['text' => 'Tak'],
+            'off' => ['text' => 'Nie'],
+        ];
+
+        $grid->column('status', __('Status'))->switch($states);
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 

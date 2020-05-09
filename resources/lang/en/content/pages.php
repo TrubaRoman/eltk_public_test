@@ -5,7 +5,8 @@ return [
         'offers-title'=>'Vacancies',
         'cv-desc' => 'We hire experienced electricians. If you are interested, please fill out the form and submit your CV.',
         'required-desc'=>'Required fields are marked with an asterisk',
-
+        'no_vacancies' => 'There are no vacancies at this time',
+        'no_vacancies_desc' => 'If you have any other questions, call :phone  or email us at :email.'
 
 
     ],

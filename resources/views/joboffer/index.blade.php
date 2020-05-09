@@ -7,6 +7,8 @@
         <section class="ttm-row contact-form-section clearfix">
             <div class="container">
                 <div class="row">
+
+                    @if(count($offers) > 0)
                     <div class="col-md-7 pr-60 res-767-pr-15">
                         <!-- section title -->
                         <div class="section-title with-desc clearfix">
@@ -141,6 +143,19 @@
     @endforeach
                         </div><!-- acadion end-->
                     </div>
+                    @else
+                        <div class="col-lg-12 h-200">
+                            <div class="section-title clearfix ">
+                                <div class="title-header">
+
+                                    <h3  >{{__('content/pages.offers.no_vacancies')}}</h3>
+                                    <p>{{__('content/pages.offers.no_vacancies_desc',['email' => 'rura@mail.com','phone' => '46736467367'])}}</p>
+                                </div>
+                            </div><!-- section title end -->
+
+                        </div>
+                    @endif
+
                 </div><!-- row end -->
             </div>
         </section>
