@@ -22,5 +22,9 @@ return [
                 'true' => 'Tak',
                 'false'=>'Nie'
             ]
-],
+    ],
+    'widget_firm_info' => [
+        'title' => 'Skontaktuj się',
+        'hours_of_work' => 'Godziny pracy :open - :closed'
+    ]
 ];

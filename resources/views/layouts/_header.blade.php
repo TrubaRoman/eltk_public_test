@@ -23,7 +23,7 @@
                     </div>
                     <ul class="top-contact ttm-highlight-right">
 
-                        <li><strong><i class="fa fa-phone"></i>{{__('/layouts/header.top-header.right-slogan')}} :</strong> <span class="tel-no">0 (143) 456 7897</span></li>
+                        <li><strong><i class="fa fa-phone"></i>{{__('/layouts/header.top-header.right-slogan')}} :</strong> <span class="tel-no">{{config('settings.public_phone')}}</span></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="title-box">
                                 <h5>{{__('/layouts/header.top-header.call')}}</h5>
-                                <p>+123 456 7890</p>
+                                <p>{{config('settings.public_phone')}}</p>
                             </div>
                         </li>
                         <li>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="title-box">
                                 <h5>{{__('/layouts/header.top-header.email')}}</h5>
-                                <p>info@example.com</p>
+                                <p>{{config('settings.public_email')}}</p>
                             </div>
                         </li>
                         <li>
@@ -67,7 +67,7 @@
                             </div>
                             <div class="title-box">
                                 <h5>{{__('/layouts/header.top-header.address')}}</h5>
-                                <p>24 Fifth st, Los Angeles, USA</p>
+                                <p>{{config('settings.public_address')}}</p>
                             </div>
                         </li>
                     </ul>
@@ -93,21 +93,23 @@
                                     <ul class="dropdown">
                                     @include('layouts._script_nav')
 
-
+@if(count(config('settings.locales')) > 2  )
                                         <li><a href="#" ><img src="/build/img/flags/24/{{app()->getLocale()}}.png">	&#8195;{{strtoupper(app()->getLocale())}}</a>
                                             <ul>
-                                                @foreach(config('app.locales') as $locale)
-                                                    @if(\Illuminate\Support\Facades\Route::currentRouteName())
+                                                @foreach(config('settings.locales') as $locale)
+
+                                                    @if(\Illuminate\Support\Facades\Route::currentRouteName() && $locale !== null)
                                                 <li><a  href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), [$locale,(request()->route()->parameter('slug'))??''])}}">
                                                         <img src="/build/img/flags/24/{{$locale}}.png" alt=""> 	&#8195;&#8195;{{strtoupper($locale)}} </a></li>
                                                     @endif
                                               @endforeach
                                             </ul>
                                         </li>
-
+                                        @endif
                                     </ul>
                                 </nav>
                             </div>
+
                             <div class="ttm-rt-contact">
                   <!-- header-icins -->
                                         <div class="ttm-header-icons ">
@@ -126,13 +128,13 @@
 										                            <ul>
 										                                <li>                         
 										                                       <a href="tel:+48609862467"  class= "link-defoult" >
-										                                       		<p ><i class="fa fa-phone"></i> +48 609 862 467</p> 
+										                                       		<p ><i class="fa fa-phone"></i> {{config('settings.public_phone')}}</p>
 										                                       </a>                                     
 										                                </li>
 										                              
 										                                <li>                         
 										                                       <a href="mailto:eltk.koczurek@op.pl"  class= "link-defoult" >
-										                                       		<p ><i class="fa fa-at"></i> eltk.koczurek@op.pl</p> 
+										                                       		<p ><i class="fa fa-at"></i> {{config('settings.public_email')}}</p>
 										                                       </a>                                     
 										                                </li> 
 

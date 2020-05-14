@@ -149,7 +149,7 @@
                                 <div class="title-header">
 
                                     <h3  >{{__('content/pages.offers.no_vacancies')}}</h3>
-                                    <p>{{__('content/pages.offers.no_vacancies_desc',['email' => 'rura@mail.com','phone' => '46736467367'])}}</p>
+                                    <p>{{__('content/pages.offers.no_vacancies_desc',['email' => config('settings.public_email'),'phone' => config('settings.public_phone')])}}</p>
                                 </div>
                             </div><!-- section title end -->
 

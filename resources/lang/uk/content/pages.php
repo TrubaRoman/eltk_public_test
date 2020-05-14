@@ -23,4 +23,8 @@ return [
             'false'=>'Ні'
         ]
     ],
+    'widget_firm_info' => [
+        'title' => 'Зв\'яжіться з нами',
+        'hours_of_work' => 'Години роботи  :open - :closed'
+    ]
 ];

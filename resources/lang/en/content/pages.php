@@ -24,4 +24,10 @@ return [
             'false'=>'No'
         ]
     ],
+
+    'widget_firm_info' => [
+        'title' => 'Get in touch',
+        'hours_of_work' => 'Hours of work :open - :closed'
+    ]
+
 ];

@@ -681,7 +681,7 @@
                                         style="padding:0;Margin:0;padding-bottom:20px;padding-left:20px;padding-right:20px;">
                                                                 <span class="es-button-border"
                                                                       style="border-style:solid;border-color:#FFFFFF;background:#3065B3 none repeat scroll 0% 0%;border-width:0px;display:inline-block;border-radius:0px;width:auto;border-left-color:#2CB543;"><a
-                                                                            href="#"
+                                                                            href="tel:+{{$data->phone}}"
                                                                             class="es-button" target="_blank"
                                                                             style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:tahoma, verdana, segoe, sans-serif;font-size:18px;color:#FFFFFF;border-style:solid;border-color:#3065B3;border-width:5px 20px 5px 20px;display:inline-block;background:#3065B3 none repeat scroll 0% 0%;border-radius:0px;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center;">Zadzwoń</a></span>
                                     </td>

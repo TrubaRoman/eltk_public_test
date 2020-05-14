@@ -15,7 +15,11 @@ class SetLocale
      */
     public function handle($request, Closure $next)
     {
-        app()->setLocale($request->segment(1));
+        $segment = $request->segment(1);
+        if (in_array($segment,config('settings.locales'))){
+            app()->setLocale($segment);
+        }
+        else app()->setLocale(config('app.locale'));
         return $next($request);
     }
 }

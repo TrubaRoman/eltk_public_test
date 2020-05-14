@@ -20,9 +20,7 @@
         'where' => ['locale' => '[a-zA-Z]{2}'],
         'middleware' => 'setlocale'], function(){
 
-            Route::get('/', function () {
-                return view('welcome');
-            });
+
 
             Auth::routes();
 

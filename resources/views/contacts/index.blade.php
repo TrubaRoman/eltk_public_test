@@ -84,9 +84,9 @@
                                 <div class="pt-40 pr-140 pb-55 pl-60 box-shadow2 res-991-plr-15 clearfix">
                                     <h4>Contact Details</h4>
                                     <ul class="ttm_contact_widget_wrapper">
-                                        <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>1212 Paint Valley Road East Rutherford, New<br>York 06192, USA</li>
-                                        <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i>(+01) 123 456 7890<br>(+01) 987 456 1234</li>
-                                        <li><i class="ttm-textcolor-skincolor ti ti-comment"></i><a href="mailto:info@boldman.com">info@boldman.com</a></li>
+                                        <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>{{config('settings.public_address')}}</li>
+                                        <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i><a href="tel:{{config('settings.public_phone')}}">{{config('settings.public_phone')}}</a></li>
+                                        <li><i class="ttm-textcolor-skincolor ti ti-comment"></i><a href="mailto:{{config('settings.public_email')}}">{{config('settings.public_email')}}</a></li>
                                         <li><i class="ttm-textcolor-skincolor ti ti-world"></i><a href="http://www.example.com/">http://www.example.com</a></li>
                                     </ul>
                                     <div class="social-icons circle social-hover mb-35">
