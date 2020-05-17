@@ -18,8 +18,8 @@ Route::group([
     $router->resource('menus', MenuController::class);
     $router->resource('contacts', ContactsController::class);
     $router->resource('answers', AnswersController::class);
-    $router->resource('abouts-localizations', AboutLocalizationController::class);
-    $router->resource('abouts', AboutController::class);
+    $router->resource('abouts-localizations', AboutsLocalizationController::class);
+    $router->resource('abouts', AboutsController::class);
     $router->resource('counters', CounterController::class);
     $router->resource('portfolios', PortfolioController::class);
     $router->resource('portfolio-localizations', PortfolioLocalizationController::class);

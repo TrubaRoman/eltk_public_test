@@ -9,13 +9,6 @@ class ServicesController extends Controller
 
 {
 
-    public function index()
-    {
-        $locale = app()->getLocale();
-        $services = Services::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
-
-        return  view('services.index',compact('services'));
-    }
 
     public function show($locale = null,$slug)
     {   $locale = app()->getLocale();

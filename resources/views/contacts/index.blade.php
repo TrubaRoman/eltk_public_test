@@ -12,10 +12,10 @@
                         <!-- section title -->
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
-                                <h5>GET IN TOUCH</h5>
-                                <h2 class="title">Contact Form</h2>
+                                <h5></h5>
+                                <h2 class="title">{{__('content/pages.contacts.title')}}</h2>
                             </div>
-                            <div class="title-desc">We are a team of professional and skilled experts in all domestic spheres. We offer a wide range of seryou with any unconventional.</div>
+                            <div class="title-desc">{{__('content/pages.contacts.sub_title')}}.</div>
                             <div class="title-desc"><small>{{__('content/pages.contacts.required-desc')}} </small></div>
                         </div><!-- section title end -->
                         <div class="text-success h6"  id="flash-messages"></div>
@@ -51,7 +51,7 @@
                             <label for="message">
                                 <span class="text-input"><i class="ttm-textcolor-skincolor ti-comment"></i><textarea name="message" rows="3" cols="40" placeholder="{{__('validation.attributes.message')}}" id="message"></textarea></span>
                             </label>
-                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="MAKE A RESERVATION">
+                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="{{__('content/pages.buttons.send')}}">
                         </form>
                     </div>
 

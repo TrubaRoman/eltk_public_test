@@ -1,5 +1,35 @@
 <?php
 return [
+
+    'about' => [
+        'title' => 'O FIRMIE',
+        'sub_title' => ''
+    ],
+
+    'services' => [
+        'title' => 'NASZE USŁUGI',
+        'sub_title' => 'CO ROBIMY',
+        'short_text' => 'Oto lista naszych usług, które otrzymasz.',
+    ],
+
+    'portfolio' => [
+        'title' => 'NASZE PRACE',
+    ],
+
+    'contacts' => [
+        'title' =>'SKONTAKTUJ SIĘ Z NAMI',
+        'sub_title'=> 'Odpowiemy na każde Twoje pytanie',
+        'required-desc' => 'Wszystkie pola są wymagane'
+    ],
+
+    'prices' => [
+        'title'  => 'CENY USŁUG'
+    ],
+
+    'buttons'=>[
+        'more_details'=> 'WIĘCEJ SZCZEGÓŁÓW',
+        'send' => 'WYSŁAĆ'
+    ],
     'offers' =>[
         'cv-title'=>'Prześlij swoje CV',
         'offers-title'=>'Oferty pracy',
@@ -10,9 +40,7 @@ return [
 
 
     ],
-      'contacts' => [
-    'required-desc' => 'Wszystkie pola są wymagane'
-],
+
         'form' => [
             'file-max-size-desc' =>'rozmiar pliku maks. :value kB',
 

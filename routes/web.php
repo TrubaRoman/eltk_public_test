@@ -26,10 +26,8 @@
 
             Route::get('/', 'HomeController@index')->name('home');
             Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
-            Route::get('/services','ServicesController@index')->name('services');
             Route::get('/services/{slug?}','ServicesController@show')->name('services.show');
             Route::get('/price','PriceController@index')->name('price');
-            Route::get('/about','AboutsController@index')->name('about-us');
             Route::get('/portfolios','PortfolioController@index')->name('portfolios');
             Route::get('/portfolio/{slug?}','PortfolioController@show')->name('portfolio.show');
             Route::get('/contacts','ContactsController@index')->name('contacts');

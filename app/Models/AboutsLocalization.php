@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AboutsLocalization extends Model
 {
     protected $fillable = [
-      'abouts_id','lang','title','title_two','content','content_two'
+      'abouts_id','lang','title','short_content','content'
     ];
 
     protected $table = 'abouts_localization';

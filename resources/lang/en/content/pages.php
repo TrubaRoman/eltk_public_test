@@ -1,5 +1,36 @@
 <?php
 return [
+
+    'about' => [
+        'title' => 'ABOUT THE COMPANY',
+        'sub_title' => ''
+    ],
+
+    'services' => [
+        'title' => 'OUR SERVICES',
+        'sub_title' => 'WHAT WE DO',
+        'short_text' => 'Here is a list of our services that you will receive.',
+    ],
+
+    'portfolio' => [
+        'title' => 'OUR WORKS',
+    ],
+
+    'contacts' => [
+        'title' =>'CONTACT US',
+        'sub_title'=> 'We will answer any of your questions',
+        'required-desc' => 'All fields are required'
+    ],
+
+    'prices' => [
+        'title'  => 'PRICES FOR SERVICES'
+    ],
+
+    'buttons'=>[
+        'more_details'=> 'MORE DETAILS',
+        'send' => 'SEND'
+    ],
+
     'offers' =>[
         'cv-title'=>'Please send your CV',
         'offers-title'=>'Vacancies',
@@ -9,9 +40,6 @@ return [
         'no_vacancies_desc' => 'If you have any other questions, call :phone  or email us at :email.'
 
 
-    ],
-    'contacts' => [
-        'required-desc' => 'All fields are required'
     ],
 
     'form' => [

@@ -8,14 +8,14 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class AboutLocalizationController extends AdminController
+class AboutsLocalizationController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'App\Models\AboutsLocalization';
+    protected $title = 'O Nas "treść językowa"';
 
     /**
      * Make a grid builder.
@@ -25,17 +25,17 @@ class AboutLocalizationController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new AboutsLocalization());
+
         $grid->column('id', __('Id'));
         $grid->column('abouts_id', __('Abouts id'));
-        $grid->column('lang')->display(function ($title) {
+        $grid->column('lang')->display(function ($lang) {
 
-            return "<img src='/build/img/flags/24/{$title}.png'> &nbsp;$title</img>";
+            return "<img src='/build/img/flags/24/{$lang}.png'> &nbsp;$lang</img>";
 
-        });
+        })->sortable();
         $grid->column('title', __('Title'));
-        $grid->column('title_two', __('Title two'));
+        $grid->column('short_content', __('Short content'));
         $grid->column('content', __('Content'));
-        $grid->column('content_two', __('Content two'));
 
         return $grid;
     }
@@ -54,9 +54,8 @@ class AboutLocalizationController extends AdminController
         $show->field('abouts_id', __('Abouts id'));
         $show->field('lang', __('Lang'));
         $show->field('title', __('Title'));
-        $show->field('title_two', __('Title two'));
+        $show->field('short_content', __('Short content'));
         $show->field('content', __('Content'));
-        $show->field('content_two', __('Content two'));
 
         return $show;
     }
@@ -70,7 +69,7 @@ class AboutLocalizationController extends AdminController
     {
         $form = new Form(new AboutsLocalization());
 
-        $form->number('abouts_id', __('Abouts id'));
+        $form->number('abouts_id', __('Abouts id'))->default(request()->abouts_id);
         $form->select('lang', __('Lang'))->options(function ()
         {
             $arr = [];
@@ -81,9 +80,8 @@ class AboutLocalizationController extends AdminController
 
         })->default(app()->getLocale());
         $form->text('title', __('Title'));
-        $form->text('title_two', __('Title two'));
+        $form->text('short_content', __('Short content'));
         $form->ckeditor('content', __('Content'));
-        $form->ckeditor('content_two', __('Content two'));
 
         return $form;
     }

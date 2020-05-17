@@ -10,7 +10,7 @@ class Abouts extends LocalizedModel
 {
 
     protected $fillable = [
-     'image','alt_image','sort','status'
+     'image','alt_image','sort','status','icons','type_content'
     ];
     protected $table = 'abouts';
 
