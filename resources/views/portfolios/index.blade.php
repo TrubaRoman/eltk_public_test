@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-    @include('layouts._breadcrumbs')
+
     <div class="site-main">
 
         <section class="ttm-row pt-60 pb-110 res-991-pb-70 ttm-bgcolor-grey clearfix">

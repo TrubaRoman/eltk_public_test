@@ -1,5 +1,5 @@
 @extends('layouts.main')
-
+@section('breadcrumbs','')
 @section('content')
     @include('home._slider')
     <div class="site-main">

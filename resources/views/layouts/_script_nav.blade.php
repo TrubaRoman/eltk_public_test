@@ -26,3 +26,9 @@
 buildMenu($menuitems, 'mainMenu');
 @endphp
     @endif
+
+@foreach($menufooter as $item)
+    @if(Route::currentRouteName() == $item->url)
+        @section('breadcrumbs',\DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs::render($item->url,$item))
+        @endif
+@endforeach

@@ -30,8 +30,8 @@
     <!-- preloader end -->
 @include('layouts._header')
 
-
-
+{{--@section('breadcrumbs',Breadcrumbs::render())--}}
+@yield('breadcrumbs')
     <!--site-main start-->
     @yield('content')
 
