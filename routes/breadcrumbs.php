@@ -1,15 +1,15 @@
 <?php
 use DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs;
 use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
-// Home
+
     Breadcrumbs::for('home', function ($trail) {
-        $trail->push('Home', route('home',app()->getLocale()));
+        $trail->push(__('content/pages.home.title'), route('home',app()->getLocale()));
     });
 
 // Home > About
-    Breadcrumbs::for('portfolios', function ($trail,$item) {
+    Breadcrumbs::for('portfolios', function ($trail) {
         $trail->parent('home');
-        $trail->push($item->name, route($item->url,app()->getLocale()));
+        $trail->push(__('content/pages.portfolio.title'), route('portfolios',app()->getLocale()));
     });
 
 // Home > Blog
@@ -28,5 +28,16 @@ use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
     Breadcrumbs::for('offers', function ($trail, $item) {
         $trail->parent('home');
         $trail->push($item->name,  route($item->url,app()->getLocale()));
+    });
+    // Home > Blog > [Category] > [Post]
+    Breadcrumbs::for('services.show', function ($trail, $model) {
+
+        $trail->parent('home');
+        $trail->push($model->localization->title,  route('services.show',[app()->getLocale(),$model->slug]));
+    });
+    Breadcrumbs::for('portfolios.show', function ($trail, $model) {
+
+        $trail->parent('portfolios');
+        $trail->push($model->localization->title,  route('portfolios.show',[app()->getLocale(),$model->slug]));
     });
 

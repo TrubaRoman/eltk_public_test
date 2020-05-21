@@ -2,13 +2,10 @@
     <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
     <aside class="widget widget-nav-menu">
         <ul class="widget-menu">
+
             @foreach($services as $item)
-            <li><a href="{{route('services.show',[app()->getLocale(),$item->slug])}}"> {{$item->localization->title}} </a></li>
-{{--            <li><a href="painting-services.html"> Painting Services </a></li>--}}
-{{--            <li class="active"><a href="renovation-and-painting.html"> Renovation and Painting </a></li>--}}
-{{--            <li><a href="air-conditioner.html"> Air Conditioner </a></li>--}}
-{{--            <li><a href="wiring-and-installation.html"> Wiring and installation </a></li>--}}
-{{--            <li><a href="plumber-services.html"> Plumber Services </a></li>--}}
+            <li class="{{Route::current()->slug == $item->slug?'active':''}}"><a href="{{route('services.show',[app()->getLocale(),$item->slug])}}"> {{$item->localization->title}} </a></li>
+
                 @endforeach
         </ul>
     </aside>

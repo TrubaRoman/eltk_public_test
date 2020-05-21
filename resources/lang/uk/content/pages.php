@@ -1,5 +1,9 @@
 <?php
 return [
+
+    'home' => [
+        'title' => 'Головна'
+    ],
     'about' => [
         'title' => 'ПРО НАС',
         'sub_title' => ''
@@ -12,7 +16,7 @@ return [
     ],
 
     'portfolio' => [
-        'title' => 'НАШІ РОБОТИ',
+        'title' => 'Наші роботи',
     ],
 
     'contacts' => [

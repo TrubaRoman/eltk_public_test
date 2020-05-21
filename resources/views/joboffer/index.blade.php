@@ -116,7 +116,7 @@
                             <label for="description"><i class="ttm-textcolor-skincolor ti-comment"></i><b>	&#8194;{{__('validation.attributes.description')}}</b>
                                 <span class="text-input"><textarea name="description" rows="3" cols="40" placeholder="" id="description"></textarea></span>
                             </label>
-                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="send" >
+                            <input name="submit" type="submit" id="submit" class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-border ttm-btn-color-black mb-20" value="{{__('content/pages.buttons.send')}}" >
                         </form>
                     </div>
 

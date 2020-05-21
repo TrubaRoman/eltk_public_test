@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    @include('layouts._breadcrumbs')
+@section('breadcrumbs',\DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs::render('portfolios.show',$portfolio_item))
     <!--site-main start-->
     <div class="site-main">
         <section class="ttm-row pb-25 res-991-pb-0 clearfix">

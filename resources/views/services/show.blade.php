@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-@include('layouts._breadcrumbs')
+@section('breadcrumbs',\DaveJamesMiller\Breadcrumbs\Facades\Breadcrumbs::render('services.show',$service_item))
     <!--site-main start-->
 {{--    <div class="site-main">--}}
 

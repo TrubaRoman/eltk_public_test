@@ -1,6 +1,10 @@
 <?php
 return [
 
+    'home' => [
+        'title' => 'Home'
+    ],
+
     'about' => [
         'title' => 'ABOUT THE COMPANY',
         'sub_title' => ''
@@ -13,7 +17,7 @@ return [
     ],
 
     'portfolio' => [
-        'title' => 'OUR WORKS',
+        'title' => 'Our works',
     ],
 
     'contacts' => [

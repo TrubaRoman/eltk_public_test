@@ -18,9 +18,9 @@
                         @else
                         <span><span>{{$breadcrumb->title}}</span></span>
                     </div>
-                    <div class="page-title-heading">
-                        <h1 class="title">{{$breadcrumb->title}}</h1>
-                    </div><!-- /.page-title-captions -->
+{{--                    <div class="page-title-heading">--}}
+{{--                        <h1 class="title">{{$breadcrumb->title}}</h1>--}}
+{{--                    </div><!-- /.page-title-captions -->--}}
                         @endif
                     @endforeach
                 </div>
