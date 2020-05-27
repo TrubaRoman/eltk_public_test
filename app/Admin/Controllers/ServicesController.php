@@ -8,6 +8,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Encore\Admin\Widgets\Table;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -33,15 +34,25 @@ class ServicesController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
-        $grid->column('status', __('Status'))->bool();
-        $grid->column('sort', __('Sort'))->editable();
-        $grid->column('created_at', __('Created at'))->date('Y-m-d');
-        $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
-        $grid->localizations('Language Variants')->display(function ($localize) {
+        $grid->column('status', __('Widoczny'))->switch();
+        $grid->column('sort', __('Sortowanie'))->editable();
+        $grid->column('created_at', __('Data utworzenia'))->date('Y-m-d');
+        $grid->column('updated_at', __('Data aktualizacji'))->date('Y-m-d');
+        $grid->localizations('Treść językowa')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
 
+        })->help('Jeśli brakuje tekstu w jednym z dostępnych języków, etykieta będzie czerwona... Aby dodać tekst, klikni na (Wyświetl
+)-> (Treść językowa) przycisk (+ Nowy)');
+        $grid->Treśćjęzykowa()->display(function (){
+        return '<i class="fa fa-language"> </i>';
+    })->modal('Treść językowa', function ($model) {
+
+        $meta = $model->localizations->map(function ($meta) {
+            return $meta->only(['title','lang','short_content','content','meta_title', 'meta_descriptions','robots']);
         });
+        return new Table(['Tytuł','język','krótka treść','główna zawartość','meta_tyluł', 'meta_opis','robots'], $meta->toArray());
+    });
 
         return $grid;
     }
@@ -75,7 +86,6 @@ class ServicesController extends AdminController
 
             $localizations->id()->sortable();
             $localizations->services_id()->sortable();
-            $localizations->menu();
             $localizations->column('lang')->display(function ($title) {
 
                 return "<img src='/build/img/flags/24/{$title}.png'> &nbsp;$title</img>";
@@ -84,7 +94,9 @@ class ServicesController extends AdminController
 //            $localizations->lang()->image('public/build/img/flag/24/uk.png');
             $localizations->short_content()->limit(10);
             $localizations->content()->limit(40);
-
+            $localizations->meta_title();
+            $localizations->meta_descriptions();
+            $localizations->robots()->select(config('admin.robots_list'))->width(200);
 
 
             $localizations->filter(function ($filter) {

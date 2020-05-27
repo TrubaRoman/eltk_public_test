@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PortfolioLocalization extends Model
 {
     protected $fillable = [
-        'portfolio_id','lang','title','short_content','content'
+        'portfolio_id','lang','title','short_content','content','meta_title','meta_descriptions','robots'
     ];
 
     protected $table = 'portfolios_localization';
@@ -21,5 +21,6 @@ class PortfolioLocalization extends Model
     {
         return $this->belongsTo(Portfolio::class);
     }
+
 
 }

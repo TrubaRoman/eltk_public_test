@@ -409,4 +409,13 @@ return [
             ]
         ]
     ],
+
+//    own settings
+    'robots_list'=> [
+        'all' => 'Nie ma żadnych ograniczeń',
+        'noindex' => 'Nie pokazuj tej strony w wynikach wyszukiwania',
+        'nofollow'=> 'Zakaz linkowania na stronie',
+        'none' => 'Zakaz linkowania na stronie i pokazu',
+        'noarchive' => 'Dyrektywa zabrania wyświetlania linku pamięci podręcznej w wynikach wyszukiwania'
+    ]
 ];

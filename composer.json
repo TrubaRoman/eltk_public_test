@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "artesaos/seotools": "^0.17.2",
         "cviebrock/eloquent-sluggable": "^6.0",
         "davejamesmiller/laravel-breadcrumbs": "5.x",
         "encore/laravel-admin": "^1.7",

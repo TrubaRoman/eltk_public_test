@@ -36,6 +36,9 @@ class PriceController extends AdminController
             return "<img src='/build/img/flags/24/{$lang}.png'> &nbsp;$lang</img>";
 
         })->sortable();
+        $grid->column('robots', __('Robots'))->select(config('admin.robots_list'))->help('Pokaż, czy ukryć tę treść w wyszukiwarce')->width(200)->hide();
+        $grid->column('meta_title', __('Meta-Tytuł'))->help('Informacje serwisowe dla SEO');
+        $grid->column('meta_descriptions', __('Meta-opis'))->help('Informacje serwisowe dla SEO');
         $grid->column('created_at', __('Created at'))->sortable();
         $grid->column('updated_at', __('Updated at'))->sortable();
 
@@ -57,7 +60,9 @@ class PriceController extends AdminController
         $show->field('lang', __('Lang'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
-
+        $show->field('robots', __('Robots'))->select(config('admin.robots_list'))->help('Pokaż, czy ukryć tę treść w wyszukiwarce');
+        $show->field('meta_title', __('Meta-Tytuł'))->help('Informacje serwisowe dla SEO');
+        $show->field('meta_descriptions', __('Meta-opis'))->help('Informacje serwisowe dla SEO');
         return $show;
     }
 
@@ -80,6 +85,11 @@ class PriceController extends AdminController
 
         })->default(app()->getLocale());
         $form->ckeditor('table', __('Table'));
+        $form->select('robots', __('Robots'))->options(
+            config('admin.robots_list')
+        )->help('Pokaż, czy ukryć tę treść w wyszukiwarce');
+        $form->text('meta_title', __('Meta-Tytuł'))->help('Informacje serwisowe dla SEO');
+        $form->text('meta_descriptions', __('Meta-opis'))->help('Informacje serwisowe dla SEO');
 
         return $form;
     }

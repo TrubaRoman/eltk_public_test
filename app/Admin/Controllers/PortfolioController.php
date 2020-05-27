@@ -7,7 +7,9 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
+use Encore\Admin\Widgets\Table;
 use Illuminate\Support\Str;
 use Route;
 
@@ -38,13 +40,22 @@ class PortfolioController extends AdminController
         $grid->column('duration', __('Duration'))->sortable();
         $grid->column('address', __('Address'));
         $grid->column('sort', __('Sort'))->editable();
-        $grid->column('status', __('Status'))->bool();
+        $grid->column('status', __('Status'))->switch();
         $grid->column('created_at', __('Created at'))->date('Y-m-d');
         $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
         $grid->localizations('Language Variants')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
 
+        });
+        $grid->Treśćjęzykowa()->display(function (){
+            return '<i class="fa fa-language"> </i>';
+        })->modal('Treść językowa', function ($model) {
+
+            $meta = $model->localizations->map(function ($meta) {
+                return $meta->only(['title','lang','short_content','content','meta_title', 'meta_descriptions','robots']);
+            });
+            return new Table(['Tytuł','język','krótka treść','główna zawartość','meta_tyluł', 'meta_opis','robots'], $meta->toArray());
         });
 
         return $grid;
@@ -76,6 +87,7 @@ class PortfolioController extends AdminController
         $show->field('address', __('Address'));
         $show->field('sort', __('Sort'));
         $show->field('status', __('Status'));
+
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -93,7 +105,9 @@ class PortfolioController extends AdminController
             $localizations->title();
             $localizations->short_content()->limit(10);
             $localizations->content()->limit(40);
-
+            $localizations->meta_title();
+            $localizations->meta_descriptions();
+            $localizations->robots()->select(config('admin.robots_list'));
 
 
             $localizations->filter(function ($filter) {

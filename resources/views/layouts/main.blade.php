@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    {!! SEOMeta::generate() !!}
 
     <link rel="stylesheet" type="text/css" href="{{mix('css/layout.css','build')}}"/>
 

@@ -4,8 +4,11 @@ namespace App\Admin\Controllers;
 
 use App\Models\Menu;
 use Encore\Admin\Controllers\AdminController;
+use Encore\Admin\Controllers\ModelForm;
+use Encore\Admin\Facades\Admin;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
 class MenuController extends AdminController
@@ -15,7 +18,8 @@ class MenuController extends AdminController
      *
      * @var string
      */
-    protected $title = 'App\Models\Menu';
+    protected $title = 'Zarządzaj elementami menu';
+
 
     /**
      * Make a grid builder.
@@ -32,8 +36,8 @@ class MenuController extends AdminController
         $grid->column('name_en', __('Name en'));
         $grid->column('name_uk', __('Name uk'));
         $grid->column('url', __('Url'));
-        $grid->column('sort_order', __('Sort order'));
-        $grid->column('status', __('Status'))->bool();
+        $grid->column('sort_order', __('Sort order'))->editable();
+        $grid->column('status', __('Status'))->switch();
 
 
         return $grid;

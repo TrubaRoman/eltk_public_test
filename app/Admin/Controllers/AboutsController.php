@@ -6,6 +6,7 @@ use App\Models\Abouts;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
+use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 use Str;
 
@@ -27,10 +28,7 @@ class AboutsController extends AdminController
     {
         $grid = new Grid(new Abouts());
 
-        $grid->column('id', __('Id'))->sortable();
-
-        $grid->column('image', __('Obraz'))->image();
-        $grid->column('alt_image', __('Alternatywny obraz'))->help('Tekst zostanie wyświetlony, jeśli nie ma obrazu');
+        $grid->column('id', __('Id'))->sortable();;
         $grid->column('sort', __('Sortowanie'))->editable();
         $grid->column('status', __('Widoczny'))->switch();
         $grid->column('icons', __('Ikona'));
@@ -98,14 +96,7 @@ class AboutsController extends AdminController
     protected function form()
     {
         $form = new Form(new Abouts());
-
-        $form->image('image', __('Obraz'))->resize(509, null, function ($constraint) {
-            $constraint->aspectRatio();
-        })->crop(509,598)->removable()->name(function ( $file ){
-            return 'abouts_'.Str::random(2).'.'.$file->guessExtension();
-        });
-        $form->text('alt_image', __('Alternatywny obraz'))->help('Tekst zostanie wyświetlony, jeśli nie ma obrazu');
-        $form->number('sort', __('Sortowanie'));
+        $form->number('sort', __('Sortowanie'))->rules('integer');
         $form->switch('status', __('Widoczny'));
         $form->icon('icons', __('Icons'));
         $form->select('type_content', __('Typ zawartości'))->options([

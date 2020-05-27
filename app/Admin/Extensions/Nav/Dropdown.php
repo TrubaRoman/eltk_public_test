@@ -18,13 +18,14 @@
            <div class="box box-solid" style="width: 300px;height: 300px;margin-bottom: 0;">
             <!-- /.box-header -->
             <div class="box-body">
-              <a class="btn btn-app" href="/admin/services">
+      
+              <a class="btn btn-app" href="/hala-bala/services">
             <i class="fa fa-bolt"></i> services
               </a>
 <!--              <a class="btn btn-app" href="/users">-->
 <!--                <i class="fa fa-users"></i> Users-->
 <!--              </a>-->
-              <a class="btn btn-app" href="/admin/prices"
+              <a class="btn btn-app" href="/hala-bala/prices">
                 <i class="fa fa-dollar"></i> Prices
               </a>
               <a class="btn btn-app" href="/admin/contacts">
