@@ -82,20 +82,25 @@
                             <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                             <div class="layer-content">
                                 <div class="pt-40 pr-140 pb-55 pl-60 box-shadow2 res-991-plr-15 clearfix">
-                                    <h4>Contact Details</h4>
+                                    <h4>{{__('/content/pages.contacts.contact_details')}}</h4>
                                     <ul class="ttm_contact_widget_wrapper">
                                         <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>{{config('settings.public_address')}}</li>
                                         <li><i class="ttm-textcolor-skincolor ti ti-mobile"></i><a href="tel:{{config('settings.public_phone')}}">{{config('settings.public_phone')}}</a></li>
                                         <li><i class="ttm-textcolor-skincolor ti ti-comment"></i><a href="mailto:{{config('settings.public_email')}}">{{config('settings.public_email')}}</a></li>
-                                        <li><i class="ttm-textcolor-skincolor ti ti-world"></i><a href="http://www.example.com/">http://www.example.com</a></li>
+                                        <li><i class="ttm-textcolor-skincolor ti ti-world"></i><a href="{{route('home',app()->getLocale())}}">{{config('app.url')}}</a></li>
                                     </ul>
                                     <div class="social-icons circle social-hover mb-35">
-                                        <ul class="list-inline">
-                                            <li class="social-facebook"><a class="tooltip-top ttm-textcolor-skincolor" target="_blank" href="#" data-tooltip="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                            <li class="social-twitter"><a class="tooltip-top ttm-textcolor-skincolor" target="_blank" href="#" data-tooltip="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                            <li class="social-gplus"><a class=" tooltip-top ttm-textcolor-skincolor" target="_blank" href="#" data-tooltip="Google+"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                            <li class="social-linkedin"><a class=" tooltip-top ttm-textcolor-skincolor" target="_blank" href="#" data-tooltip="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        </ul>
+                                        @if(count(config('settings.sociallinks')))
+
+                                            <ul class="list-inline">
+                                                @foreach(config('settings.sociallinks') as $name => $value)
+                                                    @if($value !==null)
+                                                        <li class="social-{{$name}}"><a class="tooltip-top ttm-textcolor-skincolor" target="_blank" href="{{$value}}" data-tooltip="{{ucfirst($name)}}"><i class="fa fa-{{$name}}" aria-hidden="true"></i></a>
+                                                        </li>
+                                                    @endif
+                                                @endforeach
+                                            </ul>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

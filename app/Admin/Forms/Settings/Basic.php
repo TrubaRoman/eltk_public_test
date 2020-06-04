@@ -56,13 +56,21 @@
                 return $arr;
 
             })->default($data['locales'])->help("Opcje językowe strony internetowej.");
-            $this->time('hours_work_open', 'Godziny otwarcia ')->default($data['hours_work_open']);
-            $this->time('hours_work_closed', 'Godziny zamknięcia')->default($data['hours_work_closed']);
+            $this->time('hours_work_open', 'Godziny otwarcia ')->format('HH:mm')->default($data['hours_work_open']);
+            $this->time('hours_work_closed', 'Godziny zamknięcia')->format('HH:mm')->default($data['hours_work_closed']);
+
+            $this->multipleSelect('weekend','Weekend')->options(
+                __('/layouts/footer.weeks-days')
+            )->help('Dni wolne od pracy')->default($data['weekend']);
 //            $this->image('website_logo', 'Strona LOGO');
 //            $this->image('website_text_logo', 'Tekst strony LOGO');
-//            $this->textarea('website_desc', '站点描述')->help('网站描述，有利于搜索引擎抓取相关信息');
+//
 
-            $this->text('nip', 'NIP')->help('NIP')->rules('required|string');
+            $this->text('nip', 'NIP')->help('NIP')->rules('required|string')->default($data['nip']);
+
+            $this->url('sociallinks.facebook', 'Link facebook')->attribute(['sociallinks' => 'facebook'])->default($data['sociallinks']['facebook'])->rules('url');
+
+            $this->url('sociallinks.twitter', 'Link twitter')->attribute(['sociallinks' => 'twitter'])->default($data['sociallinks']['twitter'])->rules('url');
 //            $this->text('website_icp', '备案信息')->help("调用方式：config('website_icp')");
 //            $this->textarea('website_statistics', '网站统计代码')->help("网站统计代码，支持百度、Google、cnzz等，调用方式：config('website_statistics')");
         }

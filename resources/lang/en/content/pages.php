@@ -22,6 +22,7 @@ return [
 
     'contacts' => [
         'title' =>'CONTACT US',
+        'contact_details' => 'Contact Details',
         'sub_title'=> 'We will answer any of your questions',
         'required-desc' => 'All fields are required'
     ],

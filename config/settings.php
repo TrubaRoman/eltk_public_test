@@ -5,11 +5,28 @@
   'locales' => 
   array (
     0 => 'pl',
-    1 => 'en',
-    2 => 'uk',
-    3 => NULL,
+    1 => 'uk',
+    2 => NULL,
   ),
-  'hours_work_open' => '07:08:00',
-  'hours_work_closed' => '17:00:00',
+  'hours_work_open' => '07:03',
+  'hours_work_closed' => '17:00',
+  'weekend' => 
+  array (
+    0 => 'sunday',
+  ),
   'nip' => '681-117-05-61',
+  'sociallinks' => 
+  array (
+    'facebook' => 'https://laravel.com/docs/facebook',
+    'twitter' => 'https://laravel.com/docs/7.x',
+  ),
+  'workdays' => 
+  array (
+    0 => 'monday',
+    1 => 'tuesday',
+    2 => 'wednesday',
+    3 => 'thursday',
+    4 => 'friday',
+    5 => 'saturday',
+  ),
 );

@@ -19,7 +19,9 @@
             <!-- /.box-header -->
             <div class="box-body">
       
-              <a class="btn btn-app" href="/hala-bala/services">
+              <a class="btn btn-app" href="
+              /hala-bala/services
+              ">
             <i class="fa fa-bolt"></i> services
               </a>
 <!--              <a class="btn btn-app" href="/users">-->
@@ -31,6 +33,7 @@
               <a class="btn btn-app" href="/admin/contacts">
                 <i class="fa fa-envelope"></i> Messages
               </a>
+              
               <a class="btn btn-app" href="/admin/menus">
                 <i class="fa fa-list"></i> Menu header
               </a>

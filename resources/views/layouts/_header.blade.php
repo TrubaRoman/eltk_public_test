@@ -10,15 +10,15 @@
                 <div class="topbar-right text-right">
                     <div class="ttm-social-links-wrapper list-inline">
                         <ul class="social-icons">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-flickr"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
 
+                            @if(count(config('settings.sociallinks')))
+                                @foreach(config('settings.sociallinks') as $name => $value)
+                                    @if($value !==null)
+                            <li><a href="{{$value}}"><i class="fa fa-{{$name}}"></i></a>
+                            </li>
+                                    @endif
+                                @endforeach
+                            @endif
                         </ul>
                     </div>
                     <ul class="top-contact ttm-highlight-right">
@@ -127,13 +127,13 @@
                                                             	        <!-- ????                -->
 										                            <ul>
 										                                <li>                         
-										                                       <a href="tel:+48609862467"  class= "link-defoult" >
+										                                       <a href="tel:{{config('settings.public_phone')}}"  class= "link-defoult" >
 										                                       		<p ><i class="fa fa-phone"></i> {{config('settings.public_phone')}}</p>
 										                                       </a>                                     
 										                                </li>
 										                              
 										                                <li>                         
-										                                       <a href="mailto:eltk.koczurek@op.pl"  class= "link-defoult" >
+										                                       <a href="mailto:{{config('settings.public_email')}}"  class= "link-defoult" >
 										                                       		<p ><i class="fa fa-at"></i> {{config('settings.public_email')}}</p>
 										                                       </a>                                     
 										                                </li> 

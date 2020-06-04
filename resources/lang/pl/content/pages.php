@@ -9,7 +9,7 @@ return [
     ],
 
     'services' => [
-        'title' => 'NASZE USŁUGI',
+        'title' => 'OFERTA',
         'sub_title' => 'CO ROBIMY',
         'short_text' => 'Oto lista naszych usług, które otrzymasz.',
     ],
@@ -20,6 +20,7 @@ return [
 
     'contacts' => [
         'title' =>'SKONTAKTUJ SIĘ Z NAMI',
+        'contact_details' => 'Szczegóły kontaktu',
         'sub_title'=> 'Odpowiemy na każde Twoje pytanie',
         'required-desc' => 'Wszystkie pola są wymagane'
     ],
