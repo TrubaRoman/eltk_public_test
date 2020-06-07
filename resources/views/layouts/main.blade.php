@@ -142,17 +142,18 @@
 <script src="{{mix('revolution/js/extensions/extensions-slider.js','build')}}"></script>
 
 
-
 <script type="text/javascript">
     $(function(){
         $("#phone").mask("+(99) 999-999-999");
     });
 </script>
-@if(Route::current()->getName() == 'contacts')
+
+@if( Route::currentRouteName() == 'contacts' )
     @include('layouts._ajax_contactform')
-@elseif(Route::current()->getName() == 'offers')
+@elseif(Route::currentRouteName() == 'offers'  )
     @include('layouts._ajax_job_offerts_form')
     @endif
+
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 
 
 
-            Auth::routes();
+            Auth::routes(['register' => false]);
 
             Route::get('/', 'HomeController@index')->name('home');
             Route::get('/cabinet', 'CabinetController@index')->name('cabinet');

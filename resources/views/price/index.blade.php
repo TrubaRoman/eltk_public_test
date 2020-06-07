@@ -5,30 +5,7 @@
     @include('layouts._breadcrumbs')
     <!-- sidebar -->
     <div class="site-main">
-h
-        <!-- row-text-section -->
-{{--        <section class="ttm-row row-text-section ttm-bgcolor-grey">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-12">--}}
 
-{{--                        <div class="sep-box text-center">--}}
-{{--                            <h2>We Work Hard And Make Your Home Beautiful</h2>--}}
-{{--                            <h6>Friendly customer service staff for your all questions!</h6>--}}
-{{--                            <div class="sep_holder_box width-30 pt-10">--}}
-{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
-{{--                                <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">--}}
-{{--                                    <i class="fa fa-phone"></i>--}}
-{{--                                </div>--}}
-{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
-{{--                            </div>--}}
-{{--                            <h4>Toll Free: 1800-200-45678</h4>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
-        <!-- row-text-section end -->
 
         <!-- about-section -->
         <section class="ttm-row about3-section">

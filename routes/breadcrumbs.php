@@ -40,4 +40,13 @@ use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
         $trail->parent('portfolios');
         $trail->push($model->localization->title,  route('portfolios.show',[app()->getLocale(),$model->slug]));
     });
-
+    //errors 404
+    Breadcrumbs::for('errors.404', function ($trail) {
+        $trail->parent('home');
+        $trail->push('Page Not Found');
+    });
+    //errors 503
+    Breadcrumbs::for('errors.503', function ($trail) {
+        $trail->parent('home');
+        $trail->push('Service Temporarily Unavailable');
+    });

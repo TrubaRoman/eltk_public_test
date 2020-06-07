@@ -151,9 +151,9 @@
                                         </div><!-- header-icons end -->
 
 
-                                <div class="ttm-custombutton">
-                                    <a href="contact-us.html">{{__('/layouts/header.nav.employee-cabinet')}}<i class="fa fa-caret-right"></i></a>
-                                </div>
+{{--                                <div class="ttm-custombutton">--}}
+{{--                                    <a href="contact-us.html">{{__('/layouts/header.nav.employee-cabinet')}}<i class="fa fa-caret-right"></i></a>--}}
+{{--                                </div>--}}
                             </div>
                         </div>
                     </div>
