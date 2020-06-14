@@ -15,8 +15,7 @@ class CreateTableAbouts extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('image')->nullable();
-            $table->string('alt_image')->nullable();
+
             $table->integer('sort')->default(0);
             $table->tinyInteger('status')->default(0);
             $table->string('icons')->nullable();
