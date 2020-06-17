@@ -7,11 +7,13 @@ $timezone = 'Europe/Warsaw';
 //path to the directory on web-server
 $path = '/var/www/project';
 
-$current = $path . 'current';
+$current = $path . '/current';
 
 //where take your code (git repository)
 
-$repo = "git@github.com:TrubaRoman/eltk.git";
+$repo = "git@github.com:TrubaRoman/eltk.git
+
+";
 
 $branch = 'deploy';
 
