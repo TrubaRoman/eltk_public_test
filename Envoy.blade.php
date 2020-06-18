@@ -1,4 +1,4 @@
-@setup
+ @setup
 //user on web-server
 $user = 'ruraeltk';
 
@@ -11,9 +11,7 @@ $current = $path . '/current';
 
 //where take your code (git repository)
 
-$repo = "git@github.com:TrubaRoman/eltk.git
-
-";
+$repo = 'https://github.com/TrubaRoman/eltk_public_test.git';
 
 $branch = 'deploy';
 
@@ -31,8 +29,8 @@ $release = $path.'/releases/'. $date->format('YmdHis');
 
 @task('clone',['on' => $on])
     mkdir -p {{$release}}
-
-    git clone --depth 1 -b {{$branch}} "{{$repo}}" {{$release}}
+    echo "#0 mkdir"
+    git clone --depth 1 -b {{$branch}} "{{ $repo }}" {{$release}}
     echo "#1 - Repository has been cloned"
 @endtask
 
@@ -47,8 +45,10 @@ $release = $path.'/releases/'. $date->format('YmdHis');
 {{--Updates composer then runs a fresh instalation--}}
 
 @task('artisan',['on' => $on])
-    cd{{$release}}
+    cd {{$release}}
+	echo "#3.0 cd released"
     ln -nfs {{$path}}/.env .env;
+	echo "#3.1 ls-nfs env"
     chgrp -h www-data .env;
 
     php artisan config:clear

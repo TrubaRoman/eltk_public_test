@@ -27,6 +27,7 @@
         </section>
         <!-- row-text-section end -->
         <!-- about-section -->
+        @if(isset($abouts_main))
         <section class="ttm-row about2-section break-1199-colum clearfix">
             <div class="container">
                 <div class="row">
@@ -71,10 +72,10 @@
                 </div><!-- row end -->
             </div>
         </section>
-
+@endif
 
         <!-- about-section end -->
-
+@if(isset($abouts_block))
         <!--services-box-section-->
         <section class="ttm-row services-box-section bg-img12 clearfix">
             <div class="container">
@@ -100,6 +101,7 @@
                 </div><!-- row end -->
             </div>
         </section>
+   @endif     
         <!-- services-box-section end -->
         <!-- service-section -->
         <section class="ttm-row services2-section pb-110 clearfix">
