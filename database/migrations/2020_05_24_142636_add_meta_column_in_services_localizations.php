@@ -14,9 +14,9 @@ class AddMetaColumnInServicesLocalizations extends Migration
     public function up()
     {
         Schema::table('services_localization', function (Blueprint $table) {
-            $table->string('meta_title');
-            $table->string('meta_descriptions');
-            $table->string('robots');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_descriptions')->nullable();
+            $table->string('robots')->nullable();
         });
     }
 

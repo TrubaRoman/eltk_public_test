@@ -104,6 +104,7 @@
    @endif     
         <!-- services-box-section end -->
         <!-- service-section -->
+        @if(isset($services))
         <section class="ttm-row services2-section pb-110 clearfix">
             <div class="container">
                 <!-- row -->
@@ -122,7 +123,8 @@
                     <div class="col-md-2"></div>
                 </div>
                 <div class="row mt-10">
-                    {{--                    {{dd($services)}}--}}
+
+
                     @foreach($services as $item)
 
                         <div class="col-md-4 d-flex align-items-streach">
@@ -146,6 +148,7 @@
                             </div><!-- featured-imagebox end-->
                         </div>
                     @endforeach
+    @endif
                 </div><!-- row end -->
             </div>
         </section>

@@ -14,9 +14,9 @@ class AddMetaColumnInPrice extends Migration
     public function up()
     {
         Schema::table('price', function (Blueprint $table) {
-            $table->string('meta_title');
-            $table->string('meta_descriptions');
-            $table->string('robots');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_descriptions')->nullable();
+            $table->string('robots')->nullable();
         });
     }
 
