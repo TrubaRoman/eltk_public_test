@@ -81,7 +81,7 @@
                         <div class="ttm-bg ttm-col-bgcolor-yes ttm-right-span ttm-bgcolor-grey">
                             <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                             <div class="layer-content">
-                                <div class="pt-40 pr-140 pb-55 pl-60 box-shadow2 res-991-plr-15 clearfix">
+                                <div class="pt-40 pr-140 pb-55 pl-60 box-shadow2 res-991-plr-35 clearfix">
                                     <h4>{{__('/content/pages.contacts.contact_details')}}</h4>
                                     <ul class="ttm_contact_widget_wrapper">
                                         <li><i class="ttm-textcolor-skincolor ti ti-location-pin"></i>{{config('settings.public_address')}}</li>

@@ -77,7 +77,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget widget_text clearfix">
-                            <h3 class="widget-title">Kontakt</h3>
+                            <h3 class="widget-title">{{__('/layouts/footer.contact')}}</h3>
                             <div class="textwidget widget-text">
                                 <h6 class="ttm-textcolor-skincolor"><a href="tel:{{config('settings.public_phone')}}">{{config('settings.public_phone')}}</a></h6>
                                 <p class="ttm-textcolor-skincolor"><a href="mail+to:{{config('settings.public_email')}}">{{config('settings.public_email')}}</a></p>

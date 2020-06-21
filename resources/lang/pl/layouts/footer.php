@@ -1,5 +1,6 @@
 <?php
     return [
+        'contact' => 'Kontakt',
         'work-days' => 'Dni robocze',
         'weeks-days'=> [
 

@@ -117,7 +117,7 @@
 
 
                                             <div class="ttm-header-icon ttm-header-search-link">
-                                                <a  href="#" id="alt-menu" ><i class="ti ti-more-alt"></i></a>
+                                                <a  href="#" id="alt-menu"  class="bg-transparent"><i class="ti ti-more-alt"></i></a>
                                                 <div class="ttm-search-overlay">
                                                     <div class="ttm-site-searchform">
                                                         <div class="w-search-form-h">

@@ -1,6 +1,7 @@
 <?php
     return [
         'work-days' => 'Робочі дні',
+        'contact' => 'Контакти',
         'weeks-days'=> [
 
             'monday'=>'Понеділок',

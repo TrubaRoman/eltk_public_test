@@ -1,7 +1,7 @@
 <?php
     return [
         'work-days' => 'Work Days',
-
+        'contact'=> 'Contact',
         'weeks-days'=> [
             'monday'=>'Monday',
             'tuesday'=>'Tuesday',

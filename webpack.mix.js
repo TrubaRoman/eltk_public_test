@@ -73,8 +73,8 @@ mix.setPublicPath('public/build')
     .copy('resources/assets/template/revolution/assets','public/build/revolution/assets')
     .copy('resources/assets/template/revolution/css','public/build/revolution/css')
     .copy('resources/assets/template/revolution/fonts','public/build/revolution/fonts')
-    .copy('resources/assets/template/Version','public/build/Version')
-    .copy('resources/assets/template/youtu.be','public/build/youtu.be')
+    // .copy('resources/assets/template/Version','public/build/Version')
+    // .copy('resources/assets/template/youtu.be','public/build/youtu.be')
 
     // .js('resources/assets/js/app.js', 'public/build/js')
 
