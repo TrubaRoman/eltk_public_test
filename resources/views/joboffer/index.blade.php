@@ -9,7 +9,30 @@
                 <div class="row">
 
                     @if(count($offers) > 0)
-                    <div class="col-md-7 pr-60 res-767-pr-15">
+                        <div class="col-md-12">
+                            <!-- single-img -->
+                            <div class="section-title clearfix">
+                                <div class="title-header">
+
+                                    <h3 >{{__('content/pages.offers.offers-title')}}</h3>
+                                </div>
+                            </div><!-- section title end -->
+                            <!-- acadion -->
+                            <div class="accordion mt-40">
+                            @foreach($offers as $offer)
+
+                                <!-- toggle -->
+                                    <div class="toggle ttm-style-classic ttm-toggle-title-bgcolor-grey">
+                                        <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" >{{$offer->title}}</a></div>
+                                        <div class="toggle-content">
+                                            <p>{!!$offer->description  !!}</p>
+                                        </div>
+                                    </div><!-- toggle end -->
+                                    <!-- toggle -->
+                                @endforeach
+                            </div><!-- acadion end-->
+                        </div>
+                    <div class="col-md-12 pr-60 res-767-pr-15">
                         <!-- section title -->
                         <div class="section-title with-desc clearfix">
                             <div class="title-header">
@@ -120,29 +143,7 @@
                         </form>
                     </div>
 
-                    <div class="col-md-5">
-                        <!-- single-img -->
-                        <div class="section-title clearfix">
-                            <div class="title-header">
 
-                                <h3 >{{__('content/pages.offers.offers-title')}}</h3>
-                            </div>
-                        </div><!-- section title end -->
-                        <!-- acadion -->
-                        <div class="accordion mt-40">
-@foreach($offers as $offer)
-
-                            <!-- toggle -->
-                            <div class="toggle ttm-style-classic ttm-toggle-title-bgcolor-grey">
-                                <div class="toggle-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" >{{$offer->title}}</a></div>
-                                <div class="toggle-content">
-                                    <p>{!!$offer->description  !!}</p>
-                                </div>
-                            </div><!-- toggle end -->
-                            <!-- toggle -->
-    @endforeach
-                        </div><!-- acadion end-->
-                    </div>
                     @else
                         <div class="col-lg-12 h-200">
                             <div class="section-title clearfix ">

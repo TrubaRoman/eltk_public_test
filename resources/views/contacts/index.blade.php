@@ -71,7 +71,7 @@
         <div class="ttm-row map-section bg-layer clearfix">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 pl-35">
 
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.7371101624863!2d19.984145315113846!3d50.01628242643495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164367f3dc2173%3A0x4ee479f6f6467e!2zT2vDs2xuYSAyOCwgS3Jha8Ozdw!5e0!3m2!1suk!2spl!4v1583614458825!5m2!1suk!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 

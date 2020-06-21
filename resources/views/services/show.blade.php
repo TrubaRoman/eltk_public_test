@@ -9,8 +9,8 @@
             <div class="container">
                 <!-- row -->
                 <div class="row">
-@include('services._widget_left')
-                    <div class="col-lg-9 content-area">
+
+                    <div class="col-lg-9 order-lg-2  content-area">
                         <!-- ttm-service-single-content-are -->
                         <div class="ttm-service-single-content-area">
 
@@ -29,6 +29,7 @@
                         </div>
                         <!-- ttm-service-single-content-are end -->
                     </div>
+                    @include('services._widget_left')
                 </div><!-- row end -->
             </div>
         </div>

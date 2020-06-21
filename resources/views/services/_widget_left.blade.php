@@ -1,6 +1,7 @@
-<div class="col-lg-3 widget-area sidebar-left ttm-col-bgcolor-yes ttm-bg ttm-left-span ttm-bgcolor-grey">
+<div class="col-lg-3 order-lg-1  widget-area sidebar-left ttm-col-bgcolor-yes ttm-bg ttm-left-span ttm-bgcolor-grey">
     <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
-    <aside class="widget widget-nav-menu">
+
+    <aside class="widget widget-nav-menu d-none d-lg-block">
         <ul class="widget-menu">
 
             @foreach($services as $item)
