@@ -30,14 +30,18 @@ class CvMali extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.cv-mail')
+        $message = $this->view('emails.cv-mail')
             ->text('emails.cv-mail-plain')
             ->with(
-            [
-                'data'=>$this->data,
-                'imagePath' => public_path().'/build/images/'
-            ]
-        )->subject('CV z witryny')->from($this->data->email,$this->data->surname)
-            ->attachFromStorage($this->data->cv);
+                [
+                    'data'=>$this->data,
+                    'imagePath' => public_path().'/build/images/'
+                ]
+            )->subject('CV z witryny')->from($this->data->email,$this->data->surname);
+        if ($this->data->cv !=null){
+            $message->attachFromStorage($this->data->cv);
+        }
+        return $message;
+
     }
 }

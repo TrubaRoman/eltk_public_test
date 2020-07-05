@@ -16,13 +16,16 @@
 
         public function uploadCV($file)
         {
-            if($file == null)return;
+           if($file == null){
+               $this->cv = null;
+               return $this->save();
+           }
             $this->removeCV();//storage видаляє картинку в папці, якшо вона існує
             $filename = $this->name.'_'.$this->surname.'_'.Str::random(2).'.'.$file->extension();//потім створюється імя нової картинки
             $file->storeAs($this->upload_dir,$filename);//зберігаємо файл в папку
             $this->cv = $this->upload_dir.$filename;// завантажуємо імя нового файла в поле image
-            $this->save();// зберігаємо імя картинки в базу
-//            return $filename;
+            // зберігаємо імя картинки в базу
+           return $this->save();
         }
 
         public function removeCV()

@@ -34,7 +34,7 @@ class JobofferController extends Controller
             'driving_license' => 'required|bool',
             'sep' => 'required|bool',
             'udt' => 'required|bool',
-            'experience' => 'integer|required',
+            'experience' => 'integer|required|max:60',
             'description'=> 'nullable|string|max:1000',
             'cv'=> 'nullable|file|mimes:ppt,pptx,doc,docx,pdf,xls,xlsx|max:500'
         ]);
