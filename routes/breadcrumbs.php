@@ -18,11 +18,7 @@ use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
         $trail->push($item->name,route($item->url,app()->getLocale()));
     });
 
-// Home > Blog > [Category]
-    Breadcrumbs::for('price', function ($trail, $item) {
-        $trail->parent('home');
-        $trail->push($item->name, route($item->url,app()->getLocale()));
-    });
+
 
 // Home > Blog > [Category] > [Post]
     Breadcrumbs::for('offers', function ($trail, $item) {
