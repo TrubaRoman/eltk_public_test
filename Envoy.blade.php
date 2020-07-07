@@ -37,6 +37,7 @@ $release = $path.'/releases/'. $date->format('YmdHis');
 {{--Runs as fresh installation--}}
 @task('composer', ['on' => $on])
     composer self-update
+    echo "# Composer self update"
     cd {{ $release }}
     composer install --no-interaction --no-dev --prefer-dist
     echo "#2 -Composer dependencies have been installed"
