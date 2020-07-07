@@ -59,12 +59,12 @@ div.product .summary .star-rating,
 .featured-icon-box.style9 a.ttm-btn.ttm-btn-color-black:hover,
 .ttm-btn.btn-inline.ttm-btn-color-black:hover,
 .featured-imagebox-event .ttm-box-meta i{
-  color: #EE5651;
+  color: #e31212;
 }
 
 h1.ttm-textcolor-skincolor, h2.ttm-textcolor-skincolor, h3.ttm-textcolor-skincolor, 
 h4.ttm-textcolor-skincolor, h5.ttm-textcolor-skincolor, h6.ttm-textcolor-skincolor {
-  color: #EE5651 !important;
+  color: #e31212 !important;
 }
 
 /** Skin-bg-color **/
@@ -131,7 +131,7 @@ a.checkout-button:hover, .coupon button:hover, .ttm-cart-form button:hover, .pla
 .tribe-events-cal-links a,
 .tribe-events-nav-next a,
 .color-trigger{
-  background-color: #EE5651;
+  background-color: #e31212;
 }
 
 .skin-flat-button:hover{ background-color: rgba(253, 161, 43, 0.88); border-color: rgba(253, 161, 43, 0.88); }
@@ -164,15 +164,15 @@ input[type="color"]:focus,
 .featured-icon-box.style7,
 .ttm-tabs.ttm-tab-style-classic ul.tabs li.active a,
 .ttm-video-btn .ttm-btn-play, .ttm-btn-play:after, .ttm-btn-play:before { 
-    border-color: #EE5651 !important;
+    border-color: #e31212 !important;
 }
 .ttm-search-overlay,
 #site-header-menu #site-navigation .menu > ul,
 #site-header-menu #site-navigation .menu > ul > li > ul,
 .ttm-rounded-shadow-box, div.product ul.tabs li.active a:before{
-    border-top-color: #EE5651 !important; 
+    border-top-color: #e31212 !important; 
 }
 .featured-imagebox-portfolio.ttm-box-view-top-image:hover .ttm-box-bottom-content:before{
-  border-color: transparent transparent #EE5651 transparent;
+  border-color: transparent transparent #e31212 transparent;
 }
-.ttm-search-overlay .w-search-form-row:before{ border-bottom-color: #EE5651 !important; }
+.ttm-search-overlay .w-search-form-row:before{ border-bottom-color: #e31212 !important; }
