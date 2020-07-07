@@ -65,8 +65,7 @@
                             </div><!-- section title end -->
                             <p>{!! $abouts_main->localization->content !!}</p>
 
-                                <!-- row-->
-                            @include('layouts._counters')
+
                         </div>
                     </div>
                 </div><!-- row end -->

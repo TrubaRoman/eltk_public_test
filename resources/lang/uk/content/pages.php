@@ -17,6 +17,12 @@ return [
 
     'portfolio' => [
         'title' => 'Наші роботи',
+        'title_list' => 'Our previous work',
+        'project_name' => 'Назва проекту',
+        'client' => 'Клієнт',
+        'date' => 'Дата',
+        'location' => 'Розташування',
+        'other_projects' => 'Інші проекти'
     ],
 
     'contacts' => [

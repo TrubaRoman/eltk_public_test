@@ -16,6 +16,12 @@ return [
 
     'portfolio' => [
         'title' => 'Nasze prace',
+        'title_list' => 'Nasza poprzednia praca',
+        'project_name' => 'Nazwa Projektu',
+        'client' => 'Klient',
+        'date' => 'Data',
+        'location' => 'Lokalizacja',
+        'other_projects' => 'Inne projekty'
     ],
 
     'contacts' => [

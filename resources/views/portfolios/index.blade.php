@@ -9,7 +9,7 @@
                 <!-- row -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h2><strong>Our Latest Projects</strong></h2>
+                        <h2><strong>{{__('content/pages.portfolio.title_list')}}</strong></h2>
                         <p class="mb-55">Below you’ll see our best industrial projects.&nbsp; We are providing&nbsp;never ending customer support also provide guarantee a very high level of satisfaction for our clients.&nbsp;&nbsp;if you have a question&nbsp; don’t hesitate to email us at <a href="#">info@example.com</a>&nbsp;for more details.</p>
                     </div>
                 </div><!-- row end -->

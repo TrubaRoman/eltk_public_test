@@ -19,20 +19,5 @@
             <li><i class="ti ti-alarm-clock"></i>{{__('content/pages.widget_firm_info.hours_of_work',['open' =>config('settings.hours_work_open'),'closed' => config('settings.hours_work_closed')])}}</li>
         </ul>
     </aside>
-    <aside class="widget widget_media_image">
-        <a href="#"><img class="img-fluid" src="images/widget-banner.jpg" alt="widget-banner"></a>
-    </aside>
-    <aside class="widget tagcloud-widget">
-        <h3 class="widget-title">Tags</h3>
-        <div class="tagcloud">
-            <a href="#" class="tag-cloud-link">Design</a>
-            <a href="#" class="tag-cloud-link">Dry Wall</a>
-            <a href="#" class="tag-cloud-link">Electrical</a>
-            <a href="#" class="tag-cloud-link">Furniture</a>
-            <a href="#" class="tag-cloud-link">Handywork</a>
-            <a href="#" class="tag-cloud-link">Painting</a>
-            <a href="#" class="tag-cloud-link">Pools</a>
-            <a href="#" class="tag-cloud-link">Roofing</a>
-        </div>
-    </aside>
+
 </div>

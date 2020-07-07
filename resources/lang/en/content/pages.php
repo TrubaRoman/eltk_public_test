@@ -18,6 +18,12 @@ return [
 
     'portfolio' => [
         'title' => 'Our works',
+        'title_list' => 'Our previous work',
+        'project_name' => 'Project Name',
+        'client' => 'Client',
+        'date' => 'Date',
+        'location' => 'Location',
+        'other_projects' => 'Other projects'
     ],
 
     'contacts' => [
