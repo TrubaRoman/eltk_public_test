@@ -78,12 +78,12 @@ a:focus {
     text-decoration: none; 
 }
 a:focus, a:hover { 
-    color: #EE5651;
+    color: #e31212;
     text-decoration: none; 
 }
 a, button, input { 
     outline: medium none; 
-    color: #EE5651;
+    color: #e31212;
 }
 ol, ul{ 
     padding: 0; 
@@ -103,17 +103,17 @@ p {
 }
 
 *::-moz-selection { 
-    background: #EE5651;
+    background: #e31212;
     color: #fff; 
     text-shadow: none; 
 }
 ::-moz-selection { 
-    background: #EE5651;
+    background: #e31212;
     color: #fff;
     text-shadow: none; 
 }
 ::selection { 
-    background: #EE5651;
+    background: #e31212;
     color: #fff; 
     text-shadow: none; 
 }
