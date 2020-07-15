@@ -5,26 +5,26 @@
     <div class="site-main">
         <!--row-top-section-->
         <!-- row-text-section -->
-{{--        <section class="ttm-row row-text-section ttm-bgcolor-grey">--}}
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-12">--}}
-{{--                        <div class="sep-box text-center">--}}
-{{--                            <h2>Firma, która najlepiej zadba o Twoją instalację elektryczną</h2>--}}
-{{--                            <h6>Friendly customer service staff for your all questions!</h6>--}}
-{{--                            <div class="sep_holder_box width-30 pt-10">--}}
-{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
-{{--                                <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">--}}
-{{--                                    <i class="fa fa-phone"></i>--}}
-{{--                                </div>--}}
-{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
-{{--                            </div>--}}
-{{--                            <h4>Toll Free: 1800-200-45678</h4>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </section>--}}
+        <section class="ttm-row row-text-section ttm-bgcolor-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sep-box text-center">
+                            <h2>Firma, która najlepiej zadba o Twoją instalację elektryczną</h2>
+                            <h6>Friendly customer service staff for your all questions!</h6>
+                            <div class="sep_holder_box width-30 pt-10">
+                                <span class="sep_holder"><span class="sep_line"></span></span>
+                                <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <span class="sep_holder"><span class="sep_line"></span></span>
+                            </div>
+                            <h4>Toll Free: 1800-200-45678</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- row-text-section end -->
         <!-- about-section -->
         @if(isset($abouts_main))

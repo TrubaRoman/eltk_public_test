@@ -13,9 +13,6 @@
     <link rel="stylesheet" type="text/css" href="{{mix('css/layout.css','build')}}"/>
 
 
-    <!-- REVOLUTION LAYERS STYLES -->
-
-    <link rel="stylesheet" type="text/css" href="{{mix('revolution/css/slider.css','build')}}"/>
 
 </head>
 
@@ -137,9 +134,7 @@
 <script src="{{mix('js/layout.js','build')}}"></script>
 
 <!-- Revolution Slider -->
-<script src="{{mix('revolution/js/slider.js','build')}}"></script>
-<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="{{mix('revolution/js/extensions/extensions-slider.js','build')}}"></script>
+<script src="{{mix('js/slider.js','build')}}"></script>
 
 
 <script type="text/javascript">
@@ -147,11 +142,16 @@
         $("#phone").mask("+(99) 999-999-999");
     });
 </script>
+<script type="text/javascript">jssor_1_slider_init();
+</script>
 
 @if( Route::currentRouteName() == 'contacts' )
     @include('layouts._ajax_contactform')
 @elseif(Route::currentRouteName() == 'offers'  )
     @include('layouts._ajax_job_offerts_form')
+@elseif(Route::currentRouteName() == 'home'  )
+    <script type="text/javascript">jssor_1_slider_init();
+    </script>
     @endif
 
 </body>

@@ -30,9 +30,7 @@ mix.setPublicPath('public/build')
     "resources/assets/template/css/responsive.css",
     ],'public/build/css/layout.css')
 
-    .styles(["resources/assets/template/revolution/css/layers.css",
-            "resources/assets/template/revolution/css/settings.css"],
-            'public/build/revolution/css/slider.css')
+
 
     .scripts([
 
@@ -52,27 +50,14 @@ mix.setPublicPath('public/build')
 
 
 
-    .scripts([ "resources/assets/template/revolution/js/jquery.themepunch.tools.min.js",
-        "resources/assets/template/revolution/js/jquery.themepunch.revolution.min.js",
-        "resources/assets/template/revolution/js/slider.js",
-        ],'public/build/revolution/js/slider.js')
+    .scripts([ "resources/assets/template/js/jssor.slider-28.0.0.min.js",
 
-    .scripts([
-        "resources/assets/template/revolution/js/extensions/revolution.extension.actions.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.carousel.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.kenburn.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.layeranimation.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.migration.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.navigation.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.parallax.min.js",
-        "resources/assets/template/revolution/js/extensions/revolution.extension.slideanims.min.js",],
-        'public/build/revolution/js/extensions/extensions-slider.js')
+        ],'public/build/js/slider.js')
+
+
 
     .copy('resources/assets/template/fonts','public/build/fonts')
     .copy('resources/assets/template/images','public/build/images')
-    .copy('resources/assets/template/revolution/assets','public/build/revolution/assets')
-    .copy('resources/assets/template/revolution/css','public/build/revolution/css')
-    .copy('resources/assets/template/revolution/fonts','public/build/revolution/fonts')
     // .copy('resources/assets/template/Version','public/build/Version')
     // .copy('resources/assets/template/youtu.be','public/build/youtu.be')
 
