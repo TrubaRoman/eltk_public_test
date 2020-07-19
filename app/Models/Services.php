@@ -20,7 +20,7 @@ class Services extends LocalizedModel
 
 
     protected $fillable = [
-        'slug', 'image', 'sort','status'
+        'slug', 'image','thumbnail','alt_image', 'sort','status'
     ];
     use Sluggable;
 

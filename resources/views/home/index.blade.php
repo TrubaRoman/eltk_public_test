@@ -130,7 +130,8 @@
                             <!-- featured-imagebox -->
                             <div class="featured-imagebox box-shadow2 mb-30">
                                 <div class="featured-thumbnail" style="min-height: 270px">
-                                    <img class="img-fluid" src="{{$item->getLastImage()}}" alt="">
+
+                                    <img class="img-fluid" src="{{$item->getThumbnail()}}"  alt="">
                                 </div>
                                 <div class="ttm-box-bottom-content">
                                     <div class="featured-title featured-title">

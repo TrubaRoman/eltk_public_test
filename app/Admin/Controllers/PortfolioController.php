@@ -35,14 +35,15 @@ class PortfolioController extends AdminController
         $grid->column('slug', __('Slug'));
         $grid->column('image', __('Image'))->image();
         $grid->column('alt_image', __('Alt image'))->editable();
+        $grid->column('thumbnail',__('Small image'))->image();
         $grid->column('project_name', __('Project name'))->sortable();
         $grid->column('client', __('Client'))->sortable();
         $grid->column('duration', __('Duration'))->sortable();
         $grid->column('address', __('Address'));
         $grid->column('sort', __('Sort'))->editable();
         $grid->column('status', __('Status'))->switch();
-        $grid->column('created_at', __('Created at'))->date('Y-m-d');
-        $grid->column('updated_at', __('Updated at'))->date('Y-m-d');
+        $grid->column('created_at', __('Created at'))->date('Y-m-d')->hide();
+        $grid->column('updated_at', __('Updated at'))->date('Y-m-d')->hide();
         $grid->localizations('Language Variants')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
@@ -81,6 +82,7 @@ class PortfolioController extends AdminController
             return $html;
         })->unescape();
         $show->field('alt_image', __('Alt image'));
+        $show->field('thumbnail',__('Small image'));
         $show->field('project_name', __('Project name'));
         $show->field('client', __('Client'));
         $show->field('duration', __('Duration'));
@@ -131,6 +133,12 @@ class PortfolioController extends AdminController
         $constraint->aspectRatio();
     })->crop(1200,800)->removable()->name(function ( $file ){
             return 'portfolios_'.Str::random(2).'.'.$file->guessExtension();
+        });
+
+        $form->image('thumbnail','Small image')->resize(740, null, function ($constraint) {
+        $constraint->aspectRatio();
+    })->crop(740,556)->removable()->name(function ( $file ){
+            return 'thumbnails/portfolios_small'.Str::random(2).'.'.$file->guessExtension();
         });
         $form->text('alt_image', __('Alt image'));
         $form->text('project_name', __('Project name'));

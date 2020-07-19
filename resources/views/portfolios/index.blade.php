@@ -22,7 +22,7 @@
                             <div class="ttm-box-view-content-inner">
                                 <!-- featured-thumbnail -->
                                 <div class="featured-thumbnail">
-                                    <a href="#"> <img class="img-fluid" src="{{$item->getLastImage()}}" alt="{{$item->alt_image}}"></a>
+                                    <a href="#"> <img class="img-fluid" src="{{$item->getThumbnail()}}" alt="{{$item->alt_image}}"></a>
                                 </div><!-- featured-thumbnail end-->
                                 <!-- ttm-box-view-overlay -->
                                 <div class="ttm-box-view-overlay">

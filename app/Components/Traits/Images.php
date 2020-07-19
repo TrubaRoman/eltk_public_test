@@ -3,7 +3,7 @@
 
     namespace App\Components\Traits;
     use Illuminate\Support\Facades\Storage;
-
+    use \Encore\Admin\Traits\Resizable;
     trait Images
     {
         public function getLastImage()
@@ -30,5 +30,15 @@
             }
 
             return Storage::url($image);
+        }
+
+        public function getResponsiveImage()
+        {
+            $this->thumbnail('small','thumbnail');
+        }
+
+        public function getThumbnail()
+        {
+            return self::getImage($this->thumbnail);
         }
     }

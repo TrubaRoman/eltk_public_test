@@ -30,12 +30,12 @@ class MenuController extends AdminController
     {
         $grid = new Grid(new Menu());
 
-        $grid->column('id', __('Id'));
-        $grid->column('parent_id', __('Parent id'));
-        $grid->column('name_pl', __('Name pl'));
-        $grid->column('name_en', __('Name en'));
-        $grid->column('name_uk', __('Name uk'));
-        $grid->column('url', __('Url'));
+        $grid->column('id', __('Id'))->editable();
+        $grid->column('parent_id', __('Parent id'))->editable();
+        $grid->column('name_pl', __('Name pl'))->editable();
+        $grid->column('name_en', __('Name en'))->editable();
+        $grid->column('name_uk', __('Name uk'))->editable();
+        $grid->column('url', __('Url'))->editable()->color('red')->help('Nieostrożna edycja tej kolumny może zakłócić działanie witryny')->hide();
         $grid->column('sort_order', __('Sort order'))->editable();
         $grid->column('status', __('Status'))->switch();
 

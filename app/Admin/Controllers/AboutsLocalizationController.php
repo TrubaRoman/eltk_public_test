@@ -43,9 +43,9 @@ class AboutsLocalizationController extends AdminController
             return "<img src='/build/img/flags/24/{$lang}.png'> &nbsp;$lang</img>";
 
         })->sortable();
-        $grid->column('title', __('Title'));
-        $grid->column('short_content', __('Short content'));
-        $grid->column('content', __('Content'));
+        $grid->column('title', __('Title'))->editable();
+        $grid->column('short_content', __('Short content'))->editable();
+        $grid->column('content', __('Content'))->editable();
 
         return $grid;
     }

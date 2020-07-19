@@ -34,10 +34,12 @@ class ServicesController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
+        $grid->column('alt_image', __('Alt image'))->editable();
+        $grid->column('thumbnail')->image();
         $grid->column('status', __('Widoczny'))->switch();
         $grid->column('sort', __('Sortowanie'))->editable();
-        $grid->column('created_at', __('Data utworzenia'))->date('Y-m-d');
-        $grid->column('updated_at', __('Data aktualizacji'))->date('Y-m-d');
+        $grid->column('created_at', __('Data utworzenia'))->date('Y-m-d')->hide();
+        $grid->column('updated_at', __('Data aktualizacji'))->date('Y-m-d')->hide();
         $grid->localizations('Treść językowa')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
@@ -76,6 +78,8 @@ class ServicesController extends AdminController
             }
             return $html;
         })->unescape();
+        $show->field('alt_image','Alt_image');
+        $show->field('thumbnail',__('Thumbnail'));
         $show->field('status', __('Status'));
         $show->field('sort', __('Sort'));
         $show->field('created_at', __('Created at'));
@@ -117,12 +121,19 @@ class ServicesController extends AdminController
         $form = new Form(new Services());
 
         $form->text('slug', __('Slug'));
+
         // multiple image
         $form->multipleImage('image','images')->resize(1600, null, function ($constraint) {
             $constraint->aspectRatio();
         })->crop(1600,1200)->removable()->name(function ( $file ){
         return 'services_'.Str::random(2).'.'.$file->guessExtension();
     });
+        $form->text('alt_image','Alt image');
+        $form->image('thumbnail','Small image')->resize(720, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->crop(720,544)->name(function ( $file ){
+            return 'thumbnails/services_small'.Str::random(2).'.'.$file->guessExtension();
+        })->thumbnail('small', $width = 330, $height = 250);
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 

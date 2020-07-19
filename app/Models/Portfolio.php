@@ -18,7 +18,7 @@ class Portfolio extends LocalizedModel
 
 
     protected $fillable = [
-       'id', 'slug', 'image','category_id', 'alt_image','project_name','client','duration','address','sort','status'
+       'id', 'slug', 'image','thumbnail','category_id', 'alt_image','project_name','client','duration','address','sort','status'
     ];
     use Sluggable;
     use Images;

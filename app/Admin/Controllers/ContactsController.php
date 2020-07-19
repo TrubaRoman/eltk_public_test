@@ -31,7 +31,7 @@ class ContactsController extends AdminController
         $grid = new Grid(new Contacts());
         $grid->disableCreateButton();
         $grid->enableHotKeys();
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('Id'))->hide();
         $grid->column('name', __('Name'));
         $grid->column('email', __('Email'))->sortable();
         $grid->column('phone', __('Phone'));
@@ -42,7 +42,7 @@ class ContactsController extends AdminController
 
         })->sortable()->help('Język zainstalowany na stronie nadawcy')->width(80);
         $grid->column('body', __('Treść wiadomości'))->limit(300)->help('Treść wiadomości od nadawcy');
-        $grid->column('ip', __('Ip'));
+        $grid->column('ip', __('Ip'))->hide();
 
         $states = [
             'on'  => ['value' => 1, 'text' => 'tak', 'color' => 'primary'],

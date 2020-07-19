@@ -31,16 +31,19 @@ class AboutsController extends AdminController
         $grid->column('id', __('Id'))->sortable();;
         $grid->column('sort', __('Sortowanie'))->editable();
         $grid->column('status', __('Widoczny'))->switch();
-        $grid->column('icons', __('Ikona'));
-        $grid->column('type_content', __('Typ zawartości'));
+        $grid->column('icons', __('Ikona'))->editable();
+        $grid->column('type_content', __('Typ zawartości'))->select([
+            'main'=> 'główna zawartość',
+            'block' => 'blok'
+        ]);
         $grid->localizations('Treść językowa')->display(function ($localize) {
             $count = count($localize);
             return ($count < count(config('app.locales')))?"<span class='label label-danger'>{$count}</span>":"<span class='label label-success'>{$count}</span>";
 
         })->help('Jeśli brakuje tekstu w jednym z dostępnych języków, etykieta będzie czerwona... Aby dodać tekst, klikni na (Wyświetl
 )-> (Treść językowa) przycisk (+ Nowy)');
-        $grid->column('created_at', __('Data utworzenia '))->date('Y-m-d');
-        $grid->column('updated_at', __('Data aktualizacji'))->date('Y-m-d');
+        $grid->column('created_at', __('Data utworzenia '))->date('Y-m-d')->hide();
+        $grid->column('updated_at', __('Data aktualizacji'))->date('Y-m-d')->hide();
 
         return $grid;
     }

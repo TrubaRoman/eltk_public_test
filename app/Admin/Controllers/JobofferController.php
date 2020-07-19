@@ -27,9 +27,9 @@ class JobofferController extends AdminController
         $grid = new Grid(new Joboffer());
 
         $grid->column('id', __('Id'));
-        $grid->column('title_pl', __('Title pl'));
-        $grid->column('title_en', __('Title en'));
-        $grid->column('title_uk', __('Title uk'));
+        $grid->column('title_pl', __('Title pl'))->editable();
+        $grid->column('title_en', __('Title en'))->editable();
+        $grid->column('title_uk', __('Title uk'))->editable();
 
         $grid->column('description_pl', __('Opis pracy pl'))->limit(200);
         $grid->column('description_en', __('Opis pracy en'))->limit(200);
@@ -41,8 +41,8 @@ class JobofferController extends AdminController
         ];
 
         $grid->column('status', __('Status'))->switch($states);
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created at'))->hide();
+        $grid->column('updated_at', __('Updated at'))->hide();
 
         return $grid;
     }
