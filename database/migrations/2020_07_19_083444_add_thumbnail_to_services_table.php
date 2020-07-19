@@ -15,7 +15,7 @@ class AddThumbnailToServicesTable extends Migration
     {
         Schema::table('services', function (Blueprint $table) {
             $table->string('thumbnail')->nullable();
-            $table->string('alt_image')->nullable();
+//            $table->string('alt_image')->nullable();
         });
     }
 
@@ -28,7 +28,7 @@ class AddThumbnailToServicesTable extends Migration
     {
         Schema::table('services', function (Blueprint $table) {
             $table->dropColumn('thumbnail');
-            $table->dropColumn('alt_image');
+//            $table->dropColumn('alt_image');
         });
     }
 }
