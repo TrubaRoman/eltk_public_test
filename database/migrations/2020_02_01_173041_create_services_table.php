@@ -23,7 +23,7 @@ class CreateServicesTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('services_localizations', function(Blueprint $table) {
+        Schema::create('services_localization', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('services_id')->unsigned()->index();
             $table->string('lang', 2);

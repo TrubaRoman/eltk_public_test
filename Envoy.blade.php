@@ -56,6 +56,7 @@ $release = $path.'/releases/'. $date->format('YmdHis');
 
     php artisan migrate
     php artisan clear-compiled --env=production;
+    php artisan storage:link
 {{--    php artisan optimize --env=production;--}}
 
     echo "#3 - Production dependencies have been installed"
