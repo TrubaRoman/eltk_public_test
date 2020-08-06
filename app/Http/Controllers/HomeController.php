@@ -10,6 +10,7 @@
 
     class HomeController extends Controller
     {
+
         /**
          * Show the application home page.
          *
@@ -17,8 +18,7 @@
          */
         public function index()
         {   $agent = new Agent();
-            $checkdevice = true;
-            if ($agent->isMobile()) $checkdevice =  false;
+
 
             SEOMeta::setTitle('HOME EL-TK');
             $locale = app()->getLocale();
@@ -31,7 +31,7 @@
                 'services' => $services,
                 'abouts_main' => $abouts_main,
                 'abouts_block' => $abouts_block,
-                'checkdevice' => $checkdevice
+                'agent' => $agent
             ]);
         }
     }

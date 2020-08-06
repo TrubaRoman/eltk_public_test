@@ -1,9 +1,12 @@
 @extends('layouts.main')
 @section('breadcrumbs','')
 @section('content')
-    @if($checkdevice == true)
+    @if($agent->isPhone())
+    @include('home._slider_mobile')
+    @else
     @include('home._slider')
     @endif
+
     <div class="site-main">
         <!--row-top-section-->
         <!-- row-text-section -->
