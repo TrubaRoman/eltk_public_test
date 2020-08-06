@@ -1,7 +1,9 @@
 @extends('layouts.main')
 @section('breadcrumbs','')
 @section('content')
+    @if($checkdevice == true)
     @include('home._slider')
+    @endif
     <div class="site-main">
         <!--row-top-section-->
         <!-- row-text-section -->

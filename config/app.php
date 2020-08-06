@@ -174,6 +174,8 @@ return [
 //        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Jenssegers\Agent\AgentServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -239,6 +241,7 @@ return [
         'OpenGraph' => Artesaos\SEOTools\Facades\OpenGraph::class,
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         'JsonLd'   => Artesaos\SEOTools\Facades\JsonLd::class,
+        'Agent' => Jenssegers\Agent\Facades\Agent::class,
 
     ],
 

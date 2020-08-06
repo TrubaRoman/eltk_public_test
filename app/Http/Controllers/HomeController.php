@@ -3,7 +3,7 @@
 
     namespace App\Http\Controllers;
 
-
+    use Jenssegers\Agent\Agent;
     use App\Models\Abouts;
     use App\Models\Services;
     use Artesaos\SEOTools\Facades\SEOMeta;
@@ -16,7 +16,11 @@
          * @return \Illuminate\Contracts\Support\Renderable
          */
         public function index()
-        {   SEOMeta::setTitle('HOME EL-TK');
+        {   $agent = new Agent();
+            $checkdevice = true;
+            if ($agent->isMobile()) $checkdevice =  false;
+
+            SEOMeta::setTitle('HOME EL-TK');
             $locale = app()->getLocale();
             $services = Services::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
             $abouts = Abouts::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
@@ -26,7 +30,8 @@
             return view('home.index',[
                 'services' => $services,
                 'abouts_main' => $abouts_main,
-                'abouts_block' => $abouts_block
+                'abouts_block' => $abouts_block,
+                'checkdevice' => $checkdevice
             ]);
         }
     }
