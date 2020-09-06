@@ -13,7 +13,8 @@
   'hours_work_closed' => '17:00',
   'weekend' => 
   array (
-    0 => 'sunday',
+    0 => 'thursday',
+    1 => 'sunday',
   ),
   'nip' => '681-117-05-61',
   'sociallinks' => 
@@ -26,8 +27,7 @@
     0 => 'monday',
     1 => 'tuesday',
     2 => 'wednesday',
-    3 => 'thursday',
-    4 => 'friday',
-    5 => 'saturday',
+    3 => 'friday',
+    4 => 'saturday',
   ),
 );

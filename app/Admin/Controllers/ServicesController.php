@@ -86,7 +86,7 @@ class ServicesController extends AdminController
         $show->field('updated_at', __('Updated at'));
         $show->localizations('Language Variants', function ($localizations) {
 
-            $localizations->resource('/admin/services-localizations');
+            $localizations->resource('/makita/services-localizations');
 
             $localizations->id()->sortable();
             $localizations->services_id()->sortable();

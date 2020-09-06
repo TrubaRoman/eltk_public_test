@@ -44,7 +44,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                         <div class="widget clearfix">
                             <div class="footer-logo">
-                                <img id="footer-logo-img" class="img-center" src="/build/images/footer-logo.png" alt="">
+                                <img id="footer-logo-img" class="img-center" src="/build/images/logo-white.png" alt="">
                             </div>
                             <p>Budujemy Twój sukces</p>
                         </div>

@@ -70,7 +70,7 @@ class AboutsController extends AdminController
 
         $show->localizations('Treść językowa', function ($localizations) {
 
-            $localizations->resource('/admin/abouts-localizations');
+            $localizations->resource('/makita/abouts-localizations');
 
             $localizations->id()->sortable();
             $localizations->abouts_id()->sortable();

@@ -95,7 +95,7 @@ class PortfolioController extends AdminController
 
         $show->localizations('Language Variants', function ($localizations) {
 
-            $localizations->resource('/admin/portfolio-localizations');
+            $localizations->resource('/makita/portfolio-localizations');
 
             $localizations->id()->sortable();
             $localizations->portfolio_id()->sortable();
