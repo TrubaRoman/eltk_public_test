@@ -10,10 +10,10 @@
     3 => NULL,
   ),
   'hours_work_open' => '07:00',
-  'hours_work_closed' => '17:00',
+  'hours_work_closed' => '18:00',
   'weekend' => 
   array (
-    0 => 'thursday',
+    0 => 'wednesday',
     1 => 'sunday',
   ),
   'nip' => '681-117-05-61',
@@ -26,7 +26,7 @@
   array (
     0 => 'monday',
     1 => 'tuesday',
-    2 => 'wednesday',
+    2 => 'thursday',
     3 => 'friday',
     4 => 'saturday',
   ),
