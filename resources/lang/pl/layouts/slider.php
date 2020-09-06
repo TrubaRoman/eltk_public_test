@@ -13,8 +13,9 @@ return [
 
     'page3'=>
     [
-        'title1' => 'Zapewniamy profesjonalne wykonanie',
-        'title2' => 'dla klientów indywidualnych,',
-        'title3' => 'również podwykonawstwo'
+        'title1' => 'Zapewniamy ',
+        'title2' => 'profesjonalne wykonanie',
+        'title3' => 'dla klientów indywidualnych,',
+        'title4' => 'również podwykonawstwo'
     ]
 ];

@@ -8,6 +8,7 @@
     <meta name="robots" content="noindex" />
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="shortcut icon" href="/build/images/favicon.png">
 
     {!! SEOMeta::generate() !!}
 

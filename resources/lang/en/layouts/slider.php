@@ -13,8 +13,9 @@ return [
 
     'page3'=>
     [
-        'title1' => 'We guarantee professional performance',
-        'title2' => 'for individual clients,',
-        'title3' => 'also subcontracting'
+        'title1' => 'We guarantee ',
+        'title2' => ' professional performance',
+        'title3' => 'for individual clients,',
+        'title4' => 'also subcontracting'
     ]
 ];

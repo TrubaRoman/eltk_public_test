@@ -128,11 +128,11 @@
                 <div data-ts="flat" data-p="1800" data-po="50% -100%" style="left:120px;top:90px;width:600px;height:300px;position:absolute;">
                     <svg viewbox="0 0 599 200" data-to="50% 50%" width="599" height="200" data-t="9" style="left:-64px;top:84px;display:block;position:absolute;opacity:0;overflow:visible;">
                         <g>
-                            <text fill="#ffffff" x="-17" y="62" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title1')}}&nbsp;
+                            <text fill="#ffffff" x="-17" y="62" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title1').__('layouts/slider.page3.title2')}}&nbsp;
                             </text>
-                            <text fill="#f7f8fa" text-anchor="start" x="-13" y="99" style="position:absolute;font-family:Montserrat,sans-serif !important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title2')}}&nbsp;
+                            <text fill="#f7f8fa" text-anchor="start" x="-13" y="99" style="position:absolute;font-family:Montserrat,sans-serif !important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title3')}}&nbsp;
                             </text>
-                            <text fill="#faf8f7" x="-13" y="131" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif !important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title3')}}
+                            <text fill="#faf8f7" x="-13" y="131" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif !important;font-size:26px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title4')}}
                             </text>
                         </g>
                     </svg>

@@ -36,7 +36,7 @@
             <div class="ttm-header-top-wrapper clearfix">
                 <!-- site-branding -->
                 <div class="site-branding">
-                    <a class="home-link" href="index.html" title="Boldman" rel="home">
+                    <a class="home-link" href="{{route('home',app()->getLocale())}}" title="{{env('APP_NAME')}}" rel="home">
                         <img id="logo-img" class="img-center" src="/build/images/logo-img.png" alt="logo-img">
                     </a>
                 </div><!-- site-branding end -->

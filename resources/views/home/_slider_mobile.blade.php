@@ -88,41 +88,41 @@
     </div>
     <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:640px;height:580px;overflow:hidden;">
         <div style="background-color:#000000;">
-            <img data-u="image" style="opacity:0.5;" src="/build/images/slides/lighting_office.jpg" />
+            <img data-u="image" style="opacity:0.5;" src="/build/images/slides/responsive_slider_2.jpg" />
             <div data-ts="flat" data-p="390" style="left:5px;top:187px;width:609px;height:170px;position:absolute;overflow:hidden;">
                 <div data-to="50% 50%" data-ts="preserve-3d" data-t="0" style="left:595px;top:-112px;width:693px;height:251px;position:absolute;overflow:hidden;">
-                    <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:108px;top:153px;width:392px;height:34px;position:absolute;color:#edf1f2;font-size:22px;font-weight:700;line-height:1.2;letter-spacing:0.1em;">Witamy na stronie firmy</div>
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-arr="1" style="left:108px;top:153px;width:392px;height:34px;position:absolute;color:#edf1f2;font-size:22px;font-weight:700;line-height:1.2;letter-spacing:0.1em;">{{__('layouts/slider.page1.title')}}</div>
                     <div data-to="50% 50%" data-ts="preserve-3d" data-arr="2" style="left:106px;top:180px;width:600px;height:52px;position:absolute;color:#edf1f2;font-size:32px;line-height:1.2;letter-spacing:0.05em;"><font color="#e04338"><b>EL-TK</b></font><span style="color:#3065b3">Elektroinstalacje</span></div>
                 </div>
             </div>
         </div>
         <div style="background-color:#0d0c0c;">
-            <img data-u="image" style="opacity:0.4;" src="/build/images/slides/electrical_panel.jpg" />
+            <img data-u="image" style="opacity:0.4;" src="/build/images/slides/responsive_slider_1.jpg" />
             <div data-ts="flat" data-p="2720" data-po="50% 48%" style="left:0px;top:0px;width:980px;height:380px;position:absolute;">
                 <div data-to="50% 50%" data-ts="preserve-3d" data-t="3" style="left:400px;top:-30px;width:500px;height:400px;position:absolute;">
                     <div data-to="50% 50%" data-ts="preserve-3d" data-t="4" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
                         <div data-to="50% 50%" data-ts="preserve-3d" data-t="5" style="left:0px;top:0px;width:500px;height:400px;position:absolute;">
                             <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:-243px;top:166px;width:500px;height:400px;position:absolute;">
-                                <div data-to="50% 50%" data-t="7" style="left:-141px;top:74px;width:600px;height:55px;position:absolute;opacity:0;color:#ffffff;font-size:48px;font-weight:700;line-height:1.2;text-align:center;text-shadow:1px 0px #e31212;">Instalacje elektryczne</div>
+                                <div data-to="50% 50%" data-t="7" style="left:-141px;top:74px;width:600px;height:55px;position:absolute;opacity:0;color:#ffffff;font-size:48px;font-weight:700;line-height:1.2;text-align:center;text-shadow:1px 0px #e31212;">{{__('layouts/slider.page2.title')}}</div>
                             </div>
                         </div>
-                        <div data-to="50% 50%" data-t="8" style="left:0px;top:0px;width:496px;height:116px;position:absolute;color:#ffffff;font-size:32px;font-weight:900;line-height:1.4;text-align:right;text-shadow:1px 0px #3065b3;"><p>Na terenie Krakowa i okolic</p></div>
+                        <div data-to="50% 50%" data-t="8" style="left:0px;top:0px;width:496px;height:116px;position:absolute;color:#ffffff;font-size:32px;font-weight:900;line-height:1.4;text-align:right;text-shadow:1px 0px #3065b3;"><p>{{__('layouts/slider.page2.subtitle')}}</p></div>
                     </div>
                 </div>
             </div>
         </div>
         <div style="background-color:#000000;" data-p="610">
-            <img data-u="image" style="opacity:0.6;" src="/build/images/slides/plan2.jpg" />
+            <img data-u="image" style="opacity:0.6;" src="/build/images/slides/responsive_slider_3.jpg" />
             <div data-ts="flat" data-p="1618" data-po="50% -100%" style="left:120px;top:90px;width:509px;height:300px;position:absolute;">
                 <svg viewbox="0 0 380 200" data-to="50% 50%" width="380" height="200" data-t="9" style="left:-74px;top:72px;display:block;position:absolute;opacity:0;overflow:visible;">
                     <g>
-                        <text fill="#ffffff" x="-4" y="2" style="position:absolute;mix-blend-mode:darken;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">Zapewniamy&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                        <text fill="#ffffff" x="-4" y="2" style="position:absolute;mix-blend-mode:darken;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title1')}}&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
                         </text>
-                        <text fill="#ffffff" text-anchor="middle" x="198" y="100" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;overflow:visible;">profesjonalne wykonanie
+                        <text fill="#ffffff" text-anchor="middle" x="198" y="100" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;overflow:visible;">{{__('layouts/slider.page3.title2')}}
                         </text>
-                        <text fill="#f7f8fa" text-anchor="start" x="-8" y="150" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">dla klientów indywidualnych,&nbsp;
+                        <text fill="#f7f8fa" text-anchor="start" x="-8" y="150" style="position:absolute;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title3')}}
                         </text>
-                        <text fill="#faf8f7" x="-6" y="198" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">również podwykonawstwo
+                        <text fill="#faf8f7" x="-6" y="198" style="position:absolute;opacity:0.8;font-family:Montserrat,sans-serif!important;font-size:32px;font-weight:500;letter-spacing:0.1em;overflow:visible;">{{__('layouts/slider.page3.title4')}}
                         </text>
                     </g>
                 </svg>
