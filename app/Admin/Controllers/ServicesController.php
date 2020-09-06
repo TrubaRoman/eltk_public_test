@@ -34,8 +34,8 @@ class ServicesController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('slug', __('Slug'));
         $grid->column('image')->image();
-        $grid->column('alt_image', __('Alt image'))->editable();
-        $grid->column('thumbnail')->image();
+        $grid->column('alt_image', __('Alt image'))->editable()->help('Alternatywny tekst wyświetlany, gdy nie ma obrazu');
+        $grid->column('thumbnail')->image()->hide()->help('Obraz miniatury jest używany w witrynie w miejscach, w których wymagana jest miniatura ... w celu zwiększenia wydajności strony');
         $grid->column('status', __('Widoczny'))->switch();
         $grid->column('sort', __('Sortowanie'))->editable();
         $grid->column('created_at', __('Data utworzenia'))->date('Y-m-d')->hide();
@@ -74,7 +74,7 @@ class ServicesController extends AdminController
         $show->image('image')->as(function ($image){
             $html = '';
             foreach($image as $item){
-                $html .= "<img src='{$item}' style='max-height: 150px;margin-right: 10px'>";
+                $html .= "<img src=' {$item}' style='max-height: 150px;margin-right: 10px'>";
             }
             return $html;
         })->unescape();
@@ -128,12 +128,12 @@ class ServicesController extends AdminController
         })->crop(1600,1200)->removable()->name(function ( $file ){
         return 'services_'.Str::random(2).'.'.$file->guessExtension();
     });
-        $form->text('alt_image','Alt image');
+        $form->text('alt_image','Alt image')->help('Alternatywny tekst wyświetlany, gdy nie ma obrazu');
         $form->image('thumbnail','Small image')->resize(720, null, function ($constraint) {
             $constraint->aspectRatio();
         })->crop(720,544)->name(function ( $file ){
             return 'thumbnails/services_small'.Str::random(2).'.'.$file->guessExtension();
-        })->thumbnail('small', $width = 330, $height = 250);
+        })->thumbnail('small', $width = 330, $height = 250)->help('Obraz miniatury jest używany w witrynie w miejscach, w których wymagana jest miniatura ... w celu zwiększenia wydajności strony');
         $form->switch('status', __('Status'));
         $form->number('sort', __('Sort'));
 

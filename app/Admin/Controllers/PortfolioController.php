@@ -32,15 +32,15 @@ class PortfolioController extends AdminController
         $grid = new Grid(new Portfolio());
 
         $grid->column('id', __('Id'))->sortable();
-        $grid->column('slug', __('Slug'));
+        $grid->column('slug', __('Slug'))->editable();
         $grid->column('image', __('Image'))->image();
-        $grid->column('alt_image', __('Alt image'))->editable();
-        $grid->column('thumbnail',__('Small image'))->image();
-        $grid->column('project_name', __('Project name'))->sortable();
-        $grid->column('client', __('Client'))->sortable();
-        $grid->column('duration', __('Duration'))->sortable();
-        $grid->column('address', __('Address'));
-        $grid->column('sort', __('Sort'))->editable();
+        $grid->column('alt_image', __('Alt image'))->editable()->help('Alternatywny tekst wyświetlany, gdy nie ma obrazu');
+        $grid->column('thumbnail',__('Small image'))->image()->help('Obraz miniatury jest używany w witrynie w miejscach, w których wymagana jest miniatura ... w celu zwiększenia wydajności strony');
+        $grid->column('project_name', __('Nazwa Projektu'))->sortable()->editable();
+        $grid->column('client', __('Klient'))->sortable()->editable();
+        $grid->column('duration', __('Data wykonania'))->sortable()->editable();
+        $grid->column('address', __('Adres'))->editable();
+        $grid->column('sort', __('Sortowanie'))->editable();
         $grid->column('status', __('Status'))->switch();
         $grid->column('created_at', __('Created at'))->date('Y-m-d')->hide();
         $grid->column('updated_at', __('Updated at'))->date('Y-m-d')->hide();
@@ -83,11 +83,11 @@ class PortfolioController extends AdminController
         })->unescape();
         $show->field('alt_image', __('Alt image'));
         $show->field('thumbnail',__('Small image'));
-        $show->field('project_name', __('Project name'));
-        $show->field('client', __('Client'));
-        $show->field('duration', __('Duration'));
-        $show->field('address', __('Address'));
-        $show->field('sort', __('Sort'));
+        $show->field('project_name', __('Nazwa Projektu'));
+        $show->field('client', __('Klient'));
+        $show->field('duration', __('Data wykonania'));
+        $show->field('address', __('Adres'));
+        $show->field('sort', __('Sortowanie'));
         $show->field('status', __('Status'));
 
         $show->field('created_at', __('Created at'));
@@ -139,14 +139,14 @@ class PortfolioController extends AdminController
         $constraint->aspectRatio();
     })->crop(740,556)->removable()->name(function ( $file ){
             return 'thumbnails/portfolios_small'.Str::random(2).'.'.$file->guessExtension();
-        });
-        $form->text('alt_image', __('Alt image'));
-        $form->text('project_name', __('Project name'));
-        $form->text('client', __('Client'));
-        $form->text('duration', __('Duration'));
-        $form->text('address', __('Address'));
-        $form->number('sort', __('Sort'));
-        $form->switch('status', __('Status'));
+        })->help('Obraz miniatury jest używany w witrynie w miejscach, w których wymagana jest miniatura ... w celu zwiększenia wydajności strony');
+        $form->text('alt_image', __('Alt image'))->help('Alternatywny tekst wyświetlany, gdy nie ma obrazu');
+        $form->text('project_name', __('Nazwa Projektu'));
+        $form->text('client', __('Klient'));
+        $form->text('duration', __('Data wykonania'));
+        $form->text('address', __('Adres'));
+        $form->number('sort', __('Sortowanie'));
+        $form->switch('status', __('Status'))->help('Pokazane czy nie');
 
         return $form;
     }

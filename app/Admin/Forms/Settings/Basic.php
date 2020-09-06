@@ -25,9 +25,11 @@
         public function handle(Request $request)
         {
 
-           if ( Settings::settingSave($request->all()))
+           if ( Settings::settingSave($request->all()) && \Artisan::call('config:cache'))
 
-            admin_success('Processed successfully.');
+               admin_success('Processed successfully.');
+
+
            else admin_error('no saved');
 
             return back();
