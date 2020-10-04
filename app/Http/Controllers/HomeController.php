@@ -25,7 +25,8 @@
             $services = Services::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
             $abouts = Abouts::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
             $abouts_block = $abouts->where('type_content','block');
-            $abouts_main = $abouts->where('type_content','main')->first();
+            $abouts_main = $abouts->where('type_content','main');
+
 
             return view('home.index',[
                 'services' => $services,

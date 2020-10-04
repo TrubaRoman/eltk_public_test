@@ -62,14 +62,14 @@
                                 </div>
                             </div>
                             <!-- section title -->
-
+                            @foreach($abouts_main as $main_item)
                             <div class="section-title with-desc clearfix">
                                 <div class="title-desc">
-                                    <strong>{{$abouts_main->localization->title}}</strong>
+                                    <strong>{{$main_item->localization->title}}</strong>
                                 </div>
                             </div><!-- section title end -->
-                            <p>{!! $abouts_main->localization->content !!}</p>
-
+                            <p>{!! $main_item->localization->content !!}</p>
+                            @endforeach
 
                         </div>
                     </div>
