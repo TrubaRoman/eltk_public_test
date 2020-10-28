@@ -23,6 +23,8 @@ Route::group([
     $router->resource('portfolio-localizations', PortfolioLocalizationController::class);
     $router->resource('joboffers', JobofferController::class);
     $router->resource('cvs', Cvcontroller::class);
+    $router->resource('referencjes', ReferencjeController::class);
+
 
 
 

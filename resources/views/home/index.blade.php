@@ -7,7 +7,7 @@
     @include('home._slider')
     @endif
 
-    <div class="site-main">
+    <div class="site-main ">
         <!--row-top-section-->
         <!-- row-text-section -->
         <section class="ttm-row row-text-section ttm-bgcolor-grey">
@@ -107,6 +107,149 @@
         </section>
    @endif     
         <!-- services-box-section end -->
+
+
+
+{{--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">--}}
+{{--        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>--}}
+{{--        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>--}}
+
+
+
+
+        <section class="ttm-row row-text-section ttm-bgcolor-grey">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="sep-box text-center">
+                            <h2>Referencje</h2>
+                            <h6>Friendly customer service staff for your all questions!</h6>
+{{--                            <div class="sep_holder_box width-30 pt-10">--}}
+{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
+{{--                                <div class="ttm-icon ttm-icon_element-color-skincolor ttm-icon_element-size-lg">--}}
+{{--                                    <i class="fa fa-phone"></i>--}}
+{{--                                </div>--}}
+{{--                                <span class="sep_holder"><span class="sep_line"></span></span>--}}
+{{--                            </div>--}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div class="ttm-row pb-110 ttm-bgcolor-grey clearfix ">
+                <div class="container ">
+                    <div class="row ">
+
+<div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post ttm-box-view-left-image row">
+                                <div class="col-lg-5 col-md-12 ttm-featured-img-left">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/portfolio/post-one-450x600.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 featured-content featured-content-post">
+                                <span class="category">
+                                    <a href="portfolio-category.html">Electrical</a>
+
+                                </span>
+                                    <div class="post-title featured-title">
+                                        <h5><a href="single-blog.html">Equipping Researchers in the Developing.</a></h5>
+                                    </div>
+                                    <div class="featured-desc ttm-box-desc">
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="single-blog.html">January 16, 2019</a></span>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end-->
+                        </div>
+                        <div class="item">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post ttm-box-view-left-image row">
+                                <div class="col-lg-5 col-md-12 ttm-featured-img-left">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/portfolio/post-two-450x600.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 featured-content featured-content-post">
+                                <span class="category">
+                                    <a href="portfolio-category.html">Flooring</a>
+                                    <a href="portfolio-category.html">Painting</a>
+                                </span>
+                                    <div class="post-title featured-title">
+                                        <h5><a href="single-blog.html">Simple Steps for Replacing old Tiling</a></h5>
+                                    </div>
+                                    <div class="featured-desc ttm-box-desc">
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="single-blog.html">January 31, 2019</a></span>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end-->
+                        </div>
+                        <div class="item">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post ttm-box-view-left-image row">
+                                <div class="col-lg-5 col-md-12 ttm-featured-img-left">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/portfolio/post-three-450x600.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 featured-content featured-content-post">
+                                <span class="category">
+                                    <a href="portfolio-category.html">Home Maintenance</a>
+                                    <a href="portfolio-category.html">Plumber</a>
+                                </span>
+                                    <div class="post-title featured-title">
+                                        <h5><a href="single-blog.html">Danger of Having High Water Pressure</a></h5>
+                                    </div>
+                                    <div class="featured-desc ttm-box-desc">
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="single-blog.html">January 31, 2019</a></span>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end-->
+                        </div>
+                        <div class="item">
+                            <!-- featured-imagebox-post -->
+                            <div class="featured-imagebox featured-imagebox-post ttm-box-view-left-image row">
+                                <div class="col-lg-5 col-md-12 ttm-featured-img-left">
+                                    <div class="featured-thumbnail">
+                                        <img class="img-fluid" src="images/portfolio/post-four-450x600.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-md-12 featured-content featured-content-post">
+                                <span class="category">
+                                    <a href="portfolio-category.html">Carpentry</a>
+                                    <a href="portfolio-category.html">Home Maintenance</a>
+                                </span>
+                                    <div class="post-title featured-title">
+                                        <h5><a href="single-blog.html">When have a problem with Cracked Pipes</a></h5>
+                                    </div>
+                                    <div class="featured-desc ttm-box-desc">
+                                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alter...</p>
+                                    </div>
+                                    <div class="post-meta">
+                                        <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a href="single-blog.html">January 31, 2019</a></span>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox-post end-->
+                        </div>
+</div>
+                    </div>
+                </div>
+            </div>
+
+
+
         <!-- service-section -->
         @if(isset($services))
         <section class="ttm-row services2-section pb-110 clearfix">
