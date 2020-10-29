@@ -41,4 +41,10 @@
         {
             return self::getImage($this->thumbnail);
         }
+
+        public function getLogo()
+        {
+            return self::getImage($this->logo);
+        }
+
     }

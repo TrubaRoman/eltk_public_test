@@ -18,8 +18,8 @@ class CreateReferencjeTable extends Migration
             $table->text('content_pl');
             $table->text('content_en');
             $table->text('content_uk');
-            $table->string('scan');
-            $table->string('thumbnail_scan');
+            $table->string('image');
+            $table->string('thumbnail');
             $table->string('from_whom');
             $table->string('position_pl');
             $table->string('position_en');

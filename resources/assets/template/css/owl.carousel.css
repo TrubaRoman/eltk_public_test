@@ -19,6 +19,13 @@
   animation-name: fadeOut;
 }
 
+.owl-carousel
+{
+
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;

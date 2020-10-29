@@ -144,8 +144,7 @@
         $("#phone").mask("+(99) 999-999-999");
     });
 </script>
-<script type="text/javascript">jssor_1_slider_init();
-</script>
+
 
 @if( Route::currentRouteName() == 'contacts' )
     @include('layouts._ajax_contactform')
@@ -156,11 +155,13 @@
     </script>
     @endif
 <script>
+
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        autoplay:true,
-        nav:false,
+        autoplay:false,
+        touchDrag:true,
+
         responsive:{
             0:{
                 items:1
@@ -169,10 +170,12 @@
                 items:1
             },
             1000:{
-                items:2
+                items:1
             }
         }
-    })</script>
+    });
+
+</script>
 </body>
 
 </html>
