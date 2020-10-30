@@ -3,11 +3,13 @@
 
     namespace App\Http\Controllers;
 
+    use Illuminate\Support\Str;
     use Jenssegers\Agent\Agent;
     use App\Models\Abouts;
     use App\Models\Services;
     use App\Models\Referencje;
     use Artesaos\SEOTools\Facades\SEOMeta;
+
 
     class HomeController extends Controller
     {

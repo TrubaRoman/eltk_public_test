@@ -47,4 +47,6 @@ class Referencje extends Model
     {
         return $this->status === self::IS_WAIT;
     }
+
+
 }

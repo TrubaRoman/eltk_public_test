@@ -37,7 +37,8 @@ return [
 
     'buttons'=>[
         'more_details'=> 'WIĘCEJ SZCZEGÓŁÓW',
-        'send' => 'WYSŁAĆ'
+        'send' => 'WYSŁAĆ',
+        'more' => 'WIĘCEJ'
     ],
     'offers' =>[
         'cv-title'=>'Prześlij swoje CV',

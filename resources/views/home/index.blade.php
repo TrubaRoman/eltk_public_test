@@ -96,6 +96,7 @@
                                     <h5>{{$item->localization->title}}</h5>
                                 </div>
                                 <div class="featured-desc">
+
                                     <p>{!!$item->localization->content!!}</p>
                                 </div>
                             </div>
@@ -167,13 +168,25 @@
                                             </div>
 
                                         </div>
-                                        <div class="featured-desc ttm-box-desc">
-                                           {!! $item->content !!}
+                                        <div class="featured-desc ttm-box-desc  " style=" height: calc(100vh - 120px);" >
+                                            @if($agent->isPhone())
+                                          {!! \Illuminate\Support\Str::limit($item->content,300,'...') !!}
+                                                @else
+                                                {!! \Illuminate\Support\Str::limit($item->content,1000,'...') !!}
+                                                @endif
                                         </div>
-                                        <div class="post-meta">
-                                            <span class="ttm-meta-line"><i class="fa fa-calendar"></i><a
-                                                        href="single-blog.html">January 16, 2019</a></span>
+
+                                        <div class="post-meta row row-cols-3  align-items-end " >
+{{--                                            <div class="align-items-end border ">--}}
+
+                                           <h6 class="col-9 "> <span class="ttm-meta-line "><i class="fa fa-calendar"></i>{{$item->reference_date}}</span></h6>
+                                           <h6 class="col-3 "><a class="    ttm-btn-color-black   " href=" #">{{__('content/pages.buttons.more')}}<i class="ti ti-angle-double-right"></i></a></h6>
+{{--                                            </div>--}}
                                         </div>
+
+
+
+
                                     </div>
                                 </div><!-- featured-imagebox-post end-->
                             </div>

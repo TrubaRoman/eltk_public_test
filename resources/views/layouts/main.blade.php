@@ -159,8 +159,9 @@
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        autoplay:false,
+        autoplay:true,
         touchDrag:true,
+        autoplayHoverPause:true,
 
         responsive:{
             0:{

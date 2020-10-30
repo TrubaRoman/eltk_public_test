@@ -39,7 +39,8 @@ return [
 
     'buttons'=>[
         'more_details'=> 'MORE DETAILS',
-        'send' => 'SEND'
+        'send' => 'SEND',
+        'more' => 'MORE'
     ],
 
     'offers' =>[
