@@ -50,7 +50,7 @@ class PortfolioController extends AdminController
 
         });
         $grid->Treśćjęzykowa()->display(function (){
-            return '<i class="fa fa-language"> </i>';
+            return '';
         })->modal('Treść językowa', function ($model) {
 
             $meta = $model->localizations->map(function ($meta) {

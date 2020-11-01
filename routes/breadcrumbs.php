@@ -37,6 +37,11 @@ use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
         $trail->parent('portfolios');
         $trail->push($model->localization->title,  route('portfolios.show',[app()->getLocale(),$model->slug]));
     });
+    Breadcrumbs::for('reference.show', function ($trail, $model) {
+
+        $trail->parent('home');
+        $trail->push($model->meta_title,  route('reference.show',[app()->getLocale(),$model->slug]));
+    });
     //errors 404
     Breadcrumbs::for('errors.404', function ($trail) {
         $trail->parent('home');

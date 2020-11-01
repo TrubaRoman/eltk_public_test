@@ -29,7 +29,7 @@
             $abouts = Abouts::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
             $abouts_block = $abouts->where('type_content','block');
             $abouts_main = $abouts->where('type_content','main');
-            $referencje = Referencje::where('status',Referencje::IS_ACTIVE)->orderBy('sort_order')->get();
+            $referencje = Referencje::getReferenceList();
 
 
             return view('home.index',[
@@ -39,5 +39,14 @@
                 'agent' => $agent,
                 'referencje' => $referencje
             ]);
+        }
+
+        public function show($locale = null,$slug)
+        {
+            $reference_item = Referencje::getReferenceItem($slug);
+            SEOMeta::setTitle($reference_item->meta_title);
+            SEOMeta::setDescription($reference_item->meta_description);
+
+            return view('referencje.show',['reference_item' => $reference_item]);
         }
     }

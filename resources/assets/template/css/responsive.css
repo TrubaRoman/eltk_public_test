@@ -452,6 +452,7 @@
 
 @media all and (max-width: 1199px) {
 
+	.block-height-streach{ height:auto !important;}
 	.ttm-menu-toggle {
 	    position: relative;
 	    height: 30px;
@@ -700,6 +701,7 @@
 	.sidebar.ttm-sidebar-left .content-area{ margin-right: -30px; padding-right: 30px;}
 	.sidebar .sidebar-left.ttm-left-span .ttm-col-wrapper-bg-layer{ margin-right: -15px; }
 	.ttm-tabs.ttm-tab-style-classic ul.tabs{display: -webkit-flex; display: flex;width: 100%;}
+
 }
 
 @media (max-width: 991px){
@@ -715,6 +717,7 @@
 		float: none !important;
 		display: block !important;
 	}
+
 	.break-991-colum.bg-layer .container > .row > [class*='col-'] > [class*='ttm-col-bgcolor-yes'] { 
 		padding-left: 15px;
 		padding-right: 15px;

@@ -24,7 +24,7 @@
                                 </div>
                                 <span class="sep_holder"><span class="sep_line"></span></span>
                             </div>
-                            <h4>Toll Free: 1800-200-45678</h4>
+                            <h4>Toll Free: {{config('settings.public_phone')}}</h4>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
             <div class="container">
                 <div class="row row-equal-height">
 @foreach($abouts_block as $item)
-                    <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="col-lg-4 col-md-4 col-sm-12 ">
                         <!-- featured-icon-box -->
                         <div class="featured-icon-box style1 top-icon text-center ttm-bgcolor-white box-shadow2">
                             <div class="ttm-icon ttm-icon_element-fill ttm-icon_element-background-color-skincolor ttm-icon_element-size-md ttm-icon_element-style-rounded">
@@ -148,18 +148,11 @@
 
                                         <div class="featured-thumbnail">
                                             <img class="img-fluid" src="{{$item->getThumbnail()}}"
-                                                 alt="image">
+                                                 alt="{{$item->alt_image}}">
                                         </div>
                                     </div>
                                     <div class="col-lg-7 col-md-12 featured-content featured-content-post">
-{{--                                <span class="category">--}}
-{{--                                    <a href="portfolio-category.html">Electrical</a>--}}
 
-{{--                                </span>--}}
-{{--                                        <div class="post-title featured-title">--}}
-{{--                                            <h5><a href="single-blog.html">Equipping Researchers in the Developing.</a>--}}
-{{--                                            </h5>--}}
-{{--                                        </div>  --}}
                                         <div class="row align-items-center">
 
                                             <div class="post-title featured-title  col-lg-12 text-center">
@@ -168,9 +161,9 @@
                                             </div>
 
                                         </div>
-                                        <div class="featured-desc ttm-box-desc  " style=" height: calc(100vh - 120px);" >
+                                        <div class="featured-desc ttm-box-desc  block-height-streach "   >
                                             @if($agent->isPhone())
-                                          {!! \Illuminate\Support\Str::limit($item->content,300,'...') !!}
+                                          {!! \Illuminate\Support\Str::limit($item->content,800,'...') !!}
                                                 @else
                                                 {!! \Illuminate\Support\Str::limit($item->content,1000,'...') !!}
                                                 @endif
@@ -180,7 +173,7 @@
 {{--                                            <div class="align-items-end border ">--}}
 
                                            <h6 class="col-9 "> <span class="ttm-meta-line "><i class="fa fa-calendar"></i>{{$item->reference_date}}</span></h6>
-                                           <h6 class="col-3 "><a class="    ttm-btn-color-black   " href=" #">{{__('content/pages.buttons.more')}}<i class="ti ti-angle-double-right"></i></a></h6>
+                                           <h6 class="col-3 "><a class="    ttm-btn-color-black   " href=" {{route('reference.show',[app()->getLocale(),$item->slug])}}">{{__('content/pages.buttons.more')}}<i class="ti ti-angle-double-right"></i></a></h6>
 {{--                                            </div>--}}
                                         </div>
 

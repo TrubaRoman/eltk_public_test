@@ -152,31 +152,30 @@
     @include('layouts._ajax_job_offerts_form')
 @elseif(Route::currentRouteName() == 'home'  )
     <script type="text/javascript">jssor_1_slider_init();
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            autoplay:true,
+            touchDrag:true,
+            autoplayHoverPause:true,
+
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+
     </script>
     @endif
-<script>
 
-    $('.owl-carousel').owlCarousel({
-        loop:true,
-        margin:10,
-        autoplay:true,
-        touchDrag:true,
-        autoplayHoverPause:true,
-
-        responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:1
-            },
-            1000:{
-                items:1
-            }
-        }
-    });
-
-</script>
 </body>
 
 </html>

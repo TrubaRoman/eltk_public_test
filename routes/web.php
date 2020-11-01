@@ -25,6 +25,7 @@
             Auth::routes(['register' => false]);
 
             Route::get('/', 'HomeController@index')->name('home');
+            Route::get('/reference/{slug?}', 'HomeController@show')->name('reference.show');
             Route::get('/cabinet', 'CabinetController@index')->name('cabinet');
             Route::get('/services/{slug?}','ServicesController@show')->name('services.show');
             Route::get('/portfolios','PortfolioController@index')->name('portfolios');

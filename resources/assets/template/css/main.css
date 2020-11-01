@@ -2426,3 +2426,4 @@ th{
      color: white;
     margin-bottom: 0;
 }
+.block-height-streach{ height:calc(100vh - 120px) !important;}

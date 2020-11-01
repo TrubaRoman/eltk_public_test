@@ -10,7 +10,6 @@
                 <div class="topbar-right text-right">
                     <div class="ttm-social-links-wrapper list-inline">
                         <ul class="social-icons">
-
                             @if(count(config('settings.sociallinks')))
                                 @foreach(config('settings.sociallinks') as $name => $value)
                                     @if($value !==null)
@@ -22,7 +21,6 @@
                         </ul>
                     </div>
                     <ul class="top-contact ttm-highlight-right">
-
                         <li><strong><i class="fa fa-phone"></i>{{__('/layouts/header.top-header.right-slogan')}} :</strong> <span class="tel-no">{{config('settings.public_phone')}}</span></li>
                     </ul>
                 </div>
@@ -93,11 +91,10 @@
                                     <ul class="dropdown">
                                     @include('layouts._script_nav')
 
-@if(count(config('settings.locales')) > 2  )
+                                        @if(count(config('settings.locales')) > 2  )
                                         <li><a href="#" ><img src="/build/img/flags/24/{{app()->getLocale()}}.png">	&#8195;{{strtoupper(app()->getLocale())}}</a>
                                             <ul>
                                                 @foreach(config('settings.locales') as $locale)
-
                                                     @if(\Illuminate\Support\Facades\Route::currentRouteName() && $locale !== null)
                                                 <li><a  href="{{route(\Illuminate\Support\Facades\Route::currentRouteName(), [$locale,(request()->route()->parameter('slug'))??''])}}">
                                                         <img src="/build/img/flags/24/{{$locale}}.png" alt=""> 	&#8195;&#8195;{{strtoupper($locale)}} </a></li>
@@ -113,41 +110,30 @@
                             <div class="ttm-rt-contact">
                   <!-- header-icins -->
                                         <div class="ttm-header-icons ">
-                                     
-
-
                                             <div class="ttm-header-icon ttm-header-search-link">
                                                 <a  href="#" id="alt-menu"  class="bg-transparent"><i class="ti ti-more-alt"></i></a>
                                                 <div class="ttm-search-overlay">
                                                     <div class="ttm-site-searchform">
                                                         <div class="w-search-form-h">
                                                             <div class="w-search-form-row">
-
-
-                                                            	        <!-- ????                -->
 										                            <ul>
 										                                <li>                         
-										                                       <a href="tel:{{config('settings.public_phone')}}"  class= "link-defoult" >
-										                                       		<p ><i class="fa fa-phone"></i> {{config('settings.public_phone')}}</p>
-										                                       </a>                                     
+                                                                            <a href="tel:{{config('settings.public_phone')}}"  class= "link-defoult" >
+                                                                                <p ><i class="fa fa-phone"></i> {{config('settings.public_phone')}}</p>
+                                                                            </a>
 										                                </li>
 										                              
 										                                <li>                         
-										                                       <a href="mailto:{{config('settings.public_email')}}"  class= "link-defoult" >
-										                                       		<p ><i class="fa fa-at"></i> {{config('settings.public_email')}}</p>
-										                                       </a>                                     
-										                                </li> 
-
-
+                                                                            <a href="mailto:{{config('settings.public_email')}}"  class= "link-defoult" >
+                                                                                <p ><i class="fa fa-at"></i> {{config('settings.public_email')}}</p>
+                                                                            </a>
+										                                </li>
 										                            </ul>
-                        
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                         </div><!-- header-icons end -->
 
 
