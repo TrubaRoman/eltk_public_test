@@ -21,6 +21,9 @@ asset-install:
 asset-dev:
 	docker exec node yarn run dev
 
+asset-prod:
+	docker exec node yarn run prod
+
 asset-watch:
 	docker exec node yarn run watch
 
