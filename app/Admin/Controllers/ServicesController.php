@@ -47,7 +47,7 @@ class ServicesController extends AdminController
         })->help('Jeśli brakuje tekstu w jednym z dostępnych języków, etykieta będzie czerwona... Aby dodać tekst, klikni na (Wyświetl
 )-> (Treść językowa) przycisk (+ Nowy)');
         $grid->Treśćjęzykowa()->display(function (){
-        return '<i class="fa fa-language"> </i>';
+        return 'język';
     })->modal('Treść językowa', function ($model) {
 
         $meta = $model->localizations->map(function ($meta) {

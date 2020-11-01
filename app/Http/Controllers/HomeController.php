@@ -27,7 +27,7 @@
             $locale = app()->getLocale();
             $services = Services::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
             $abouts = Abouts::withLocalization($locale)->where('status',1)->orderBy('sort')->get();
-            $abouts_block = $abouts->where('type_content','block');
+            $abouts_block = $abouts->where('type_content','block')->take(3);
             $abouts_main = $abouts->where('type_content','main');
             $referencje = Referencje::getReferenceList();
 

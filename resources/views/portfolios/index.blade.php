@@ -5,6 +5,7 @@
     <div class="site-main">
 
         <section class="ttm-row pt-60 pb-110 res-991-pb-70 ttm-bgcolor-grey clearfix">
+            @if($portfolios->count() > 0)
             <div class="container">
                 <!-- row -->
                 <div class="row">
@@ -14,7 +15,8 @@
                     </div>
                 </div><!-- row end -->
                 <div class="row">
-                    @if($portfolios != null)
+
+
                        @foreach($portfolios as $item)
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <!-- featured-imagebox -->

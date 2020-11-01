@@ -137,11 +137,12 @@
 {{--                    </div>--}}
                 </div>
                 <!-- tttm-pf-single-related-wrapper -->
+                @if($portfolios_no_current->count() > 0)
                 <div class="row ttm-pf-single-related-wrapper">
                     <div class="col-lg-12">
                         <h3 class="ttm-pf-single-related-title">{{__('content/pages.portfolio.other_projects')}}</h3>
                     </div>
-@foreach($portfolios as $item)
+                    @foreach($portfolios_no_current as $item)
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <!-- featured-imagebox -->
                         <div class="featured-imagebox featured-imagebox-portfolio ttm-box-view-top-image">
@@ -169,6 +170,7 @@
                     </div>
                     @endforeach
                 </div>
+            @endif
                 <!-- tttm-pf-single-related-wrapper end-->
             </div>
         </section>

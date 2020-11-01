@@ -32,7 +32,7 @@
         </section>
         <!-- row-text-section end -->
         <!-- about-section -->
-        @if(isset($abouts_main))
+        @if($abouts_main->count() > 0)
         <section class="ttm-row about2-section break-1199-colum clearfix">
             <div class="container">
                 <div class="row">
@@ -79,7 +79,7 @@
 @endif
 
         <!-- about-section end -->
-@if(isset($abouts_block))
+@if($abouts_block->count() > 0 && $abouts_main->count() > 0)
         <!--services-box-section-->
         <section class="ttm-row services-box-section bg-img12 clearfix">
             <div class="container">
@@ -108,10 +108,10 @@
         </section>
    @endif     
         <!-- services-box-section end -->
+{{--{{dd($referencje->count())}}--}}
 
 
-
-        @if(isset($referencje))
+        @if($referencje->count() > 0)
             <section class="ttm-row row-text-section ttm-bgcolor-grey">
                 <div class="container">
                     <div class="row">
@@ -135,7 +135,7 @@
                 <div class="container ">
                     <div class="row ">
 
-                        <div class="owl-carousel owl-theme">
+                        <div class="{{($referencje->count() > 1)?'owl-carousel owl-theme':''}}">
         @foreach($referencje as $item)
                             <div class="item">
                                 <!-- featured-imagebox-post -->
@@ -192,7 +192,7 @@
         @endif
 
         <!-- service-section -->
-        @if(isset($services))
+        @if($services->count() > 0)
         <section class="ttm-row services2-section pb-110 clearfix">
             <div class="container">
                 <!-- row -->

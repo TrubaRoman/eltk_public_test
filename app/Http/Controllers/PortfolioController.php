@@ -12,7 +12,10 @@ class PortfolioController extends Controller
     {
             $portfolioModel = new Portfolio();
             $portfolios = $portfolioModel->portfolioList();
-
+        if (! $portfolios->count() > 0)
+        {
+            abort(404);
+        }
         return  view('portfolios.index',compact('portfolios'));
     }
 
@@ -23,10 +26,11 @@ class PortfolioController extends Controller
         $portfolio_item = $portfolioModel->portfolioItem($slug);
         SEOMeta::setTitle($portfolio_item->localization->meta_title);
         SEOMeta::setDescription($portfolio_item->localization->meta_descriptions);
-        $portfolios = $portfolioModel->portfolioNoCurrent($slug);
+        $portfolios_no_current = $portfolioModel->portfolioNoCurrent($slug);
+
 
         return view('portfolios.show',[
-            'portfolios' => $portfolios,
+            'portfolios_no_current' => $portfolios_no_current,
             'portfolio_item' => $portfolio_item
         ]);
     }
